@@ -1,0 +1,17 @@
+/* Global atributes */
+@import "../2-base/_colors.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+  background-color: $light;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}

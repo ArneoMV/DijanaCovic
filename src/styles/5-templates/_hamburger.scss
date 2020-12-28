@@ -1,0 +1,110 @@
+/* Hamburger */
+body.has-nav .menu-btn {
+  color:#fff!important
+ }
+ .logo-wrapper,
+ .main,
+ .menu-btn,
+ .projects-btn {
+  opacity:1;
+ }
+ .is-loading .logo-wrapper,
+ .is-loading .main,
+ .is-loading .menu-btn,
+ .is-loading .projects-btn {
+  opacity:0;
+  visibility:hidden;
+ }
+ body.has-brand-panel .c-logo,
+ body.has-brand-panel .menu-btn,
+ body.has-brand-panel .projects-btn,
+ body.has-brand-panel .viewport-links a {
+  color:#0b202b;
+ }
+ body.has-brand-panel.has-nav-panel .menu-btn {
+  color:#fff;
+ }
+
+ 
+ .menu-btn>span:last-child,
+  .projects-btn>span:first-child {
+   display:block;
+  }
+
+ .menu-btn {
+  position:relative;
+  cursor:pointer;
+  color:#ecf2f7;
+  margin-left:40px;
+ }
+
+//  .icon.x is in _icons.scss
+ .menu-btn .icon.x {
+  position:absolute;
+  left:-40px;
+  margin-right:.5rem;
+ }
+ .menu-btn .icon.x {
+  background: #ecf2f7 none repeat scroll 0% 0%;
+ }
+ .menu-btn .icon.x.is--inactive {
+  background: none;
+ }
+
+ 
+
+ .menu-btn .icon.x.is--inactive:after,
+ .menu-btn .icon.x.is--inactive:before {
+  background:currentColor;
+  -webkit-transform:translateX(-50%) translateY(-4px) rotate(0) scaleX(1);
+  transform:translateX(-50%) translateY(-4px) rotate(0) scaleX(1);
+ }
+ .menu-btn .icon.x.is--inactive:after {
+  -webkit-transform:translateX(-50%) translateY(2px) rotate(0) scaleX(1);
+  transform:translateX(-50%) translateY(2px) rotate(0) scaleX(1);
+  -webkit-animation:menuIcon 5s ease 2s infinite;
+  animation:menuIcon 5s ease 2s infinite;
+ }
+ 
+// .icon.x::before {
+//   transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+// }
+ @-webkit-keyframes menuIcon {
+  30% {
+   -webkit-transform:translateX(-50%) translateY(2px) rotate(0) scaleX(.4);
+   transform:translateX(-50%) translateY(2px) rotate(0) scaleX(.4);
+   -webkit-transform-origin:left center;
+   transform-origin:left center;
+  }
+  40% {
+   -webkit-transform-origin:right center;
+   transform-origin:right center;
+  }
+  60%,
+  80% {
+   -webkit-transform:translateX(-50%) translateY(2px) rotate(0) scaleX(1);
+   transform:translateX(-50%) translateY(2px) rotate(0) scaleX(1);
+   -webkit-transform-origin:right center;
+   transform-origin:right center;
+  }
+ }
+ @keyframes menuIcon {
+  30% {
+   -webkit-transform:translateX(-50%) translateY(2px) rotate(0) scaleX(.4);
+   transform:translateX(-50%) translateY(2px) rotate(0) scaleX(.4);
+   -webkit-transform-origin:left center;
+   transform-origin:left center;
+  }
+  40% {
+   -webkit-transform-origin:right center;
+   transform-origin:right center;
+  }
+  60%,
+  80% {
+   -webkit-transform:translateX(-50%) translateY(2px) rotate(0) scaleX(1);
+   transform:translateX(-50%) translateY(2px) rotate(0) scaleX(1);
+   -webkit-transform-origin:right center;
+   transform-origin:right center;
+  }
+ }
+
