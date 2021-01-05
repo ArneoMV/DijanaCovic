@@ -9,7 +9,6 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin: 0;
-  color: $light;
 }
 p, a{
   font-family: 'Montserrat', sans-serif; 
@@ -17,7 +16,6 @@ p, a{
   line-height: 1.4;
   margin: 0.2em 0 0.3em 0;
   text-align: justify;
-  color: $light;
   text-decoration: none;
 }
 
@@ -65,7 +63,7 @@ p, a{
     font-size: 1em;
   }
 }
-@include respond-to(large-2-screens) {
+@include respond-to(extralarge-screens) {
   h1 {font-size: 2.5em;}
   h2 {font-size: 2em;}
   h3 {font-size: 1.95em;}
@@ -77,7 +75,7 @@ p, a{
     font-size: 1em;
   }
 }
-@include respond-to(extralarge-screens) {
+@include respond-to(extraextralarge-screens) {
   h1 {font-size: 3.2em;}
   h2 {font-size: 2.8em;}
   h3 {font-size: 1.85em;}
@@ -89,41 +87,5 @@ p, a{
     font-size: 1em;
   }
 }
-.tx--caption {
-  font-family: "Montserrat";
-  font-size: 1.33em;
-  color: $light;
-}
-.tx--link {
-  font-family: "Montserrat";
-  font-size: 0.73em;
-  font-weight: 600;
-  color: $light;
-}
 
-.tx-title-1 {
-  font-family: "Montserrat";
-  font-size: 3.5em;
-  color: $light;
-  cursor: pointer;
-}
-
-.tx-title-1 {
-  font-family: "Montserrat";
-  font-weight: 600;
-  @include respond-to(extrasmall-screens) { font-size: 1rem; }
-  @include respond-to(small-screens) { font-size: 2rem; }
-  @include respond-to(medium-screens) { font-size: 2.5rem;}
-  @include respond-to(large-screens) { font-size: 3rem; }
-  @include respond-to(large-2-screens) { font-size: 3rem; }
-  @include respond-to(extralarge-screens) { font-size: 3rem; }
-}
-
-.tx--gray-light {
-  color: rgb(236, 242, 247);
-}
-
-.tx-description-1 {
-
-}
 

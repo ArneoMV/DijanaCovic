@@ -28,7 +28,7 @@ $screen-xxl: 1200px;
     @else if $media == large-screens {
         @media only screen and (min-width: $screen-lg + 1) and (max-width: $screen-xl - 1) { @content; }
     }
-    @else if $media == extra-screens {
+    @else if $media == extralarge-screens {
         @media only screen and (min-width: $screen-xl + 1) and (max-width: $screen-xxl - 1) { @content; }
     }
     @else if $media == extraextralarge-screens {
@@ -38,11 +38,31 @@ $screen-xxl: 1200px;
 
 // KAKO KORISTITI
 // unijeti brakepoint u roditelj element
-.primjer {
-    @include respond-to(extrasmall-screens) {}
-    @include respond-to(small-screens) {}
-    @include respond-to(medium-screens) {}
-    @include respond-to(large-screens) {}
-    @include respond-to(extralarge-screens) {}
-    @include respond-to(extraextra-screens) {}
+.demo {
+    display: grid;
+   
+    @mixin xs-screen {
+     grid-template-columns: repeat(1, 1fr);
+    }
+    @mixin small-screen {
+     grid-template-columns: repeat(3, 1fr);
+    }
+    @mixin medium-screen {
+     grid-template-columns: repeat(4, 1fr);
+    }
+    @mixin large-screen {
+     grid-template-columns: repeat(1, 1fr);
+    }
+    @mixin xl-screen {
+     grid-template-columns: repeat(3, 1fr);
+    }
+    @mixin xxl-screen {
+     grid-template-columns: repeat(4, 1fr);
+    }
+    @include respond-to(extrasmall-screens) { @include xs-screen(); }
+    @include respond-to(small-screens) {  @include small-screen(); }
+    @include respond-to(medium-screens) {  @include medium-screen(); }
+    @include respond-to(large-screens) {  @include large-screen(); }
+    @include respond-to(extralarge-screens) {  @include xl-screen(); }
+    @include respond-to(extraextralarge-screens) {  @include xxl-screen(); }
 }
