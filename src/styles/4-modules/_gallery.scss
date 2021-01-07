@@ -1,93 +1,44 @@
 /* Gallery */
 
-.square-gallery {
- --xs-screen-items: 1;
- --small-screen-items: 2;
- --medium-screen-items: 3;
- --large-screen-items: 4;
- --xl-screen-items: 5;
- --xxl-screen-items: 6;
-
- --width: 100vw;
-
-  position: relative;
+// Container
+.gallery {
+  position: fixed;
   top: 15vh;
-  position: absolute;
-  z-index: -1;  
-
- display: grid;
- background: white;
- width: var(--width);
- margin: 0 auto;
- border-radius: 4px;
- overflow: hidden;
- box-shadow: 0 2px 1px rgba(0, 0, 0, 0.09), 0 4px 2px rgba(0, 0, 0, 0.09),
-   0 8px 4px rgba(0, 0, 0, 0.09), 0 16px 8px rgba(0, 0, 0, 0.09),
-   0 32px 16px rgba(0, 0, 0, 0.09);
-
- .gallery-item {
-  display: flex;
-  justify-content: center;
-  // width: calc(var(--width) / var(--items));
-  // height: calc(var(--width) / var(--items)); /* To keep it square*/
-  //padding-bottom: calc(var(--width) / var(--items)); /* alternate way to keep it square*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.8;
-  transition: all 0.2s ease-out;
-  &:nth-child(2n + 1) {
-   opacity: 0.7;
-  }
-  &:hover {
-   opacity: 1;
-  }
- }
-
-
-   @mixin xs-screen {
-    grid-template-columns: repeat(var(--xs-screen-items), 1fr);
-    .gallery-item {
-     width: calc(var(--width) / var(--xs-screen-items));
-     height: calc(var(--width) / var(--xs-screen-items));
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  .filter{
+    height: 100%;
+    form {
+      position: fixed;
     }
+  }
+  .paintings{
+    height: 100%;
+    width: auto;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 0 1em;
+  }
+  @mixin xs-screen {
+    grid-template-columns: 250px auto;
    }
    @mixin small-screen {
-    grid-template-columns: repeat(var(--small-screen-items), 1fr);
-    .gallery-item {
-     width: calc(var(--width) / var(--small-screen-items));
-     height: calc(var(--width) / var(--small-screen-items));
-    }
+      grid-template-columns: 250px auto;
    }
    @mixin medium-screen {
-    grid-template-columns: repeat(var(--medium-screen-items), 1fr);
-    .gallery-item {
-     width: calc(var(--width) / var(--medium-screen-items));
-     height: calc(var(--width) / var(--medium-screen-items));
-    }
+      grid-template-columns: 250px auto;
    }
    @mixin large-screen {
-    grid-template-columns: repeat(var(--large-screen-items), 1fr);
-    .gallery-item {
-     width: calc(var(--width) / var(--large-screen-items));
-     height: calc(var(--width) / var(--large-screen-items));
-    }
+      grid-template-columns: 250px auto;
    }
    @mixin xl-screen {
-    grid-template-columns: repeat(var(--xl-screen-items), 1fr);
-    .gallery-item {
-     width: calc(var(--width) / var(--xl-screen-items));
-     height: calc(var(--width) / var(--xl-screen-items));
-    }
+      grid-template-columns: 250px auto;
    }
    @mixin xxl-screen {
-    grid-template-columns: repeat(var(--xxl-screen-items), 1fr);
-    .gallery-item {
-     width: calc(var(--width) / var(--xxl-screen-items));
-     height: calc(var(--width) / var(--xxl-screen-items));
-    }
+    grid-template-columns: 250px auto;
    }
-  
   
    @include respond-to(extrasmall-screens) { @include xs-screen(); }
    @include respond-to(small-screens) {  @include small-screen(); }
@@ -95,11 +46,5 @@
    @include respond-to(large-screens) {  @include large-screen(); }
    @include respond-to(extralarge-screens) {  @include xl-screen(); }
    @include respond-to(extraextralarge-screens) {  @include xxl-screen(); }
-}
 
-// Just for the images - ignore it
-@for $i from 1 through 38 {
- .gallery-item:nth-child(#{$i}) {
-   background-image: url("https://randomuser.me/api/portraits/women/#{$i}.jpg");
- }
 }

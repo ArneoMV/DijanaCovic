@@ -1,0 +1,34 @@
+.MasonryIn2Lines {
+ // line-height: 40px;
+ img {
+  margin: 0.5em;
+  width: 100% !important;
+  height: auto !important;
+ }
+
+ @mixin xs-screen {
+  column-count: 1;
+ }
+ @mixin small-screen {
+  column-count: 1;
+ }
+ @mixin medium-screen {
+  column-count: 2;
+ }
+ @mixin large-screen {
+  column-count: 3;
+ }
+ @mixin xl-screen {
+  column-count: 4;
+ }
+ @mixin xxl-screen {
+  column-count: 5;
+ }
+
+ @include respond-to(extrasmall-screens) { @include xs-screen(); }
+ @include respond-to(small-screens) {  @include small-screen(); }
+ @include respond-to(medium-screens) {  @include medium-screen(); }
+ @include respond-to(large-screens) {  @include large-screen(); }
+ @include respond-to(extralarge-screens) {  @include xl-screen(); }
+ @include respond-to(extraextralarge-screens) {  @include xxl-screen(); }
+}

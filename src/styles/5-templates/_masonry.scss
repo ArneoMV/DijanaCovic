@@ -1,0 +1,92 @@
+.grid-item { width: 200px; }
+.grid-item--width2 { width: 400px; }
+
+
+
+.grid-item .grid-item-hover {
+ position: absolute;
+ top: 0px;
+ padding-left: 6px;
+ width: 100%;
+ height: 5px;
+ overflow: hidden;
+ transition: height .4s ease-in-out;
+ 
+}
+.grid-item:hover .grid-item-hover {
+ height: 100px;
+}
+
+
+.grid {
+ margin:0 auto;
+ width: 100% !important;
+}
+.grid-item {
+ background: #fff;
+overflow: hidden;
+ cursor: pointer;
+}
+.grid-item-a {
+ position: absolute;
+ opacity: 0;
+ top: 0;
+ display: none;
+ z-index: 10;
+ height: 100%;
+ width: 100%;
+ background-color: rgba(0,0,0,.3);
+ transition: opacity .5s ease;
+}
+
+.grid-item div:hover + .grid-item-a {
+ display: block;
+}
+
+.grid-item-a:hover {
+ display: block;
+ opacity: 1;
+}
+
+.grid-sizer{
+ width: 16.67%;
+}
+.grid-item {
+ width: 16.67%;
+}
+.featured {
+ width: 33.34%;
+}
+
+.square {
+ position: relative;
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ border: 2pt solid grey;
+}
+.square:after {
+ content: " ";
+ display: block;
+ padding-bottom: 100%;
+}
+.square-content{
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+@media (max-width: 600px) {
+ .grid-sizer{
+   width: 33.34%;
+ }
+ .grid-item {
+   width: 33.34%;
+ }
+ .featured {
+   width: 66.67%;
+ }
+}
