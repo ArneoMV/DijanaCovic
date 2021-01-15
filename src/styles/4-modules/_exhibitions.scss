@@ -1,0 +1,80 @@
+.exhibitions {
+ width: 100%;
+ height: 90vh;
+ position: relative;
+ display: block;
+ position: absolute;
+ bottom: 0;
+ section {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  figure {
+   place-self: center;
+   img, figcaption {
+    width: 25vw;
+   } 
+  }
+ }
+
+ @mixin xs-screen {
+  section {
+   grid-template-rows: 50% 50%;
+   margin-top: 3em;
+   grid-gap: 3em;
+   figure {
+    img, figcaption {
+     width: 55vw;
+    } 
+   }
+  }
+ }
+ @mixin small-screen {
+  section {
+   grid-template-rows: 50% 50%;
+   margin-top: 3em;
+   grid-gap: 3em;
+   figure {
+    img, figcaption {
+     width: 55vw;
+    } 
+   }
+  }
+ }
+ @mixin medium-screen {
+  section {
+   grid-template-rows: 50% 50%;
+   margin-top: 4em;
+   grid-gap: 3em;
+   figure {
+    img, figcaption {
+     width: 55vw;
+    } 
+   }
+  }
+ }
+ @mixin large-screen {
+  section {
+   grid-template-columns: 50% 50%;
+  }
+ }
+ @mixin xl-screen {
+  section {
+   grid-template-columns: 50% 50%;
+  }
+ }
+ @mixin xxl-screen {
+  section {
+   grid-template-columns: 50% 50%;
+  }
+ }
+  
+ @include respond-to(extrasmall-screens) { @include xs-screen(); }
+ @include respond-to(small-screens) {  @include small-screen(); }
+ @include respond-to(medium-screens) {  @include medium-screen(); }
+ @include respond-to(large-screens) {  @include large-screen(); }
+ @include respond-to(extralarge-screens) {  @include xl-screen(); }
+ @include respond-to(extraextralarge-screens) {  @include xxl-screen(); }
+
+
+}

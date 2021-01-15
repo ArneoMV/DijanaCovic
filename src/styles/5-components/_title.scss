@@ -1,0 +1,24 @@
+.black-title-container {
+ padding: 0 0 5vw 0;
+ .floating-title {
+   overflow: hidden;
+   width: 100%;
+   position: relative;
+   text-transform: uppercase;
+   .black-title {
+     color: $dark;
+     font-size: calc(20px + 5vw);
+     text-transform: uppercase;
+     font-weight: 150;
+     font-family: "Margaret Bold", sans-serif;
+     line-height: 1;
+   }
+   .small-title {
+     color: $dark;
+     text-transform: uppercase;
+    //  font-weight: 900;
+     font-size: calc(15px + 3vw);
+     font-family: 'Montserrat', sans-serif;
+   }
+ }
+}

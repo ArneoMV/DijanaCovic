@@ -13,7 +13,7 @@ $('.slider').each(function(e) {
 
  slider.slider({
      range: true,
-     values: [1800, 7800],
+     values: [150, 7800],
      min: 500,
      step: 5,
      minRange: 150,
