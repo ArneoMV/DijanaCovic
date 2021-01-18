@@ -1,138 +1,144 @@
-/* Navigation */
-#navBar {
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  width: 100%;
-  height: 8vh;
-  display: block;
-  transition: top 0.3s;
-  // background-image: url("../images/patterns/assault.png");
-  background-color: transparent;
-}
-#logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: top 0.3s;
-  z-index: 99999;
-  @media only screen and (max-width: 950px) {
-    width: 100%;
-    display: grid;
-    justify-items: center;
-  }
-}
-.logo {
-  padding: 0 2vh;
-  min-width: 200px;
-  height: 8vh;
-  width: 20%;
-  display: block;
-}
-.nav-links {
-  a {
-    color: $dark;
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 1em;
-    position: relative;
-    top: 0.5vh;
-  }
-}
 
-// NAVIGATION DESKTOP
-nav {
+header {
+  height: 10vh;
   width: 100%;
-  height: 8vh;
-  position: absolute;
-  z-index: 9999;
-  top: 0;
   display: grid;
-  grid-template-columns: 1fr;
-  justify-content: space-around;
-  align-items: center;
-  .nav-links {
+  margin-top: 1em;
+  .navbar {
+    width: 100%;
+    height: auto;
     display: flex;
-    justify-content: space-around;
-    width: 80%;
-    align-self: center;
-    position: relative;
-    left: 20%;
-    top: 0.5vh;
-  }
-  @media only screen and (max-width: 950px) {
-    .nav-links {
-      display: none;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10vh;
+    background-color: transparent;
+    .logo {
+      color: $dark;
+      font-family: "Great Vibes", sans-serif !important;
+      letter-spacing: 5px;
+      margin-left: 2em;
+    }
+    .navigation {
+      margin-right: 2em;
+      .nav-links {
+        width: auto;
+        width: auto;
+        display: flex;
+        justify-content: end;
+        align-self: center;
+        position: relative;
+        &.menu-active {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+        a {
+          color: $dark;
+          text-decoration: none;
+          letter-spacing: 3px;
+          font-weight: bold;
+          font-size: 1em;
+          position: relative;
+          top: 0.5vh;
+          padding-right: 1em;
+        }
+      }
     }
   }
 }
-.nav-mobile {
-  width: 0;
-  height: 100%;
-  background-color: $light;
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  overflow-y: hidden;
-  transition: width 600ms ease-in-out;
-  .nav-links {
-    position: absolute;
-    right: 0px;
-    height: 100vh;
-    top: 0;
-    display: grid;
-    width: 100%;
-    grid-template-rows: repeat(6, 50px);
-    justify-items: center;
-    align-items: center;
-    padding-top: 100px;
-    opacity: 0;
-    transition: opacity 450ms ease-in-out;
-  }
-}
-.nav-mobile.is-active { 
-  display: block;
-  width: 100%;
-  .nav-links {
-    opacity: 1;
-  }
-  @media only screen and (min-width: 950px) {
-    display: none;
-  }
-}
 
-/* Hamburger Icon */
-.burger {
+.navbar .menu-icon {
   display: none;
   cursor: pointer;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 999999;
-  padding: 2vh;
-  @media only screen and (max-width: 950px) {
-    display: block;
-  }
-
+  flex-grow: 1;
+  margin-left: 25px;
 }
 
-.burger div {
-  width: 25px;
-  height: 3px;
+.navbar .menu-icon span {
+  display: block;
+  border-radius: 15px;
+  width: 33px;
+  height: 2px;
   background-color: $dark;
   margin: 5px;
-  transition: all 0.3s ease;
-}
-.toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px) }
-.toggle .line2 { opacity: 0 }
-.toggle .line3 { transform: rotate(45deg) translate(-5px, -6px) }
-
-
-
-
-@media only screen and (max-width: 950px) {
-  .logo-hide { display: none;}
+  transition: all 0.4s ease;
 }
 
+@media screen and (max-width: 850px) {
+  header {
+    .navbar {
+      margin-left: 2em;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .logo {
+        flex-grow: 1;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    overflow: hidden;
+  }
+  header {
+    margin-top: 0.5em;
+    .navbar {
+      .logo {
+        flex-grow: 1;
+      }
+      .navigation {
+        .nav-links {
+          height: 90%;
+          width: 100%;
+          position: absolute;
+          top: 10vh;
+          left: 0px;
+          justify-content: space-evenly;
+          flex-direction: column;
+          align-items: center;
+          background-color: rgba(0, 0, 0, 1);
+          transform: translateX(-100%);
+          transition: transform 0.5s ease-in;
+          li {
+            opacity: 0;
+          }
+          a {
+            color: $light;
+          }
+        }
+        .menu-icon {
+          display: block;
+          z-index: 99999;
+        }
+      }
+    }
+  }
+}
+
+
+
+// Hamburger animation
+@keyframes navLinkAnime {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.navbar .menu-icon.span-anime {
+  span {
+    &:first-child {
+      transform: rotate(-135deg) translate(-16px, 10px);
+      margin-left: -14px;
+    }
+    &:nth-child(2) { opacity: 0; }
+    &:last-child {
+      transform: rotate(135deg) translate(-20px, -5px);
+      margin-left: -14px;
+    }
+  }
+}

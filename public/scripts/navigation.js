@@ -1,26 +1,33 @@
 
 $(document).ready(function() {
 
-  let burger = document.querySelector('.burger');
-  let navMobile = document.querySelector('.nav-mobile');
-  let navBar = document.getElementById("navBar");
+  const menuSlide = () => {
+    const menuIcon = document.querySelector(".menu-icon");
+    const navLinks = document.querySelector(".nav-links");
+    const navLinksInner = document.querySelectorAll(".nav-links li");
   
-  burger.addEventListener('click', () => {
-    //Burger Animation
-    burger.classList.toggle('toggle');
-    navMobile.classList.toggle('is-active');
-  });  
-
-  // HIDE NAVIGATION ON SCROLL
-  var prevScrollpos = window.pageYOffset;
-  window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      navBar.style.top = "0";
-    } else {
-      navBar.style.top = "-8vh";
-    }
-    prevScrollpos = currentScrollPos;
-  }
+    //menu-icon click event
+    menuIcon.addEventListener("click", () => {
+      //toggle active class
+      navLinks.classList.toggle("menu-active");
+  
+      //animate navLinks
+      navLinksInner.forEach((li, index) => {
+        if (li.style.animation) {
+          li.style.animation = "";
+        } else {
+          li.style.animation = `navLinkAnime 0.5s ease forwards ${
+            index / 7 + 0.3
+          }s`;
+        }
+      });
+  
+      //toggle for menu-icon animation
+      menuIcon.classList.toggle("span-anime");
+    });
+  };
+  
+  menuSlide();
+  
 
 });
