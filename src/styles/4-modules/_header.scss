@@ -2,26 +2,25 @@
 header {
   height: 10vh;
   width: 100%;
-  display: grid;
-  margin-top: 1em;
+  position: fixed;
+  top: 0;
+  z-index: 999;
   .navbar {
-    width: 100%;
-    height: auto;
+    height: 100%;
+    padding: 0 2em;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    min-height: 10vh;
     background-color: transparent;
-    .logo {
+    h1 {
       color: $dark;
       font-family: "Great Vibes", sans-serif !important;
-      letter-spacing: 5px;
-      margin-left: 2em;
+      font-size: 2em;
+      cursor: pointer;
     }
     .navigation {
-      margin-right: 2em;
       .nav-links {
-        width: auto;
         width: auto;
         display: flex;
         justify-content: end;
@@ -35,76 +34,63 @@ header {
           color: $dark;
           text-decoration: none;
           letter-spacing: 3px;
-          font-weight: bold;
+          font-weight: 400;
           font-size: 1em;
           position: relative;
           top: 0.5vh;
-          padding-right: 1em;
+          padding: 0 0.5em;
+          cursor: pointer;
+          &:hover {
+            font-weight: 800;
+          }
         }
       }
     }
   }
 }
 
+// Hamburger
 .navbar .menu-icon {
   display: none;
   cursor: pointer;
   flex-grow: 1;
-  margin-left: 25px;
-}
-
-.navbar .menu-icon span {
-  display: block;
-  border-radius: 15px;
-  width: 33px;
-  height: 2px;
-  background-color: $dark;
-  margin: 5px;
-  transition: all 0.4s ease;
-}
-
-@media screen and (max-width: 850px) {
-  header {
-    .navbar {
-      margin-left: 2em;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      .logo {
-        flex-grow: 1;
-        margin-left: 0;
-      }
-    }
+  span {
+    display: block;
+    border-radius: 15px;
+    width: 33px;
+    height: 2px;
+    background-color: $dark;
+    margin: 5px;
+    transition: all 0.4s ease;
   }
 }
 
-@media screen and (max-width: 650px) {
-  body {
-    overflow: hidden;
-  }
+
+
+@media screen and (max-width: 780px) {
   header {
-    margin-top: 0.5em;
     .navbar {
-      .logo {
+      h1 {
         flex-grow: 1;
       }
       .navigation {
         .nav-links {
-          height: 90%;
+          height: 90vh;
           width: 100%;
           position: absolute;
           top: 10vh;
           left: 0px;
-          justify-content: space-evenly;
+          justify-content: center;
           flex-direction: column;
           align-items: center;
           background-color: rgba(0, 0, 0, 1);
           transform: translateX(-100%);
           transition: transform 0.5s ease-in;
-          li {
-            opacity: 0;
-          }
+          z-index: 99;
           a {
             color: $light;
+            opacity: 0;
+            padding: 1.3em 0;
           }
         }
         .menu-icon {

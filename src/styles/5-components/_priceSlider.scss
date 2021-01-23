@@ -1,5 +1,5 @@
 
-.box {
+.priceSlider{
     width: auto;
     height: auto;
     display: grid;
@@ -109,18 +109,5 @@
              stroke-width: 2;
          }
      }
- }
-}
-
-html {
- box-sizing: border-box;
- -webkit-font-smoothing: antialiased;
-}
-
-* {
- box-sizing: inherit;
- &:before,
- &:after {
-     box-sizing: inherit;
  }
 }

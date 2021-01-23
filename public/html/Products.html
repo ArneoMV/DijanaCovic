@@ -1,23 +1,51 @@
-<div class="products">
-
-
- <section class="products_discription">
-  <div>
-   <h2>Naziv proizvoda</h2>
-   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod est perspiciatis, magni eius, iste maiores nostrum cumque, optio hic aliquam quam doloremque numquam facilis voluptas.</p>
+ <div class="wrapper">
+  <div class="text">
+   <div class="text-inner">
+    <h1>Products</h1>
+    <p>I love to paint on all kind of objets.<p>
+   </div>
   </div>
-  <div>
-   <img src="images/salice/salica_6.png" alt="">
+
+  <div class="img">
+   <div class="img-stripe stripe1">
+    <img src="images/salice/salica_1.png" alt="">
+    <img src="images/salice/salica_2.png" alt="">
+    <img src="images/salice/salica_3.png" alt="">
+    <img src="images/salice/salica_4.png" alt="">
+    <img src="images/salice/salica_5.png" alt="">
+    <img src="images/salice/salica_6.png" alt="">
+   </div>
+   <div class="img-stripe stripe2">
+    <img src="images/salice/salica_7.png" alt="">
+    <img src="images/salice/salica_8.png" alt="">
+    <img src="images/salice/salica_9.png" alt="">
+    <img src="images/salice/salica_10.png" alt="">
+    <img src="images/salice/salica_11.png" alt="">
+    <img src="images/salice/salica_12.png" alt="">
+   </div>
   </div>
- </section>
+ </div>
 
- <section class="products_gallery">
-  <img src="images/salice/salica_4.png" alt="">
-  <img src="images/salice/salica_2.png" alt="">
-  <img src="images/salice/salica_5.png" alt="">
- </section>
+<script>
+// let toggleBtn = document.querySelector(".toggleBtn");
+// let menu = document.querySelector(".menu");
 
+// INTO - LOADING ANIMATION
+gsap.from(".text-inner > *", 2, {
+ opacity: 0,
+ delay: 2,
+ stagger: 0.2
+})
+gsap.from(".stripe1 img", 2, {
+ y: 560,
+ opacity: 0,
+ stagger: 0.4,
+ delay: 0.5
+})
+gsap.from(".stripe2 img", 2, {
+ opacity: 0,
+ stagger: 0.4,
+ delay: 1
+})
 
-
-
-</div>
+</script>
