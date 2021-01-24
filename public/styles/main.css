@@ -860,7 +860,6 @@ header .navbar .navigation .nav-links a:hover {
 }
 .gallery form {
   position: relative;
-  display: grid;
   margin: 0 1rem;
 }
 .gallery .paintings {
