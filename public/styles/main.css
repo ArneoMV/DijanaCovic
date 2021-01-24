@@ -640,7 +640,7 @@ header .navbar .navigation .nav-links a {
   cursor: pointer;
 }
 header .navbar .navigation .nav-links a:hover {
-  font-weight: 800;
+  border-bottom: 1px solid #151515;
 }
 
 .navbar .menu-icon {
@@ -1765,112 +1765,63 @@ input[type=checkbox]:checked:disabled + label:before {
   border-color: #151515;
 }
 
-.priceSlider {
-  width: auto;
-  height: auto;
-  display: grid;
-  grid-template-rows: auto auto;
-}
-.priceSlider .values div,
-.priceSlider small div {
-  display: inline-block;
-  vertical-align: top;
-}
-.priceSlider .values {
-  margin: 0;
-  padding: 5px 24px;
-}
-.priceSlider .values > div:first-child {
-  margin-right: 2px;
-}
-.priceSlider .values > div:last-child {
-  margin-left: 2px;
-}
-.priceSlider small {
-  color: #151515;
-  display: block;
-  margin-top: 8px;
-  font-size: 14px;
+.ui-widget-header {
+  height: 4px !important;
+  background: #40785F;
 }
 
-.slider {
-  --primary: #151515;
-  --handle: #fff;
-  --handle-active: #b9b9b9;
-  --handle-hover: #e8e8e8;
-  --handle-border: 2px solid var(--primary);
-  --line: #cdd9ed;
-  --line-active: var(--primary);
-  height: 23px;
-  width: 90%;
-  position: relative;
-  pointer-events: none;
-  margin: 0 auto;
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  border: 1px solid #c3c3c3;
+  border-radius: 13px;
+  background: #fff;
 }
-.slider .ui-slider-handle {
-  --y: 0;
-  --background: var(--handle);
-  cursor: grab;
-  -webkit-tap-highlight-color: transparent;
-  top: 0;
-  width: 23px;
-  height: 23px;
-  transform: translateX(-50%);
-  position: absolute;
-  outline: none;
-  display: block;
-  pointer-events: auto;
+
+.ui-widget-content {
+  height: 2px !important;
+  border: 0;
+  background: #FBFBFB;
+  margin: 15px 0;
 }
-.slider .ui-slider-handle div {
-  width: 23px;
-  height: 23px;
-  border-radius: 50%;
-  transition: background 0.4s ease;
-  transform: translateY(calc(var(--y) * 1px));
-  border: var(--handle-border);
-  background: var(--background);
+
+.ui-slider-horizontal .ui-slider-range {
+  top: -2px;
 }
-.slider .ui-slider-handle:hover {
-  --background: var(--handle-hover);
-}
-.slider .ui-slider-handle:active {
-  --background: var(--handle-active);
+
+.ui-slider-horizontal .ui-slider-handle {
+  top: -10px;
   cursor: grabbing;
 }
-.slider svg {
-  --stroke: var(--line);
-  display: block;
-  height: 83px;
-  width: 100%;
+
+.ui-slider-handle {
+  outline: none;
 }
-.slider svg path {
-  fill: none;
-  stroke: var(--stroke);
-  stroke-width: 1;
+
+.min-range {
+  float: left;
+  font-size: 12px;
+  color: #333333;
 }
-.slider .active, .slider > svg {
-  position: absolute;
-  top: -30px;
-  height: 83px;
+
+.max-range {
+  float: right;
+  font-size: 12px;
+  color: #333333;
 }
-.slider > svg {
-  left: 0;
-  width: 100%;
-}
-.slider .active {
-  position: absolute;
-  overflow: hidden;
-  left: calc(var(--l) * 1px);
-  right: calc(var(--r) * 1px);
-}
-.slider .active svg {
-  --stroke: var(--line-active);
+
+.slider-range-wrap {
   position: relative;
-  left: calc(var(--l) * -1px);
-  right: calc(var(--r) * -1px);
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  padding: 24px 0 0 0;
 }
-.slider .active svg path {
-  stroke-width: 2;
+.slider-range-wrap p {
+  padding: 0 24px;
+}
+.slider-range-wrap p b span {
+  font-weight: 650;
 }
 
 .MasonryIn2Lines img {

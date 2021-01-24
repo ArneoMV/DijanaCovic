@@ -7,14 +7,15 @@
     </div>
     
     <form id="contact_form">
-        <!-- Price slider -->
-        <div class="priceSlider">
-            <div class="values">
-                <p class="tx-filter">Price Range</p>
-                <p class="tx-filter-price">$<span id="first"></span> - $<span id="second"></span></p>
-            </div>
-            <div class="slider" data-value-0="#first" data-value-1="#second" data-range="#third"></div>
+        <!-- Price slider --> 
+        <div class="slider-range-wrap">
+            <p class="tx-filter">Price</p>
+            <p class="tx-filter">MIn: <b><span id="price_min"></span></b> Max: <b><span id="price_max"></span></b></p>
+            <div id="slider-range"></div>
+            <span class="min-range">100</span>
+            <span class="max-range">7,000</span>
         </div>
+
         <!-- Style -->
         <div class="contact-dropbox-container">
             <div id="selectbox_style" class="selectbox selectbox--unselect" data-option="">
@@ -114,14 +115,9 @@
  </section>
 </div>
 
-<script>
-    $('#img-1').click(function(){
-        $('#main').load("html/Painting.html");
-    });
-</script>
-
 
 <script src="scripts/Gallery.js"></script>
 <script src="scripts/dropdown.js"></script>
 <script src="scripts/PriceSlider.js"></script>
+
 

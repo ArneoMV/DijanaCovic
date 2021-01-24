@@ -1,113 +1,53 @@
-
-.priceSlider{
-    width: auto;
-    height: auto;
-    display: grid;
-    grid-template-rows: auto auto;
- .values,
- small {
-     div {
-        display: inline-block;
-        vertical-align: top;
-     }
- }
- .values {
-     margin: 0;
-     padding: 5px 24px;
-     & > div {
-         &:first-child {
-             margin-right: 2px;
-         }
-         &:last-child {
-             margin-left: 2px;
-         }
-     }
- }
- small {
-     color: $dark;
-     display: block;
-     margin-top: 8px;
-     font-size: 14px;
- }
+.ui-widget-header {
+  height: 4px !important;
+  background: $green-0;
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  border: 1px solid #c3c3c3;
+  border-radius: 13px;
+  background: #fff;
+}
+.ui-widget-content {
+    height: 2px !important;
+    border: 0;
+    background: $light;
+    margin: 15px 0;
+}
+.ui-slider-horizontal .ui-slider-range {
+  top: -2px;
+}
+.ui-slider-horizontal .ui-slider-handle {
+  top: -10px;
+  cursor: grabbing;
+}
+.ui-slider-handle {
+  outline: none;
 }
 
-.slider {
- --primary: #151515;
- --handle: #fff;
- --handle-active: #{mix(white,$dark, 70%)};
- --handle-hover: #{mix(white, $dark, 90%)};
- --handle-border: 2px solid var(--primary);
- --line: #cdd9ed;
- --line-active: var(--primary);
- height: 23px;
- width: 90%;
- position: relative;
- pointer-events: none;
- margin: 0 auto;
- .ui-slider-handle {
-     --y: 0;
-     --background: var(--handle);
-     cursor: grab;
-     -webkit-tap-highlight-color: transparent;
-     top: 0;
-     width: 23px;
-     height: 23px;
-     transform: translateX(-50%);
-     position: absolute;
-     outline: none;
-     display: block;
-     pointer-events: auto;
-     div {
-         width: 23px;
-         height: 23px;
-         border-radius: 50%;
-         transition: background .4s ease;
-         transform: translateY(calc(var(--y) * 1px));
-         border: var(--handle-border);
-         background: var(--background);
-     }
-     &:hover {
-         --background: var(--handle-hover);
-     }
-     &:active {
-         --background: var(--handle-active);
-         cursor: grabbing;
-     }
- }
- svg {
-     --stroke: var(--line);
-     display: block;
-     height: 83px;
-     width: 100%;
-     path {
-         fill: none;
-         stroke: var(--stroke);
-         stroke-width: 1;
-     }
- }
- .active,
- & > svg {
-     position: absolute;
-     top: -30px;
-     height: 83px;
- }
- & > svg {
-     left: 0;
-     width: 100%;
- }
- .active {
-     position: absolute;
-     overflow: hidden;
-     left: calc(var(--l) * 1px);
-     right: calc(var(--r) * 1px);
-     svg {
-         --stroke: var(--line-active);
-         position: relative;
-         left: calc(var(--l) * -1px);
-         right: calc(var(--r) * -1px);
-         path {
-             stroke-width: 2;
-         }
-     }
- }
+.min-range {
+  float: left;
+  font-size: 12px;
+  color: #333333;
+}
+.max-range {
+  float: right;
+  font-size: 12px;
+  color: #333333;
+}
+.slider-range-wrap {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 24px 0 0 0;
+    p {
+        padding: 0 24px;
+        b {
+            span {
+                font-weight: 650;
+            }
+        }
+    }
 }

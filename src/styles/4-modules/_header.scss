@@ -41,7 +41,7 @@ header {
           padding: 0 0.5em;
           cursor: pointer;
           &:hover {
-            font-weight: 800;
+            border-bottom: 1px solid $dark;
           }
         }
       }
