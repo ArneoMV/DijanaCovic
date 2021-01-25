@@ -120,6 +120,10 @@ main {
   z-index: 99;
 }
 
+.link_active {
+  font-weight: 900 !important;
+}
+
 /* Color */
 /* Image's */
 img, iframe, object, embed, video {
@@ -639,9 +643,6 @@ header .navbar .navigation .nav-links a {
   padding: 0 0.5em;
   cursor: pointer;
 }
-header .navbar .navigation .nav-links a:hover {
-  border-bottom: 1px solid #151515;
-}
 
 .navbar .menu-icon {
   display: none;
@@ -678,7 +679,6 @@ header .navbar .navigation .nav-links a:hover {
   }
   header .navbar .navigation .nav-links a {
     color: #FBFBFB;
-    opacity: 0;
     padding: 1.3em 0;
   }
   header .navbar .navigation .menu-icon {

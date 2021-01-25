@@ -12,15 +12,15 @@ $(document).ready(function() {
       navLinks.classList.toggle("menu-active");
   
       //animate navLinks
-      navLinksInner.forEach((a, index) => {
-        if (a.style.animation) {
-          a.style.animation = "";
-        } else {
-          a.style.animation = `navLinkAnime 0.5s ease forwards ${
-            index / 7 + 0.3
-          }s`;
-        }
-      });
+      // navLinksInner.forEach((a, index) => {
+      //   if (a.style.animation) {
+      //     a.style.animation = "";
+      //   } else {
+      //     a.style.animation = `navLinkAnime 0.5s ease forwards ${
+      //       index / 7 + 0.3
+      //     }s`;
+      //   }
+      // });
       //toggle for menu-icon animation
       menuIcon.classList.toggle("span-anime");
     });
@@ -31,15 +31,15 @@ $(document).ready(function() {
       navLinks.classList.toggle("menu-active");
   
       //animate navLinks
-      navLinksInner.forEach((a, index) => {
-        if (a.style.animation) {
-          a.style.animation = "";
-        } else {
-          a.style.animation = `navLinkAnime 0.5s ease forwards ${
-            index / 7 + 0.3
-          }s`;
-        }
-      });
+      // navLinksInner.forEach((a, index) => {
+      //   if (a.style.animation) {
+      //     a.style.animation = "";
+      //   } else {
+      //     a.style.animation = `navLinkAnime 0.5s ease forwards ${
+      //       index / 7 + 0.3
+      //     }s`;
+      //   }
+      // });
       //toggle for menu-icon animation
       menuIcon.classList.toggle("span-anime");
     });

@@ -30,7 +30,7 @@ header {
           transform: translateX(0%);
           opacity: 1;
         }
-        a {
+        a{
           color: $dark;
           text-decoration: none;
           letter-spacing: 3px;
@@ -40,9 +40,6 @@ header {
           top: 0.5vh;
           padding: 0 0.5em;
           cursor: pointer;
-          &:hover {
-            border-bottom: 1px solid $dark;
-          }
         }
       }
     }
@@ -89,7 +86,6 @@ header {
           z-index: 99;
           a {
             color: $light;
-            opacity: 0;
             padding: 1.3em 0;
           }
         }
