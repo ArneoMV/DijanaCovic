@@ -1,12 +1,7 @@
-
- <div class="about">
-
-  <section>
+<div class="about">
     <div class="page1">
-      <div class="black-title-container">
-        <div class="floating-title">
-          <h1 class="black-title">Self - Portrait</h1>
-        </div>
+      <div class="text-container">
+        <h1 class="black-title">Self - Portrait</h1>
         <p class="tx-1">Dijana Čović is Croatian painter based in Zagreb. Her bold, victorian style - often described as Croatian oil painter, and TV journalist. Television is my work, art is my love. I live in Zagreb and was born in Vukovar.</p> 
         <div class="about-contact">
           <h4>Contact</h4>
@@ -17,59 +12,82 @@
           </div>
         </div>
       </div> 
-      <img class="avatar" src="images/avatar/woman_painting.png" alt="">
+      <img class="avatar trigger-image" src="images/avatar/woman_painting.png" alt="">
     </div>
-
-  </section>
- 
-
-
-  <section>
-   <div class="page2">
-
-    <div class="black-title-container">
-     <div class="floating-title">
-       <h1 class="small-title">I love to paint on big canvases</h1>
-     </div>
-     <p>When I first started to make large portrait paintings on canvas years ago, I never thought that in the future I would create so many of them.  I also never thought that I would put them on exhibit as many times as I have, and in so many different places.</p>
-    </div>
-    
-    <div class="gallery-1">
-     <img class="gallery-item-1" src="images/mockup/Astha_sofa_in_large_open_lounge_1.jpg" alt="">
-     <img class="gallery-item-1"src="images/mockup/mockup_1_Alice is meeting Mr.Rabbit.jpg" alt="">
-     <img class="gallery-item-1" src="images/mockup/Astha_sofa_in_large_open_lounge_1.jpg" alt="">
-     <img class="gallery-item-1"src="images/mockup/mockup_1_Alice is meeting Mr.Rabbit.jpg" alt="">
-    </div>
-
-   </div>
-  </section>
- 
-  <section>
-   <div class="page3">
-    <div class="black-title-container">
-      <div class="floating-title">
-        <h1 class="small-title">Classic with modern style</h1>
+    <!-- horizontal scroll images  -->
+    <div class="factsContainer_sm">
+      <div class="fact">
+        <img src="images/mockup/Astha_sofa_in_large_open_lounge_1.jpg" alt="">
       </div>
-      <p>Dijana Čović is Croatian painter based in Zagreb. Her bold, victorian style - often described as Croatian oil painter, and TV journalist. Television is my work, art is my love.</p>
+      <div class="fact">
+        <img src="images/mockup/mockup_1_Alice is meeting Mr.Rabbit.jpg" alt="">
+      </div>
+      <div class="fact">
+        <img src="images/mockup/Astha_sofa_in_large_open_lounge_1.jpg" alt="">
+      </div>
+      <div class="fact">
+        <img src="images/mockup/mockup_1_Alice is meeting Mr.Rabbit.jpg" alt="">
+      </div>
+      <div class="fact">
+        <img src="images/mockup/Astha_sofa_in_large_open_lounge_1.jpg" alt="">
+      </div>
+      <div class="fact">
+        <img src="images/mockup/mockup_1_Alice is meeting Mr.Rabbit.jpg" alt="">
+      </div>
     </div>
-     
-    <div class="gallery-2">
-     <img src="images/mockup/mockup_1_Flower_Dance.jpg" alt="">
-     <img src="images/mockup/mockup_2_Alice is meeting Mr.Rabbit.jpg" alt="">
+
+    <div class="socialContainer">
+      <div class="page3">
+        <div class="text-container">
+          <h3 class="small-title">Classic with modern style</h3>
+          <p>Dijana Čović is Croatian painter based in Zagreb. Her bold, victorian style - often described as Croatian oil painter, and TV journalist. Television is my work, art is my love.</p>
+        </div>   
+        <div class="gallery-2">
+          <img src="images/mockup/mockup_1_Flower_Dance.jpg" alt="">
+          <img src="images/mockup/mockup_2_Alice is meeting Mr.Rabbit.jpg" alt="">
+          <img src="images/mockup/mockup_1_Flower_Dance.jpg" alt="">
+          <img src="images/mockup/mockup_2_Alice is meeting Mr.Rabbit.jpg" alt="">
+          <img src="images/mockup/mockup_1_Flower_Dance.jpg" alt="">
+          <img src="images/mockup/mockup_2_Alice is meeting Mr.Rabbit.jpg" alt="">
+        </div>
+      </div>
     </div>
-   </div>
-  </section>
- 
- 
 </div>
 
+
+
+
 <script>
-  // let avatar = document.querySelector(".avatar");
-  // gsap.from(".avatar", 2, {
-  //  y: 0,
-  //  opacity: 0.4,
-  //  stagger: 0.4,
-  //  delay: 0.5
-  // })
-  
-  </script>
+let scroll_tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.trigger-image',
+        start: "top center",
+        //pin: true,
+        scrub: true,
+        end: "+=300",
+        markers: true
+      }
+    }),
+    facts = [...document.querySelectorAll('.fact')]
+    scroll_tl.to('.factsContainer h2', {
+      scale: 1.5,
+      duration: 1,
+      ease: "slow"
+    })
+    scroll_tl.to(facts, {
+      xPercent: -85 * (facts.length - 1),
+      scrollTrigger: {
+        trigger: ".factsContainer_sm",
+        start: "center center",
+        pin: true,
+        // horizontal: true,
+        // pinSpacing:false,
+        // markers: true,
+        scrub: 1,
+        snap: 1 / (facts.length - 1),
+        // base vertical scrolling on how wide the container is so it feels more natural.
+        // end: () => `+=${smallFactsContainer.offsetWidth}`
+        end: () => `+=4320`
+      }
+    });
+</script>

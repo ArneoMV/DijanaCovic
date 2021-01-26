@@ -2,16 +2,18 @@
 @import "../2-base/_colors.scss";
 @import "../3-layout/_breakpoint.scss";
 
-
 html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
 }
 * {
   box-sizing: border-box;
+  margin : 0;
+  padding : 0;
 }
-
 body {
+  width: 100vw;
+  height: 100vh;
   font-family: "Helvetica Neue", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1rem;
@@ -21,13 +23,18 @@ ul {
   margin: 0px;
   padding: 0px;
 }
-
 main {
-  height: 100%;
-  width: 100%;
-  position: absolute;
+  height: 90vh;
+  width: 100vw;
+  position: relative;
   top: 10vh;
   z-index: 99;
+  bottom: 0;
+  .about {}
+  .gallery {}
+  .exhibitions {}
+  .products {}
+  .about {}
 }
 
 

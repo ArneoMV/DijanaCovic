@@ -1,60 +1,98 @@
 
-.wrapper {
+.products {
+ width: auto;
+ height: 100%;
  display: flex;
- height: 100vh;
- overflow-y: hidden;
-}
-.text {
- width: 50%;
- height: 100vh;
- padding: 15px 15px 15px 100px;
- display: flex;
- align-items: center;
-}
-.text h1 {
- font-size: 70px;
- line-height: 84px;
- font-weight: normal;
- color: $dark;
- text-transform: uppercase;
- font-family: "Margaret Bold", sans-serif;
-}
-.text p {
- font-size: 20px;
- color: $dark;
- text-transform: uppercase;
- margin-top: 15px;
- letter-spacing: 4px;
-}
+ overflow: hidden;
+ .text {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   align-self: center;
+   margin: 0 auto;
+  h1 {
+   font-size: 70px;
+   line-height: 84px;
+   font-weight: normal;
+   color: $dark;
+   text-transform: uppercase;
+   font-family: "Margaret Bold", sans-serif;
+  }
+  p {
+   font-size: 20px;
+   color: $dark;
+   text-transform: uppercase;
+   letter-spacing: 4px;
+  }
+ }
+ /* images */
+ .img {
+  width: 50%;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  .img-stripe {
+   width: calc(50% - 15px);
+  }
+  .stripe1 {
+   animation: stripe-one 60s ease 0s infinite;
+  }
+ }
+ img.img {
+  width: 100%;
+  margin: 15px;
+ }
 
 
+ /* REPONSIVE */
+ @media only screen and (max-width: 1024px) {
+  overflow: hidden;
+  display: grid;
+  padding-top: 10vh;
+  .img {
+   width: 100%;
+   height: auto;
+   flex-wrap: wrap;
+   display: block;
+  }
+  .img .img-stripe {
+   width: 100%;
+   height: 30%;
+   animation: none !important;
+   display: flex;
+   max-width: 100%;
+   overflow-x: auto;
+   transform: translateY(0) !important;
+   img {
+    width: 33%;
+    object-fit: contain;
+    margin: 5px;
+   }
+  }
+ }
+ @media only screen and (max-width: 575px) {
+ }
+ @media only screen and (max-width: 480px) {
+  .text h1 {
+   font-size: 42px;
+  }
+  .text p {
+   font-size: 18px;
+   line-height: 28px;
+  }
+ }
+ @media only screen and (max-width: 375px) {
+ }
+}
 
-
-/* images */
-.img {
- width: 50%;
- padding: 0 30px;
- display: flex;
- justify-content: space-between;
-}
-.img img {
- width: 100%;
- margin: 15px;
-}
-.img .img-stripe {
- width: calc(50% - 15px);
-}
-.img .stripe1 {
- animation: stripe-one 60s ease 0s infinite;
-}
 // image animation
 @keyframes stripe-one {
  50% {
-  transform: translateY(-200%); /* It depends on your image stripe height */
+  transform: translateY(-50%); /* It depends on your image stripe height */
  }
 }
 .img .stripe2 {
- transform: translateY(-200%); /* It depends on your image stripe height */
+ transform: translateY(-50%); /* It depends on your image stripe height */
  animation: stripe-two 60s ease 0s infinite;
 }
 @keyframes stripe-two {
@@ -62,50 +100,4 @@
   transform: translateY(0%);
  }
 }
-/* REPONSIVE */
-@media only screen and (max-width: 1024px) {
- .wrapper {
-  display: flex;
-  height: auto;
-  overflow-y: auto;
-  flex-wrap: wrap;
- }
- .text {
-  width: 100%;
-  height: auto;
-  padding: 1em 0 1em 2em;
- }
- .img {
-  width: 100%;
-  height: auto;
-  flex-wrap: wrap;
-  padding: 0;
- }
- .img .img-stripe {
-  width: 100%;
-  height: 30%;
-  animation: none !important;
-  display: flex;
-  max-width: 100%;
-  overflow-x: auto;
-  transform: translateY(0) !important;
-  img {
-   width: 33%;
-   object-fit: contain;
-   margin: 5px;
-  }
- }
-}
-@media only screen and (max-width: 575px) {
-}
-@media only screen and (max-width: 480px) {
- .text h1 {
-  font-size: 42px;
- }
- .text p {
-  font-size: 18px;
-  line-height: 28px;
- }
-}
-@media only screen and (max-width: 375px) {
-}
+

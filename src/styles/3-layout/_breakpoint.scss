@@ -42,22 +42,16 @@ $screen-xxl: 1200px;
     display: grid;
    
     @mixin xs-screen {
-     grid-template-columns: repeat(1, 1fr);
     }
     @mixin small-screen {
-     grid-template-columns: repeat(3, 1fr);
     }
     @mixin medium-screen {
-     grid-template-columns: repeat(4, 1fr);
     }
     @mixin large-screen {
-     grid-template-columns: repeat(1, 1fr);
     }
     @mixin xl-screen {
-     grid-template-columns: repeat(3, 1fr);
     }
     @mixin xxl-screen {
-     grid-template-columns: repeat(4, 1fr);
     }
     @include respond-to(extrasmall-screens) { @include xs-screen(); }
     @include respond-to(small-screens) {  @include small-screen(); }
