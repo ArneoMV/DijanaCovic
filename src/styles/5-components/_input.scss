@@ -1,4 +1,4 @@
-/* Input */
+/* INPUT */
 
 textarea:focus, input:focus{
     outline: none;
@@ -7,7 +7,7 @@ textarea:focus, input:focus{
     position: relative;
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
-    border-bottom: 1px solid $light;
+    border-bottom: 1px solid $dark;
     .control-label {
         font-family: 'Montserrat';
         position: absolute;
@@ -15,7 +15,7 @@ textarea:focus, input:focus{
         pointer-events: none;
         padding-left: 0.125rem;
         z-index: 1;
-        color: $light;
+        color: $dark;
         font-size: 1rem;
         font-weight: normal;
         -webkit-transition: all 0.28s ease;
@@ -42,18 +42,18 @@ textarea:focus, input:focus{
     input {
         /* Show green borders when valid */
         &:focus, &:valid, &.form-file, &.has-value {
-            color: $light;
+            color: $dark;
         }
     }
     textarea {
     &:focus, &:valid, &.form-file, &.has-value {
-        color: $light;
+        color: $dark;
         }
     }
     input {
     &:focus ~ .control-label, &:valid ~ .control-label, &.form-file ~ .control-label, &.has-value ~ .control-label {
         font-size: 0.8rem;
-        color: $light;
+        color: $dark;
         top: -1rem;
         left: 0;
         }
@@ -61,7 +61,7 @@ textarea:focus, input:focus{
     textarea {
     &:focus ~ .control-label, &:valid ~ .control-label, &.form-file ~ .control-label, &.has-value ~ .control-label {
         font-size: 0.8rem;
-        color: $light;
+        color: $dark;
         top: -1rem;
         left: 0;
         }
@@ -70,7 +70,7 @@ textarea:focus, input:focus{
         outline: none;
     }
     select:focus ~ .control-label, input:focus ~ .control-label, textarea:focus ~ .control-label {
-        color: $light;
+        color: $dark;
         font-family: 'Montserrat';
     }
     select:focus ~ .bar-form::before, input:focus ~ .babar-formr::before, textarea:focus ~ .bar-form::before {
@@ -90,8 +90,9 @@ textarea:focus, input:focus{
     cursor: pointer;
     padding-left: 2rem;
     text-align: left;
-    color: $light;
+    color: $dark;
     display: block;
+    font-size: 12px;
 }
 .checkbox input {
     width: auto;
@@ -100,17 +101,16 @@ textarea:focus, input:focus{
     left: 0;
 }
 .checkbox {
-    margin-top: 3rem;
-    margin-bottom: 1rem;
+    margin: 1em;
     .helper {
-        color: $dark;
+        color: $success-4;
         position: absolute;
         top: 4px;
         left: 0;
         width: 1rem;
         height: 1rem;
         z-index: 0;
-        border: 0.125rem solid $light;
+        border: 0.125rem solid $dark;
         border-radius: 0.0625rem;
         -webkit-transition: border-color 0.28s ease;
         transition: border-color 0.28s ease;
@@ -118,7 +118,7 @@ textarea:focus, input:focus{
             position: absolute;
             height: 0;
             width: 0.2rem;
-            background-color: $light;
+            background-color: $emerald-city;
             display: block;
             -webkit-transform-origin: left top;
             transform-origin: left top;
@@ -143,7 +143,7 @@ textarea:focus, input:focus{
         }
     }
     label:hover .helper {
-        color: $light;
+        color: $dark;
     }
     input:checked ~ .helper {
         color: #337ab7;

@@ -1,0 +1,44 @@
+/******** ART DECO TRIPLE *********/
+.triple-deco-container {
+ display: grid;
+ grid-template-columns: 
+   [wide-start]  5px 
+   [mid-start]   5px 
+   [tall-start]  1fr 
+   [tall-end]    5px 
+   [mid-end]     5px 
+   [wide-end] 
+ ;
+ grid-template-rows: 
+   [tall-start]  5px 
+   [mid-start]   5px 
+   [wide-start]  1fr 
+   [wide-end]    5px 
+   [mid-end]     5px 
+   [tall-end] 
+ ;
+/*   background-color: peachpuff; */
+}
+
+.triple-deco-container .triple-deco-content {
+ grid-column: tall-start / tall-end;
+ grid-row: wide-start / wide-end;
+ padding: 1.5em;
+ // background-color: $glove-white;
+/*   color: #000; */
+}
+
+.triple-deco-container .triple-deco-tall {
+ grid-area: tall;
+ border: 1px solid $authentic-brown;
+}
+
+.triple-deco-container .triple-deco-mid {
+ grid-area: mid;
+ border: 1px solid $authentic-brown;
+}
+
+.triple-deco-container .triple-deco-wide {
+ grid-area: wide;
+ border: 1px solid $authentic-brown;
+}

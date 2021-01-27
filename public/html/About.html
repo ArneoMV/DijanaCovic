@@ -1,4 +1,5 @@
 <div class="about">
+  <!-- PAGE1 -->
     <div class="page1">
       <div class="text-container">
         <h1 class="black-title">Self - Portrait</h1>
@@ -14,49 +15,99 @@
       </div> 
       <img class="avatar trigger-image" src="images/avatar/woman_painting.png" alt="">
     </div>
+
+    <!-- PAGE2 -->
     <!-- horizontal scroll images  -->
-    <div class="factsContainer_sm">
-      <div class="fact">
-        <img src="images/mockup/Astha_sofa_in_large_open_lounge_1.jpg" alt="">
-      </div>
-      <div class="fact">
-        <img src="images/mockup/mockup_1_Alice is meeting Mr.Rabbit.jpg" alt="">
-      </div>
-      <div class="fact">
-        <img src="images/mockup/Astha_sofa_in_large_open_lounge_1.jpg" alt="">
-      </div>
-      <div class="fact">
-        <img src="images/mockup/mockup_1_Alice is meeting Mr.Rabbit.jpg" alt="">
-      </div>
-      <div class="fact">
-        <img src="images/mockup/Astha_sofa_in_large_open_lounge_1.jpg" alt="">
-      </div>
-      <div class="fact">
-        <img src="images/mockup/mockup_1_Alice is meeting Mr.Rabbit.jpg" alt="">
+    <div class="page2">
+      <div class="fact"><img src="images/mockup/Astha_sofa_in_large_open_lounge_1.jpg" alt=""></div>
+      <div class="fact"><img src="images/mockup/mockup_1_Alice is meeting Mr.Rabbit.jpg" alt=""></div>
+      <div class="fact"><img src="images/mockup/Astha_sofa_in_large_open_lounge_1.jpg" alt=""></div>
+      <div class="fact"><img src="images/mockup/mockup_1_Alice is meeting Mr.Rabbit.jpg" alt=""></div>
+      <div class="fact"><img src="images/mockup/Astha_sofa_in_large_open_lounge_1.jpg" alt=""></div>
+      <div class="fact"><img src="images/mockup/mockup_1_Alice is meeting Mr.Rabbit.jpg" alt=""></div>
+    </div>
+
+
+    <!-- PAGE3 -->
+    <div class="page3">
+      <div class="text-container">
+        <h3 class="small-title">Classic with modern style</h3>
+        <p>Dijana Čović is Croatian painter based in Zagreb. Her bold, victorian style - often described as Croatian oil painter, and TV journalist. Television is my work, art is my love.</p>
+      </div>   
+      <div class="page3-galery">
+        <img src="images/mockup/mockup_1_Flower_Dance.jpg" alt="">
+        <img src="images/mockup/mockup_2_Alice is meeting Mr.Rabbit.jpg" alt="">
+
       </div>
     </div>
 
-    <div class="socialContainer">
-      <div class="page3">
-        <div class="text-container">
-          <h3 class="small-title">Classic with modern style</h3>
-          <p>Dijana Čović is Croatian painter based in Zagreb. Her bold, victorian style - often described as Croatian oil painter, and TV journalist. Television is my work, art is my love.</p>
-        </div>   
-        <div class="gallery-2">
-          <img src="images/mockup/mockup_1_Flower_Dance.jpg" alt="">
-          <img src="images/mockup/mockup_2_Alice is meeting Mr.Rabbit.jpg" alt="">
-          <img src="images/mockup/mockup_1_Flower_Dance.jpg" alt="">
-          <img src="images/mockup/mockup_2_Alice is meeting Mr.Rabbit.jpg" alt="">
-          <img src="images/mockup/mockup_1_Flower_Dance.jpg" alt="">
-          <img src="images/mockup/mockup_2_Alice is meeting Mr.Rabbit.jpg" alt="">
+    <!-- page contact -->
+    <div class="page-contact">
+      <section class="container contact">
+        
+        <div class="triple-deco-container container">
+          <div class="triple-deco-content">
+
+          <div class="title-2">
+            <h2>Let's stay in touch</h2>
+            <p class="small-title">if you are interested in purchase details, feel free to contact me </p>
+          </div>
+          <form action="#" method="post" class="form" id="contact_form">
+            <fieldset>
+              <!-- INPUTS -->
+              <div class="inputFilled">
+                <input id="contact_name" type="text" name="name" required pattern="\S+.*">
+                <label for="contact_name" class="control-label">Your name</label>
+                <i class="bar-form"></i>
+              </div>
+              <div class="inputFilled">
+                <input id="contact_email" type="email" name="email" required pattern="\S+.*">
+                <label for="contact_email" class="control-label">E-mail</label>
+                <i class="bar-form"></i>
+              </div>
+              <div class="inputFilled">
+                <input id="contact_phone" type="number" name="phone" required="required">
+                <label for="contact_phone" class="control-label">Phone</label>
+                <i class="bar-form"></i>
+              </div>
+              <div class="inputFilled">
+                <textarea id="contact_message" rows="3" cols="10" name="message" required></textarea>
+                <label for="contact_message" class="control-label">Drop me a line</label>
+                <i class="bar-form"></i>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" checked="checked" name="terms"/>
+                  <i class="helper"></i>I agree that Dijana Čović will save my personal information so that she can
+                  contact me in the future.
+                </label>
+              </div>
+            </fieldset>
+            <div class="button-form">
+              <button id="btn_form" class="default deco" type="submit" value="Send"><span>Send message</span></button>
+            </div>
+            <span id="status"></span>
+          </form>
+
+          </div>
+          <div class="triple-deco-tall"></div>
+          <div class="triple-deco-mid"></div>
+          <div class="triple-deco-wide"></div>
         </div>
-      </div>
+ 
+      </section>
     </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+
+    </div>
+
 </div>
 
 
 
-
+<script src="scripts/contact.js"></script>
 <script>
 let scroll_tl = gsap.timeline({
       scrollTrigger: {
@@ -65,19 +116,19 @@ let scroll_tl = gsap.timeline({
         //pin: true,
         scrub: true,
         end: "+=300",
-        markers: true
+        // markers: true
       }
     }),
     facts = [...document.querySelectorAll('.fact')]
     scroll_tl.to('.factsContainer h2', {
       scale: 1.5,
-      duration: 1,
+      duration: 2,
       ease: "slow"
     })
     scroll_tl.to(facts, {
       xPercent: -85 * (facts.length - 1),
       scrollTrigger: {
-        trigger: ".factsContainer_sm",
+        trigger: ".page2",
         start: "center center",
         pin: true,
         // horizontal: true,
@@ -87,7 +138,7 @@ let scroll_tl = gsap.timeline({
         snap: 1 / (facts.length - 1),
         // base vertical scrolling on how wide the container is so it feels more natural.
         // end: () => `+=${smallFactsContainer.offsetWidth}`
-        end: () => `+=4320`
+        end: () => `+=5320`
       }
     });
 </script>

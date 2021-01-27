@@ -35,21 +35,6 @@
  }
 }
 
-// ripple effect
-.btn-ripple .ripple {
- border-radius: 50%;
- background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
- position: absolute;
- transform: scale(0);
- animation: ripple 0.6s linear;
-}
-@keyframes ripple {
- to {
-  transform: scale(1);
-  opacity: 0;
- }
-}
-
 
 /* SOCIAL */
 .social a {
@@ -85,4 +70,101 @@
 }
 .social a:hover:before {
  transform: scale(1);
+}
+
+
+/* Art deco button */
+.default {
+	width: 100%;
+	max-width: 250px;
+	display: inline-block;
+	position: relative;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 1rem;
+	font-weight: 700;
+	color: #fff;
+	cursor: pointer;
+	background-color: transparent;
+	border: 0;
+}
+.deco {
+	border: none;
+	color: #fff;
+	padding: 3px;
+	position: relative;
+	display: inline-block;
+	transition: color 0.5s ease;
+}
+.deco:hover {
+	color: $emerald-city;
+}
+.deco:before, .deco:after {
+	content: '';
+	display: block;
+	position: absolute;
+	transition: all 0.5s ease;
+}
+.deco:before {
+	width: 100%;
+	height: 50%;
+	left: -1px;
+	top: 50%;
+	transform: translateY(-50%);
+	border-left: solid 1px #000;
+	border-right: solid 1px #000;
+}
+.deco:hover:before {
+	height: 0%;
+}
+.deco:after {
+	width: 80%;
+	height: 100%;
+	top: -1px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-top: solid 1px #000;
+	border-bottom: solid 1px #000;
+}
+.deco:hover:after {
+	width: 0%;
+}
+.deco span {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	letter-spacing: 2px;
+	line-height: 24px;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	padding: 8px 30px;
+	position: relative;
+	border: solid 1px #000;
+	user-select: none;
+	cursor: pointer;
+}
+.deco span:before, .deco span:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 51%;
+	height: 100%;
+	top: 0;
+	background-color: #000;
+	z-index: -1;
+	transition: width 0.5s ease;
+}
+.deco span:before {
+	left: 0;
+}
+.deco span:after {
+	right: 0;
+}
+.deco:hover span:before, .deco:hover span:after {
+	width: 0;
 }
