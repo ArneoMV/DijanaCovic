@@ -13,12 +13,17 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-    h1 {
-      color: $dark;
-      font-family: "Great Vibes", sans-serif !important;
-      font-size: 2em;
-      cursor: pointer;
+    img {
+      width: 180px;
+      height: auto;
+      margin-top: 15px;
     }
+    // h1 {
+    //   color: $dark;
+    //   font-family: "Great Vibes", sans-serif !important;
+    //   font-size: 2em;
+    //   cursor: pointer;
+    // }
     .navigation {
       .nav-links {
         width: auto;
