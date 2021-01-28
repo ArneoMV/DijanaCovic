@@ -1,72 +1,59 @@
+@import "../1-helpers/_mixins.scss";
 .exhibitions {
  width: auto;
  height: 100%;
- display: grid;
+ padding: 0 2em;
  section {
-  width: auto;
-  height: auto;
+  width: 100%;
   display: grid;
   grid-gap: 1em;
+  max-width: 960px;
+  margin: 0 auto;
+  figure, img, figcaption {
+   width: auto;
+  }
   figure {
+   height: auto;
    place-self: center;
    img, figcaption {
-    width: 25vw;
-   } 
+    height: auto;
+    object-fit: cover;
+   }
+  }
+ }
+ img {
+  @include shadow();
+ }
+ 
+ @mixin mobile-screen {
+  section {
+   position: relative;
+   top: 8vh;
+   padding-bottom: 8vh;
+   height: auto;
+   grid-template-rows: 50% 50%;
+   figure, img, figcaption {
+    max-width: 250px;
+   }
   }
  }
 
- @mixin xs-screen {
+ @mixin desktop-screen {
   section {
-   grid-template-rows: 50% 50%;
-   figure {
-    img, figcaption {
-     width: 55vw;
-    } 
-   }
-  }
- }
- @mixin small-screen {
-  section {
-   grid-template-rows: 50% 50%;
-   figure {
-    img, figcaption {
-     width: 55vw;
-    } 
-   }
-  }
- }
- @mixin medium-screen {
-  section {
-   grid-template-rows: 50% 50%;
-   figure {
-    img, figcaption {
-     width: 55vw;
-    } 
-   }
-  }
- }
- @mixin large-screen {
-  section {
+   height: 100%;
    grid-template-columns: 50% 50%;
-  }
- }
- @mixin xl-screen {
-  section {
-   grid-template-columns: 50% 50%;
-  }
- }
- @mixin xxl-screen {
-  section {
-   grid-template-columns: 50% 50%;
+   figure, img, figcaption {
+    max-width: 350px;
+   }
   }
  }
   
- @include respond-to(extrasmall-screens) { @include xs-screen(); }
- @include respond-to(small-screens) {  @include small-screen(); }
- @include respond-to(medium-screens) {  @include medium-screen(); }
- @include respond-to(large-screens) {  @include large-screen(); }
- @include respond-to(extralarge-screens) {  @include xl-screen(); }
- @include respond-to(extraextralarge-screens) {  @include xxl-screen(); }
+ @include respond-to(extrasmall-screens) { @include mobile-screen(); }
+ @include respond-to(small-screens) {  @include mobile-screen(); }
+ @include respond-to(medium-screens) {  @include mobile-screen(); }
+ @include respond-to(large-screens) {  @include desktop-screen(); }
+ @include respond-to(extralarge-screens) {  @include desktop-screen(); }
+ @include respond-to(extraextralarge-screens) {  @include desktop-screen(); }
 
 
 }

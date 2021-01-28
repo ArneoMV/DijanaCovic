@@ -4,6 +4,9 @@
 // HORIZONTAL
 .text-container {
   margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-gap: 0.5em;
   .small-title {
     width: auto;
     text-align: center;
@@ -11,21 +14,21 @@
     font-size: 3rem;
     font-weight: 600;
    }
+   p {
+    max-width: 40ch;
+    text-align: justify;
+  }
 }
 
-
 .page1 {
-  height: 90vh;
+  height: auto;
   display: grid;
+  height: 100vh;
   .text-container {
     width: 80%;
     place-self: center;
     h1, h4 {
       text-align: left;
-    }
-    p {
-      max-width: 40ch;
-      text-align: justify;
     }
     .about-contact {
       display: flex;
@@ -107,16 +110,16 @@
 
 // PAGE3
 .page3 {
-  height: auto;
+  height: 100vh;
   width: auto;
   max-width: 960px;
-  margin: 0 auto;
-  padding-top: 10vh;
+  //margin: 20vh auto 0 auto;
+  display: grid;
+  align-items: center;
   .text-container {
+    align-self: end;
     p {
       margin: 0 auto;
-      max-width: 40ch;
-      text-align: justify;
     }
   }
   .page3-galery {
@@ -160,8 +163,6 @@
   width: auto;
   max-width: 960px;
   margin: 0 auto;
-  padding-top: 10vh;
-  padding: 10vh 1em 0 1em;
   .button-form {
     text-align: center;
   }

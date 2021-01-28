@@ -1,3 +1,10 @@
+.shadowed {
+  -webkit-filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
+  filter: url(#drop-shadow);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+
 /* 
 	Reset
 	http://meyerweb.com/eric/tools/css/reset/ 
@@ -86,15 +93,40 @@ ul {
 }
 
 main {
-  height: 90vh;
+  height: 100vh;
   width: 100vw;
   position: relative;
-  top: 10vh;
   z-index: 99;
   bottom: 0;
 }
+.filler {
+  padding-top: 10vh;
+}
+
+.middle {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .link_active {
   font-weight: 900 !important;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 0.5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #40785F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6db193;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #40785F;
 }
 
 /* Color */
@@ -102,10 +134,6 @@ main {
 img, iframe, object, embed, video {
   width: 100%;
   max-width: 100%;
-}
-
-figure {
-  padding: 1%;
 }
 
 figcaption {
@@ -376,7 +404,12 @@ p, a {
 }
 /* 12 COLUMN GRID */
 .container {
-  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.container-small {
+  width: 95%;
   height: auto;
   margin: 0 auto;
 }
@@ -474,6 +507,10 @@ p, a {
   .col-wd-12 {
     width: 100%;
   }
+
+  .container {
+    width: 90%;
+  }
 }
 @media screen and (min-width: 640px) {
   .col-md-1 {
@@ -522,6 +559,10 @@ p, a {
 
   .col-md-12 {
     width: 100%;
+  }
+
+  .container {
+    width: 85%;
   }
 }
 @media screen and (min-width: 960px) {
@@ -572,26 +613,43 @@ p, a {
   .col-sm-12 {
     width: 100%;
   }
+
+  .container {
+    width: 80%;
+  }
 }
 /* Grid layout */
+.Masonry {
+  padding-bottom: 130px;
+}
 .Masonry img {
   margin: 0.5em;
-  width: 100% !important;
-  height: auto !important;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 @media only screen and (min-width: 151px) and (max-width: 479px) {
   .Masonry {
     column-count: 1;
+    text-align: center;
+  }
+  .Masonry img {
+    height: 200px;
   }
 }
 @media only screen and (min-width: 321px) and (max-width: 479px) {
   .Masonry {
     column-count: 1;
+    text-align: center;
+  }
+  .Masonry img {
+    height: 250px;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 719px) {
   .Masonry {
     column-count: 2;
+    text-align: center;
   }
 }
 @media only screen and (min-width: 721px) and (max-width: 919px) {
@@ -858,6 +916,13 @@ header .navbar .navigation .nav-links a {
   }
 }
 
+.shadowed {
+  -webkit-filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
+  filter: url(#drop-shadow);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+
 /* Gallery */
 .gallery {
   width: 100%;
@@ -867,6 +932,7 @@ header .navbar .navigation .nav-links a {
 }
 .gallery .filters {
   height: 100%;
+  margin: 1em 0 0.5em 0;
 }
 .gallery form {
   position: relative;
@@ -880,11 +946,15 @@ header .navbar .navigation .nav-links a {
   overflow-x: hidden;
   margin: 0 1em;
 }
+.gallery .paintings .Masonry img {
+  border-radius: 3px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+}
 .gallery .filter_icon {
   display: none;
-  cursor: pointer;
   margin: 0 0 0 4em;
   position: relative;
+  cursor: pointer;
 }
 .gallery .filter_icon p {
   font-size: 1.3em;
@@ -962,6 +1032,13 @@ header .navbar .navigation .nav-links a {
   }
 }
 
+.shadowed {
+  -webkit-filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
+  filter: url(#drop-shadow);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+
 .products {
   width: auto;
   height: 100%;
@@ -976,6 +1053,8 @@ header .navbar .navigation .nav-links a {
   text-align: center;
   align-self: center;
   margin: 0 auto;
+  position: relative;
+  bottom: 50px;
 }
 .products .text h1 {
   font-size: 70px;
@@ -989,19 +1068,25 @@ header .navbar .navigation .nav-links a {
   text-transform: uppercase;
   letter-spacing: 4px;
 }
-.products .img {
+.products .products-gallery {
   width: 50%;
   padding: 0 30px;
   display: flex;
   justify-content: space-between;
 }
-.products .img .img-stripe {
+.products .products-gallery .img-stripe {
   width: calc(50% - 15px);
 }
-.products .img .stripe1 {
+.products .products-gallery .stripe1 {
   animation: stripe-one 60s ease 0s infinite;
 }
-.products img.img {
+.products .products-gallery img {
+  -webkit-filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
+  filter: url(#drop-shadow);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+.products img.products-gallery {
   width: 100%;
   margin: 15px;
 }
@@ -1009,15 +1094,18 @@ header .navbar .navigation .nav-links a {
   .products {
     overflow: hidden;
     display: grid;
-    padding-top: 10vh;
+    grid-template-rows: 35% auto;
   }
-  .products .img {
+  .products .text {
+    bottom: 0;
+  }
+  .products .products-gallery {
     width: 100%;
     height: auto;
     flex-wrap: wrap;
     display: block;
   }
-  .products .img .img-stripe {
+  .products .products-gallery .img-stripe {
     width: 100%;
     height: 30%;
     animation: none !important;
@@ -1026,13 +1114,16 @@ header .navbar .navigation .nav-links a {
     overflow-x: auto;
     transform: translateY(0) !important;
   }
-  .products .img .img-stripe img {
+  .products .products-gallery .img-stripe img {
     width: 33%;
     object-fit: contain;
     margin: 5px;
   }
 }
 @media only screen and (max-width: 480px) {
+  .products .text {
+    bottom: 0;
+  }
   .products .text h1 {
     font-size: 42px;
   }
@@ -1047,7 +1138,7 @@ header .navbar .navigation .nav-links a {
     /* It depends on your image stripe height */
   }
 }
-.img .stripe2 {
+.products-gallery .stripe2 {
   transform: translateY(-50%);
   /* It depends on your image stripe height */
   animation: stripe-two 60s ease 0s infinite;
@@ -1058,60 +1149,100 @@ header .navbar .navigation .nav-links a {
     transform: translateY(0%);
   }
 }
+.shadowed {
+  -webkit-filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
+  filter: url(#drop-shadow);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+
 .exhibitions {
   width: auto;
   height: 100%;
-  display: grid;
+  padding: 0 2em;
 }
 .exhibitions section {
-  width: auto;
-  height: auto;
+  width: 100%;
   display: grid;
   grid-gap: 1em;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.exhibitions section figure, .exhibitions section img, .exhibitions section figcaption {
+  width: auto;
 }
 .exhibitions section figure {
+  height: auto;
   place-self: center;
 }
 .exhibitions section figure img, .exhibitions section figure figcaption {
-  width: 25vw;
+  height: auto;
+  object-fit: cover;
+}
+.exhibitions img {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
 }
 @media only screen and (min-width: 151px) and (max-width: 479px) {
   .exhibitions section {
+    position: relative;
+    top: 8vh;
+    padding-bottom: 8vh;
+    height: auto;
     grid-template-rows: 50% 50%;
   }
-  .exhibitions section figure img, .exhibitions section figure figcaption {
-    width: 55vw;
+  .exhibitions section figure, .exhibitions section img, .exhibitions section figcaption {
+    max-width: 250px;
   }
 }
 @media only screen and (min-width: 321px) and (max-width: 479px) {
   .exhibitions section {
+    position: relative;
+    top: 8vh;
+    padding-bottom: 8vh;
+    height: auto;
     grid-template-rows: 50% 50%;
   }
-  .exhibitions section figure img, .exhibitions section figure figcaption {
-    width: 55vw;
+  .exhibitions section figure, .exhibitions section img, .exhibitions section figcaption {
+    max-width: 250px;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 719px) {
   .exhibitions section {
+    position: relative;
+    top: 8vh;
+    padding-bottom: 8vh;
+    height: auto;
     grid-template-rows: 50% 50%;
   }
-  .exhibitions section figure img, .exhibitions section figure figcaption {
-    width: 55vw;
+  .exhibitions section figure, .exhibitions section img, .exhibitions section figcaption {
+    max-width: 250px;
   }
 }
 @media only screen and (min-width: 721px) and (max-width: 919px) {
   .exhibitions section {
+    height: 100%;
     grid-template-columns: 50% 50%;
+  }
+  .exhibitions section figure, .exhibitions section img, .exhibitions section figcaption {
+    max-width: 350px;
   }
 }
 @media only screen and (min-width: 921px) and (max-width: 1199px) {
   .exhibitions section {
+    height: 100%;
     grid-template-columns: 50% 50%;
+  }
+  .exhibitions section figure, .exhibitions section img, .exhibitions section figcaption {
+    max-width: 350px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .exhibitions section {
+    height: 100%;
     grid-template-columns: 50% 50%;
+  }
+  .exhibitions section figure, .exhibitions section img, .exhibitions section figcaption {
+    max-width: 350px;
   }
 }
 
@@ -1121,6 +1252,9 @@ header .navbar .navigation .nav-links a {
 
 .text-container {
   margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-gap: 0.5em;
 }
 .text-container .small-title {
   width: auto;
@@ -1129,10 +1263,15 @@ header .navbar .navigation .nav-links a {
   font-size: 3rem;
   font-weight: 600;
 }
+.text-container p {
+  max-width: 40ch;
+  text-align: justify;
+}
 
 .page1 {
-  height: 90vh;
+  height: auto;
   display: grid;
+  height: 100vh;
 }
 .page1 .text-container {
   width: 80%;
@@ -1140,10 +1279,6 @@ header .navbar .navigation .nav-links a {
 }
 .page1 .text-container h1, .page1 .text-container h4 {
   text-align: left;
-}
-.page1 .text-container p {
-  max-width: 40ch;
-  text-align: justify;
 }
 .page1 .text-container .about-contact {
   display: flex;
@@ -1255,16 +1390,17 @@ header .navbar .navigation .nav-links a {
 }
 
 .page3 {
-  height: auto;
+  height: 100vh;
   width: auto;
   max-width: 960px;
-  margin: 0 auto;
-  padding-top: 10vh;
+  display: grid;
+  align-items: center;
+}
+.page3 .text-container {
+  align-self: end;
 }
 .page3 .text-container p {
   margin: 0 auto;
-  max-width: 40ch;
-  text-align: justify;
 }
 .page3 .page3-galery {
   height: auto;
@@ -1317,8 +1453,6 @@ header .navbar .navigation .nav-links a {
   width: auto;
   max-width: 960px;
   margin: 0 auto;
-  padding-top: 10vh;
-  padding: 10vh 1em 0 1em;
 }
 .page-contact .button-form {
   text-align: center;
@@ -1860,10 +1994,139 @@ input[type=checkbox]:checked:disabled + label:before {
   transform: scale(1);
 }
 
+.button-filter {
+  width: 100%;
+  border: 1px solid #151515;
+  background-color: transparent;
+  font-family: "Montserrat", sans-serif;
+  color: #40785F;
+  font-family: sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.85em;
+  letter-spacing: 2px;
+  line-height: 24px;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 0 0.5em 0;
+  margin: 1em 0;
+}
+
+.custom-btn {
+  width: 100%;
+  height: auto;
+  color: #FBFBFB;
+  border-radius: 3px;
+  padding: 1em 2em;
+  margin: 1.5em 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+/* 8 */
+.btn-8 {
+  background-color: #426643;
+  background-image: linear-gradient(315deg, #426643 0%, #008654 74%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+
+.btn-8 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-8:before,
+.btn-8:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #00a969;
+  /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+  												-4px -4px 6px 0 rgba(116, 125, 136, .2), 
+  		inset -4px -4px 6px 0 rgba(255,255,255,.5),
+  		inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+  transition: all 0.3s ease;
+}
+
+.btn-8:before {
+  height: 0%;
+  width: 2px;
+}
+
+.btn-8:after {
+  width: 0%;
+  height: 2px;
+}
+
+.btn-8:hover:before {
+  height: 100%;
+}
+
+.btn-8:hover:after {
+  width: 100%;
+}
+
+.btn-8:hover {
+  background: transparent;
+}
+
+.btn-8 span:hover {
+  color: #00a969;
+}
+
+.btn-8 span:before,
+.btn-8 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #00a969;
+  /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+  												-4px -4px 6px 0 rgba(116, 125, 136, .2), 
+  		inset -4px -4px 6px 0 rgba(255,255,255,.5),
+  		inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+  transition: all 0.3s ease;
+}
+
+.btn-8 span:before {
+  width: 2px;
+  height: 0%;
+}
+
+.btn-8 span:after {
+  height: 2px;
+  width: 0%;
+}
+
+.btn-8 span:hover:before {
+  height: 100%;
+}
+
+.btn-8 span:hover:after {
+  width: 100%;
+}
+
 /* Art deco button */
 .default {
   width: 100%;
-  max-width: 250px;
+  max-width: 200px;
   display: inline-block;
   position: relative;
   padding-left: 2rem;
@@ -1931,13 +2194,13 @@ input[type=checkbox]:checked:disabled + label:before {
 .deco span {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 0.85em;
   letter-spacing: 2px;
   line-height: 24px;
   display: inline-block;
   width: 100%;
   height: 100%;
-  padding: 8px 30px;
+  padding: 7px;
   position: relative;
   border: solid 1px #000;
   user-select: none;

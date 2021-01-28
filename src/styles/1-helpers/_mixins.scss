@@ -5,3 +5,27 @@
   justify-content: center;
   align-items: center;
 }
+
+// shadow
+@mixin shadow {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+	7px 7px 20px 0px rgba(0,0,0,.1),
+	4px 4px 5px 0px rgba(0,0,0,.1);
+}
+// @include shadow();
+
+@mixin shadow-png {
+  -webkit-filter: drop-shadow(inset 2px 2px 2px 0px rgba(255,255,255,.5),
+	                                  7px 7px 20px 0px rgba(0,0,0,.1),
+	                                  4px 4px 5px 0px rgba(0,0,0,.1));
+  filter: url(#drop-shadow);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+// @include shadow-png();
+.shadowed {
+  -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+  filter: url(#drop-shadow);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}

@@ -24,10 +24,9 @@ ul {
   padding: 0px;
 }
 main {
-  height: 90vh;
+  height: 100vh;
   width: 100vw;
   position: relative;
-  top: 10vh;
   z-index: 99;
   bottom: 0;
   .about {}
@@ -37,6 +36,28 @@ main {
   .about {}
 }
 
-
+.filler {
+  padding-top: 10vh;
+}
+.middle {
+  width: 100%;
+  margin: 0 auto;
+}
 // ACTIVE NAVIGATION
 .link_active {font-weight: 900 !important;}
+
+
+// scroll bar
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 0.5px;
+}
+*::-webkit-scrollbar-track {
+  background: $green-0;
+}
+::-webkit-scrollbar-thumb {
+  background: lighten($green-0, 20%);
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: $green-0;
+}
