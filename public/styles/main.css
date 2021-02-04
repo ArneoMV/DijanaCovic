@@ -1081,10 +1081,7 @@ header .navbar .navigation .nav-links a {
   animation: stripe-one 60s ease 0s infinite;
 }
 .products .products-gallery img {
-  -webkit-filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
-  filter: url(#drop-shadow);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  -webkit-filter: drop-shadow(2px 2px 2px 0px rgba(255, 255, 255, 0.5));
 }
 .products img.products-gallery {
   width: 100%;
