@@ -25,4 +25,20 @@ $(document).ready(function() {
   
   menuSlide();
 
+
+
+    // HIDE NAVIGATION ON SCROLL
+    let navBar = document.querySelector("header");
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        navBar.style.top = "0";
+      } else {
+        navBar.style.top = "-10vh";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  
+
 });

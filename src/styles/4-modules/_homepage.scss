@@ -1,3 +1,10 @@
+@mixin image__arch {
+
+    object-fit: cover;
+    border-radius: 49% 49% 0 0;
+}
+
+
 .homepage {
  margin: 0 auto 3em auto;
  width: 100vw;
@@ -42,6 +49,17 @@
   place-self: center;
   padding: 0 2em;
   div { padding: 1em 0;}
+  .home__button {
+      text-align: center;
+      a {
+        color: $gatsby-gold;
+        padding: 1em;
+        border: 1px solid $gatsby-gold;
+        width: auto;
+        max-width: 250px;
+        text-align: center;
+      }
+  }
  }
  .home__image {
   display: grid;
@@ -102,39 +120,126 @@
  }
 }
 
+// HOME 3
 .home3 {
- article {
-  h4 {}
-  .home3__textbox {}
- }
- .home__gallery {}
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    padding: 2em;
+    article {
+        align-self: center;
+        justify-self: center;
+        h4 {}
+        .home3__textbox {
+
+        }
+    }
+    .home__gallery {
+        align-self: center;
+        justify-self: center;
+        display: grid;
+        width: 80%;
+        img.home__gallery__image {
+            height: auto;
+            width: auto;
+            justify-self: center;
+        }
+        .gallery__navigation {
+            height: auto;
+            width: 80%;
+            justify-self: start;
+            img {
+                height: 48px;
+                width: auto;
+                margin: 1em;
+            }
+        }
+    }
+}
+
+// HOME 4
+.home4 {
+    width: 100%;
+    height: auto;
+    padding: 3em;
+    display: grid;
+    grid-gap: 2em;
+    article {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 2em;
+        img {
+            max-height: 500px;
+            max-width: 350px;
+            width: auto;
+            height: 400px;
+            object-fit: cover;
+            justify-self: center;
+            align-self: center;
+        }
+        h3 {
+            max-width: 30ch;
+        }
+        p {
+            text-align: justify;
+            max-width: 50ch;
+        }
+    }
+    article:nth-child(odd) {
+        img {
+            @include image__arch();
+        }
+        div {
+            justify-self: center;
+            align-self: center;
+            h3 {
+                color: $gatsby-gold;
+            }
+        }
+    }
+    article:nth-child(even) {
+        img {}
+        p {
+            justify-self: center;
+            align-self: center;
+        }
+    }
 }
 
 // resposnive
 
 @mixin mobile__screen {
- .home1 {
-  grid-template-rows: 60% 40%;
- }
- .home2 {
-  grid-template-rows: 50% 50%;
- }
+    .home1 {
+        grid-template-rows: 60% 40%;
+    }
+    .home2 {
+        grid-template-rows: 50% 50%;
+    }
+    .home3 {
+        grid-template-rows: 50% 50%;
+    }
 }
 @mixin tablet__screen {
- .home1 {
-  grid-template-columns: 60% 40%;
- }
- .home2 {
-  grid-template-columns: 50% 50%;
- }
+    .home1 {
+        grid-template-columns: 60% 40%;
+    }
+    .home2 {
+        grid-template-columns: 50% 50%;
+    }
+    .home3 {
+        grid-template-columns: 40% 60%
+    }
 }
 @mixin desktop__screen {
- .home1 {
-  grid-template-columns: 60% 40%;
- }
- .home2 {
-  grid-template-columns: 50% 50%;
- }
+    .home1 {
+        grid-template-columns: 60% 40%;
+    }
+    .home2 {
+        grid-template-columns: 50% 50%;
+    }
+    .home3 {
+        grid-template-columns: 40% 60%
+    }
 }
 
 @include respond-to(extrasmall-screens) { @include mobile__screen(); }
