@@ -1,0 +1,149 @@
+.homepage {
+ margin: 0 auto 3em auto;
+ width: 100vw;
+ height: auto;
+ section {
+  width: 100vw;
+  &:nth-child(1) { background-color: $green-1; }
+  &:nth-child(2) { background-color: $light; }
+  &:nth-child(3) { background-color:  $green-1; }
+  &:nth-child(4) { background-color: $light; }
+  &:nth-child(1), &:nth-child(2) { height: 100vh; }
+  &:nth-child(1), &:nth-child(3) { color: $light;}
+
+  &:nth-child(2) {
+   // background-image: url(../images/SVG/list_1.svg);
+   // background-repeat: no-repeat;
+   // background-size: 200px auto;
+  }
+ }
+
+ .pattern__backgroung {
+  background-image: url(../images/SVG/Pattern_ArtDeco.svg);
+  background-repeat: repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  width: 25vw;
+  float: right;
+  height: 100vh;
+ }
+
+ // HOME 1
+.home1 {
+ width: 100%;
+ height: 100vh;
+ display: grid;
+ position: relative;
+ z-index: 99;
+ .home__information {
+  height: auto;
+  place-self: center;
+  padding: 0 2em;
+  div { padding: 1em 0;}
+ }
+ .home__image {
+  display: grid;
+  img.front__image {
+   height: auto;
+   width: auto;
+   justify-self: start;
+   align-self: center;
+   object-fit: cover;
+   height: 70%;
+   width: 70%;
+   border-radius: 49% 49% 0 0;
+  }
+ }
+ 
+}
+
+// HOME 2
+.home2 {
+ width: 100vw;
+ height: 100vh;
+ display: grid;
+ width: 100vw;
+ margin: 0 auto;
+ .home2__title_container {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  place-self: center;
+
+  background-image: url(../images/SVG/list_1.svg);
+  background-repeat: no-repeat;
+  background-size: 25vw auto;
+  background-position: -30px bottom;
+  .home2__title {
+   width: 80%;
+   place-self: center;
+   color: $gatsby-gold;
+   font-size: 2em;
+  }
+ }
+
+ .home__icons {
+  padding: 0 3em 0 0;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  place-self: center;
+  img {
+   height: auto;
+   max-width: 68px;
+   min-width: 24px;
+  }
+  .objects__icons {
+   text-align: center;
+  }
+ }
+}
+
+.home3 {
+ article {
+  h4 {}
+  .home3__textbox {}
+ }
+ .home__gallery {}
+}
+
+// resposnive
+
+@mixin mobile__screen {
+ .home1 {
+  grid-template-rows: 60% 40%;
+ }
+ .home2 {
+  grid-template-rows: 50% 50%;
+ }
+}
+@mixin tablet__screen {
+ .home1 {
+  grid-template-columns: 60% 40%;
+ }
+ .home2 {
+  grid-template-columns: 50% 50%;
+ }
+}
+@mixin desktop__screen {
+ .home1 {
+  grid-template-columns: 60% 40%;
+ }
+ .home2 {
+  grid-template-columns: 50% 50%;
+ }
+}
+
+@include respond-to(extrasmall-screens) { @include mobile__screen(); }
+@include respond-to(small-screens) {  @include mobile__screen(); }
+@include respond-to(medium-screens) {  @include tablet__screen(); }
+@include respond-to(large-screens) {  @include tablet__screen(); }
+@include respond-to(extralarge-screens) {  @include desktop__screen(); }
+@include respond-to(extraextralarge-screens) {  @include desktop__screen(); }
+
+
+// kraj homepage
+}
