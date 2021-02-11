@@ -1,10 +1,21 @@
 .contact__social {
- display: flex;
- flex-direction: column;
- width: 250px;
- padding: 2em 0;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 0.5em 0;
+  h4 {
+    font-size: 1em;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif; 
+  }
+  p {
+    letter-spacing: 0.2em;
+  }
  .social {
    display: flex;
    margin: 10px 0 0 0;
+   i {
+    font-size: 2em;
+   }
  }
 }

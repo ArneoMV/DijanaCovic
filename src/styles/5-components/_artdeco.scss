@@ -1,44 +1,642 @@
-/******** ART DECO TRIPLE *********/
+
+/******** TRIPLE *********/
 .triple-deco-container {
- display: grid;
- grid-template-columns: 
-   [wide-start]  5px 
-   [mid-start]   5px 
-   [tall-start]  1fr 
-   [tall-end]    5px 
-   [mid-end]     5px 
-   [wide-end] 
- ;
- grid-template-rows: 
-   [tall-start]  5px 
-   [mid-start]   5px 
-   [wide-start]  1fr 
-   [wide-end]    5px 
-   [mid-end]     5px 
-   [tall-end] 
- ;
+  display: grid;
+  grid-template-columns: 
+    [wide-start]  5px 
+    [mid-start]   5px 
+    [tall-start]  1fr 
+    [tall-end]    5px 
+    [mid-end]     5px 
+    [wide-end] 
+  ;
+  grid-template-rows: 
+    [tall-start]  5px 
+    [mid-start]   5px 
+    [wide-start]  1fr 
+    [wide-end]    5px 
+    [mid-end]     5px 
+    [tall-end] 
+  ;
 /*   background-color: peachpuff; */
 }
 
 .triple-deco-container .triple-deco-content {
- grid-column: tall-start / tall-end;
- grid-row: wide-start / wide-end;
- padding: 1.5em;
- // background-color: $glove-white;
+  grid-column: tall-start / tall-end;
+  grid-row: wide-start / wide-end;
+  padding: 5px 10px;
+/*   background-color: lightblue; */
 /*   color: #000; */
 }
 
 .triple-deco-container .triple-deco-tall {
- grid-area: tall;
- border: 1px solid $authentic-brown;
+  grid-area: tall;
+  border: 1px solid $gatsby-gold;
+/*   background-color: plum; */
 }
 
 .triple-deco-container .triple-deco-mid {
- grid-area: mid;
- border: 1px solid $authentic-brown;
+  grid-area: mid;
+  border: 1px solid $gatsby-gold;
+/*   background-color: lightcoral; */
 }
 
 .triple-deco-container .triple-deco-wide {
- grid-area: wide;
- border: 1px solid $authentic-brown;
+  grid-area: wide;
+  border: 1px solid $gatsby-gold;
+/*   background-color: aquamarine; */
 }
+
+
+/********** STAIRSTEP ***********/
+.stair-deco-container {
+  display: grid;
+  grid-template-columns: 
+    [outer-start]  5px 
+    [mid-start]    5px 
+    [inner-start]  1fr 
+    [inner-end]    5px 
+    [mid-end]      5px 
+    [outer-end] 
+  ;
+  grid-template-rows: 
+    [inner-start]  5px 
+    [mid-start]    5px 
+    [outer-start]  1fr 
+    [outer-end]    5px 
+    [mid-end]      5px 
+    [inner-end] 
+  ;
+/*   background-color: peachpuff; */
+}
+
+.stair-deco-container .stair-deco-content {
+  grid-column: inner-start / inner-end;
+  grid-row: outer-start / outer-end;
+  padding: 5px 10px;
+/*   background-color: lightblue; */
+/*   color: #000; */
+}
+
+.stair-deco-container .stair-deco-outer-left {
+  grid-column: outer-start / mid-start;
+  grid-row: outer-start / outer-end;
+  border-left: 1px solid plum;
+  border-top: 1px solid plum;
+  border-bottom: 1px solid plum;
+}
+
+.stair-deco-container .stair-deco-outer-right {
+  grid-column: mid-end / outer-end;
+  grid-row: outer-start / outer-end;
+  border-right: 1px solid plum;
+  border-top: 1px solid plum;
+  border-bottom: 1px solid plum;
+}
+
+.stair-deco-container .stair-deco-mid-left {
+  grid-column: mid-start / inner-start;
+  grid-row: mid-start / mid-end;
+  border-top: 1px solid lightcoral;
+  border-bottom: 1px solid lightcoral;
+}
+
+.stair-deco-container .stair-deco-mid-right {
+  grid-column: inner-end / mid-end;
+  grid-row: mid-start / mid-end;
+  border-top: 1px solid lightcoral;
+  border-bottom: 1px solid lightcoral;
+}
+
+.stair-deco-container .stair-deco-mid-top {
+  grid-column: mid-start / mid-end;
+  grid-row: outer-start / mid-start;
+  border-left: 1px solid khaki;
+  border-right: 1px solid khaki;
+}
+
+.stair-deco-container .stair-deco-mid-bottom {
+  grid-column: mid-start / mid-end;
+  grid-row: mid-end / outer-end;
+  border-left: 1px solid khaki;
+  border-right: 1px solid khaki;
+}
+
+.stair-deco-container .stair-deco-inner-top {
+  grid-column: inner-start / inner-end;
+  grid-row: inner-start / mid-start;
+  border-left: 1px solid aquamarine;
+  border-right: 1px solid aquamarine;
+  border-top: 1px solid aquamarine;
+}
+
+.stair-deco-container .stair-deco-inner-bottom {
+  grid-column: inner-start / inner-end;
+  grid-row: mid-end / inner-end;
+  border-left: 1px solid aquamarine;
+  border-right: 1px solid aquamarine;
+  border-bottom: 1px solid aquamarine;
+}
+
+
+/********** SQUARE ***********/
+.square-deco-container {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: 
+    [outer-start]  5px 
+    [mid-start]    5px
+    [inner-start]  2px
+    [gap-start]    1fr
+    [gap-end]      2px
+    [inner-end]    5px
+    [mid-end]      5px 
+    [outer-end] 
+  ;
+  grid-template-rows: 
+    [outer-start]  5px 
+    [mid-start]    5px 
+    [inner-start]  2px
+    [gap-start]    1fr
+    [gap-end]      2px
+    [inner-end]    5px
+    [mid-end]      5px 
+    [outer-end] 
+  ;
+}
+
+.square-deco-container .square-deco-content {
+  grid-area: inner;
+  padding: 5px 10px;
+}
+
+.square-deco-container .square-deco-inner {
+  grid-area: mid;
+  border: 1px solid plum;
+}
+
+.square-deco-container .square-deco-square-left-top {
+  grid-column: outer-start / inner-start;
+  grid-row: outer-start / inner-start;
+  border: 1px solid lightcoral;
+}
+
+.square-deco-container .square-deco-square-left-bottom {
+  grid-column: outer-start / inner-start;
+  grid-row: inner-end / outer-end;
+  border: 1px solid lightcoral;
+}
+
+.square-deco-container .square-deco-square-right-top {
+  grid-column: inner-end / outer-end;
+  grid-row: outer-start / inner-start;
+  border: 1px solid lightcoral;
+}
+
+.square-deco-container .square-deco-square-right-bottom {
+  grid-column: inner-end / outer-end;
+  grid-row: inner-end / outer-end;
+  border: 1px solid lightcoral;
+}
+
+.square-deco-container .square-deco-tall {
+  grid-column: gap-start / gap-end;
+  grid-row: outer-start / outer-end;
+  border-top: 1px solid aquamarine;
+  border-bottom: 1px solid aquamarine;
+}
+
+.square-deco-container .square-deco-wide {
+  grid-column: outer-start / outer-end;
+  grid-row: gap-start / gap-end;
+  border-left: 1px solid khaki;
+  border-right: 1px solid khaki;
+}
+
+
+/********** DIAMOND ***********/
+.diamond-deco-container {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: 
+    [outer-start]  5px 
+    [mid-start]    5px
+    [inner-start]  3px
+    [gap-start]    1fr
+    [gap-end]      3px
+    [inner-end]    5px
+    [mid-end]      5px 
+    [outer-end] 
+  ;
+  grid-template-rows: 
+    [outer-start]  5px 
+    [mid-start]    5px 
+    [inner-start]  3px
+    [gap-start]    1fr
+    [gap-end]      3px
+    [inner-end]    5px
+    [mid-end]      5px 
+    [outer-end] 
+  ;
+}
+
+.diamond-deco-container .diamond-deco-content {
+  grid-area: inner;
+  padding: 5px 10px;
+}
+
+.diamond-deco-container .diamond-deco-square-left-top {
+  grid-column: outer-start / inner-start;
+  grid-row: outer-start / inner-start;
+  transform: rotate(45deg);
+  border: 1px solid lightcoral;
+}
+
+.diamond-deco-container .diamond-deco-square-left-bottom {
+  grid-column: outer-start / inner-start;
+  grid-row: inner-end / outer-end;
+  transform: rotate(45deg);
+  border: 1px solid lightcoral;
+}
+
+.diamond-deco-container .diamond-deco-square-right-top {
+  grid-column: inner-end / outer-end;
+  grid-row: outer-start / inner-start;
+  transform: rotate(45deg);
+  border: 1px solid lightcoral;
+}
+
+.diamond-deco-container .diamond-deco-square-right-bottom {
+  grid-column: inner-end / outer-end;
+  grid-row: inner-end / outer-end;
+  transform: rotate(45deg);
+  border: 1px solid lightcoral;
+}
+
+.diamond-deco-container .diamond-deco-tall-outer {
+  grid-column: gap-start / gap-end;
+  grid-row: outer-start / outer-end;
+  border-top: 1px solid aquamarine;
+  border-bottom: 1px solid aquamarine;
+}
+
+.diamond-deco-container .diamond-deco-tall-inner {
+  grid-column: gap-start / gap-end;
+  grid-row: inner-start / inner-end;
+  border-top: 1px solid aquamarine;
+  border-bottom: 1px solid aquamarine;
+}
+
+.diamond-deco-container .diamond-deco-wide-outer {
+  grid-column: outer-start / outer-end;
+  grid-row: gap-start / gap-end;
+  border-left: 1px solid khaki;
+  border-right: 1px solid khaki;
+}
+
+.diamond-deco-container .diamond-deco-wide-inner {
+  grid-column: inner-start / inner-end;
+  grid-row: gap-start / gap-end;
+  border-left: 1px solid khaki;
+  border-right: 1px solid khaki;
+}
+
+
+/********* TRIPLE DIAMOND DIVIDER *********/
+.triple-diamond-deco-container {
+  display: grid;
+  grid-template-columns: 
+    [line-start]    1fr
+    [small-start]   8px
+    [large-start]   2px
+    [small-end]   12px
+    [small-start]  2px
+    [large-end]     8px
+    [small-end]     1fr
+    [line-end]
+  ;
+  grid-template-rows: 
+    [large-start] 3px
+    [small-start] 5px
+    [midline]     5px
+    [small-end]   3px
+    [large-end]   
+  ;
+/*   background-color: peachpuff; */
+}
+
+.triple-diamond-deco-container .left-line {
+  grid-column: line-start / small-end 1;
+  grid-row: midline / large-end;
+  border-top: 1px solid $gatsby-gold;
+}
+
+.triple-diamond-deco-container .right-line {
+  grid-column: small-start 2 / line-end;
+  grid-row: midline / large-end;
+  border-top: 1px solid $gatsby-gold;
+}
+
+.triple-diamond-deco-container .small-diamond-left {
+  grid-column: small-start 1 / small-end 1;
+  grid-row: small-start / small-end;
+  transform: rotate(45deg);
+  border: 1px solid $gatsby-gold;
+}
+
+.triple-diamond-deco-container .small-diamond-right {
+  grid-column: small-start 2 / small-end 2;
+  grid-row: small-start / small-end;
+  transform: rotate(45deg);
+  border: 1px solid $gatsby-gold;
+}
+
+.triple-diamond-deco-container .large-diamond {
+  grid-area: large;
+  transform: rotate(45deg);
+  border: 1px solid $gatsby-gold;
+}
+
+
+/******** CORNERS ********/
+.corners-deco-container {
+  display: grid;
+  grid-template-columns: 
+    [corner-start]  5px
+    [square-start]  5px
+    [edge-start]    5px
+    [square-end]    5px
+    [corner-end]    25px
+    [edge-end]      1fr
+    [edge-start]    25px
+    [corner-start]  5px
+    [square-start]  5px
+    [edge-end]      5px
+    [square-end]    5px
+    [corner-end]
+  ;
+  grid-template-rows: 
+    [corner-start]  5px 
+    [square-start]  5px
+    [edge-start]    5px
+    [square-end]    5px
+    [corner-end]    25px
+    [edge-end]      1fr
+    [edge-start]    25px
+    [corner-start]  5px
+    [square-start]  5px
+    [edge-end]      5px
+    [square-end]    5px
+    [corner-end]
+  ;
+  min-width: 75px;
+  min-height: 120px;
+/*   background-color: peachpuff; */
+}
+
+.corners-deco-container .content {
+  grid-column: corner-end 1 / corner-start 2;
+  grid-row: corner-end 1 / corner-start 2;
+  padding: 5px 10px;
+/*   background-color: lightblue; */
+}
+
+.corners-deco-container .square-left-top {
+  grid-column: square-start 1 / square-end 1;
+  grid-row: square-start 1 / square-end 1;
+  border: 1px dotted $gatsby-gold;
+/*   background-color: plum; */
+}
+
+.corners-deco-container .square-left-bottom {
+  grid-column: square-start 1 / square-end 1;
+  grid-row: square-start 2 / square-end 2;
+  border: 1px dotted $gatsby-gold;
+/*   background-color: plum; */
+}
+
+.corners-deco-container .square-right-top {
+  grid-column: square-start 2 / square-end 2;
+  grid-row: square-start 1 / square-end 1;
+  border: 1px dotted $gatsby-gold;
+/*   background-color: plum; */
+}
+
+.corners-deco-container .square-right-bottom {
+  grid-column: square-start 2 / square-end 2;
+  grid-row: square-start 2 / square-end 2;
+  border: 1px dotted $gatsby-gold;
+/*   background-color: plum; */
+}
+
+.corners-deco-container .horizontal-edge-left {
+  grid-column: edge-start 1 / edge-end 1;
+  grid-row: edge-start 1 / edge-end 2;
+  border-top: 1px dotted $gatsby-gold;
+  border-bottom: 1px dotted $gatsby-gold;
+/*   background-color: khaki; */
+}
+
+.corners-deco-container .horizontal-edge-right {
+  grid-column: edge-start 2 / edge-end 2;
+  grid-row: edge-start 1 / edge-end 2;
+  border-top: 1px dotted $gatsby-gold;
+  border-bottom: 1px dotted $gatsby-gold;
+/*   background-color: khaki; */
+}
+
+.corners-deco-container .vertical-edge-left {
+  grid-column: edge-start 1 / edge-end 2;
+  grid-row: edge-start 1 / edge-end 1; 
+  border-left: 1px dotted $gatsby-gold;
+  border-right: 1px dotted $gatsby-gold;
+/*   background-color: sandybrown; */
+}
+
+.corners-deco-container .vertical-edge-right {
+  grid-column: edge-start 1 / edge-end 2;
+  grid-row: edge-start 2 / edge-end 2;
+  border-left: 1px dotted $gatsby-gold;
+  border-right: 1px dotted $gatsby-gold;
+/*   background-color: sandybrown; */
+}
+
+.corners-deco-container .left-outer {
+  grid-column: corner-start 1 / corner-end 1;
+  grid-row: corner-start 1 / corner-end 2;
+  border-top: 1px solid $gatsby-gold;
+  border-bottom: 1px solid $gatsby-gold;
+/*   background-color: aquamarine; */
+}
+
+.corners-deco-container .right-outer {
+  grid-column: corner-start 2 / corner-end 2;
+  grid-row: corner-start 1 / corner-end 2;
+  border-top: 1px solid $gatsby-gold;
+  border-bottom: 1px solid $gatsby-gold;
+/*   background-color: aquamarine; */
+}
+
+.corners-deco-container .top-outer {
+  grid-column: corner-start 1 / corner-end 2;
+  grid-row: corner-start 1 / corner-end 1;
+  border-left: 1px solid $gatsby-gold;
+  border-right: 1px solid $gatsby-gold;
+/*   background-color: aquamarine; */
+}
+
+.corners-deco-container .bottom-outer {
+  grid-column: corner-start 1 / corner-end 2;
+  grid-row: corner-start 2 / corner-end 2;
+  border-left: 1px solid $gatsby-gold;
+  border-right: 1px solid $gatsby-gold;
+/*   background-color: aquamarine; */
+}
+
+.corners-deco-container .left-inner {
+  grid-column: corner-start 1 / edge-start 1;
+  grid-row: corner-end 1 / corner-start 2;
+  border-top: 1px solid $gatsby-gold;
+  border-bottom: 1px solid $gatsby-gold;
+/*   background-color: lightpink; */
+}
+
+.corners-deco-container .right-inner {
+  grid-column: edge-end 2 / corner-end 2;
+  grid-row: corner-end 1 / corner-start 2;
+  border-top: 1px solid $gatsby-gold;
+  border-bottom: 1px solid $gatsby-gold;
+/*   background-color: lightpink; */
+}
+
+.corners-deco-container .top-inner {
+  grid-column: corner-end 1 / corner-start 2;
+  grid-row: corner-start 1 / edge-start 1;
+  border-left: 1px solid $gatsby-gold;
+  border-right: 1px solid $gatsby-gold;
+/*   background-color: lightpink; */
+}
+
+.corners-deco-container .bottom-inner {
+  grid-column: corner-end 1 / corner-start 2;
+  grid-row: edge-end 2 / corner-end 2;
+  border-left: 1px solid $gatsby-gold;
+  border-right: 1px solid $gatsby-gold;
+/*   background-color: lightpink; */
+}
+
+/******** TITLE ********/
+.title-deco-container {
+  /* 120 60 20 */
+  display: grid;
+  grid-template-columns:    
+    [start]       1fr
+    [mid-start]   20px
+    [small-start] 10px
+    [main-start]  5px
+    [inner-start] 5px
+    [small-end]   20px
+    [mid-end]     80px
+    [mid-start]   20px
+    [small-start] 5px
+    [inner-end]   5px
+    [main-end]    10px
+    [small-end]   20px
+    [mid-end]     1fr
+    [end]
+  ;
+  grid-template-rows:
+    [main-start]    5px
+    [inner-start]   15px
+    [small-start]   20px
+    [mid-start small-end]     10px
+    [dot-start]     5px
+    [content-start] 30px
+    [content-end]   5px
+    [dot-end]       10px
+    [mid-end small-start]   20px
+    [small-end]     15px
+    [inner-end]     5px
+    [main-end]
+  ;
+}
+
+.title-deco-container .content {
+  grid-column: start / end;
+  grid-row: content-start / content-end;
+  z-index: 100;
+  border-top: 1px solid sandybrown;
+  border-bottom: 1px solid sandybrown;
+}
+
+.title-deco-container .content-dot {
+  grid-column: start / end;
+  grid-row: dot-start / dot-end;
+  border-top: 1px dotted green;
+  border-bottom: 1px dotted green;
+}
+
+.title-deco-container .main-diamond-outer {
+  grid-area: main;
+  transform: rotate(45deg);
+  z-index: 50;
+  border: 1px solid aquamarine;
+  background-color: #000;
+}
+
+.title-deco-container .main-diamond-inner {
+  grid-area: inner;
+  transform: rotate(45deg);
+  z-index: 60;
+  border: 1px dotted green;
+}
+
+.title-deco-container .mid-diamond-left {
+  grid-column: mid-start 1 / mid-end 1;
+  grid-row: mid-start / mid-end;
+  transform: rotate(45deg);
+  z-index: 40;
+/*   z-index: 999; */
+  border: 1px solid lightcoral;
+  background-color: #000;
+}
+
+.title-deco-container .mid-diamond-right {
+  grid-column: mid-start 2 / mid-end 2;
+  grid-row: mid-start / mid-end;
+  transform: rotate(45deg);
+  z-index: 40;
+/*   z-index: 30; */
+  border: 1px solid lightcoral;
+  background-color: #000;
+}
+
+.title-deco-container .small-diamond-left-top {
+  grid-column: small-start 1 / small-end 1;
+  grid-row: small-start 1 / small-end 1;
+  transform: rotate(45deg);
+/*   z-index: 1000; */
+  border: 1px dotted plum;
+}
+
+.title-deco-container .small-diamond-left-bottom {
+  grid-column: small-start 1 / small-end 1;
+  grid-row: small-start 2 / small-end 2;
+  transform: rotate(45deg);
+  border: 1px dotted plum;
+}
+
+.title-deco-container .small-diamond-right-top {
+  grid-column: small-start 2 / small-end 2;
+  grid-row: small-start 1 / small-end 1;
+  transform: rotate(45deg);
+  border: 1px dotted plum;
+}
+
+.title-deco-container .small-diamond-right-bottom {
+  grid-column: small-start 2 / small-end 2;
+  grid-row: small-start 2 / small-end 2;
+  transform: rotate(45deg);
+  border: 1px dotted plum;
+}
+
