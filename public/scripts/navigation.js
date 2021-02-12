@@ -4,7 +4,6 @@ $(document).ready(function() {
   const menuSlide = () => {
     const menuIcon = document.querySelector(".menu-icon");
     const navLinks = document.querySelector(".nav-links");
-    //const navLinksInner = document.querySelectorAll(".nav-links a");
   
     //menu-icon click event
     menuIcon.addEventListener("click", () => {
@@ -27,18 +26,19 @@ $(document).ready(function() {
 
 
 
-    // HIDE NAVIGATION ON SCROLL
-    let navBar = document.querySelector("header");
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        navBar.style.top = "0";
-      } else {
-        navBar.style.top = "-10vh";
-      }
-      prevScrollpos = currentScrollPos;
+  // HIDE NAVIGATION ON SCROLL
+  const header = document.querySelector("header");
+  var prevScrollpos = window.pageYOffset;
+
+  window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      header.style.top = "0";
+    } else {
+      header.style.top = "-8vh";
     }
+    prevScrollpos = currentScrollPos;
+  }
   
 
 });

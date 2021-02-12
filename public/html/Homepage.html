@@ -152,8 +152,8 @@
         <h4>Contact</h4>
         <p>dijanacovichrt@gmail.com</p>
         <div class="social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><img src="images\icons\facebook.svg" alt=""></a>
+          <a href="#"><img src="images\icons\instagram.svg" alt=""></a>
         </div>
       </div>
     </div>
@@ -242,29 +242,26 @@ $(document).ready(function() {
 
 //  DROPDOWN STYLE
     if (typeof selectbox == 'undefined') {
-
-
-        const selectbox_contactForm = document.getElementById("selectbox_contactForm");
-        const click_dropdown_contactForm = document.getElementById("click_dropdown_contactForm");
-        const options_contactForm = document.querySelectorAll(".options_contactForm");
+      const selectbox_contactForm = document.getElementById("selectbox_contactForm");
+      const click_dropdown_contactForm = document.getElementById("click_dropdown_contactForm");
+      const options_contactForm = document.querySelectorAll(".options_contactForm");
        
-        const submitbtn = document.getElementById('btn_form');
+      // CONTACT BUTTON SEND
+      const submitbtn = document.getElementById('btn_form');
 
-        //  Contact Form
-        // Open dropdown
-        click_dropdown_contactForm.addEventListener("click", (e) => {
-            e.stopPropagation();
-            selectbox_contactForm.classList.toggle("selectbox--active");
-        });
-        // Show selected items
-        options_contactForm.forEach((option, index) => {
-            option.addEventListener("click", (e) => {
-                e.stopPropagation();
-            });
-        });
-
+      //  Contact Form
+      // Open dropdown
+      click_dropdown_contactForm.addEventListener("click", (e) => {
+          e.stopPropagation();
+          selectbox_contactForm.classList.toggle("selectbox--active");
+      });
+      // Show selected items
+      options_contactForm.forEach((option, index) => {
+          option.addEventListener("click", (e) => {
+              e.stopPropagation();
+          });
+      });
     }
-
 });
 
 </script>
