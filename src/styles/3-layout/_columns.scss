@@ -3,7 +3,7 @@
 .container {
 	height: auto;
 	margin: 0 auto;
-    border: 2px dotted blue;
+    //border: 2px dotted blue;
 }
 @mixin mobile__screen {
     .container { width: 90%; margin: 0 auto}
