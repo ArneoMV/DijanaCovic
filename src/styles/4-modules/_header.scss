@@ -1,134 +1,282 @@
 
+// /* HEADER*/
+/* Navigation */
+@import "../3-layout/_breakpoint.scss";
+@import "../1-helpers/_mixins.scss";
+@import "../2-base/_colors.scss";
 
-header {
-  height: 8vh;
-  width: 100%;
-  transition: ease-in 0.4s;
+#navBar {
   position: fixed;
-  top: 0;
-  display: block;
   z-index: 9999;
-  margin: 0;
-  border-bottom: 2px solid $gatsby-gold;
-  background: $green-1;
-  .navbar {
-    position: absolute;
-    z-index: 999;
-    left: 50%;
-    transform: translate(-50%);
-    height: 8vh;
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    img {
-      width: 180px;
-      height: auto;
-      margin-top: 15px;
-    }
-
-    .navigation {
-      .nav-links {
-        width: auto;
-        display: flex;
-        justify-content: end;
-        align-self: center;
-        position: relative;
-        &.menu-active {
-          transform: translateX(0%);
-          opacity: 1;
-        }
-        a {
-          color: $light;
-          text-decoration: none;
-          letter-spacing: 3px;
-          font-weight: 400;
-          font-size: 1em;
-          position: relative;
-          top: 0.5vh;
-          padding: 0 0.5em;
-          cursor: pointer;
-        }
-      }
-    }
+  top: 0;
+  width: 100%;
+  height: 8vh;
+  display: block;
+  transition: top 0.3s;
+  background-image: url("../images/patterns/assault.png");
+}
+#logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: top 0.3s;
+  z-index: 99999;
+  @media only screen and (max-width: 950px) {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+  }
+}
+.logo {
+  padding: 0 2vh;
+  min-width: 200px;
+  height: 8vh;
+  width: 20%;
+  display: block;
+}
+.nav-links {
+  a {
+    color: $light;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 1em;
+    position: relative;
+    top: 0.5vh;
   }
 }
 
-// Hamburger
-.navbar .menu-icon {
+// NAVIGATION DESKTOP
+nav {
+  width: 100%;
+  height: 8vh;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-around;
+  align-items: center;
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    align-self: center;
+    position: relative;
+    left: 20%;
+    top: 0.5vh;
+  }
+  @media only screen and (max-width: 950px) {
+    .nav-links {
+      display: none;
+    }
+  }
+}
+.nav-mobile {
+  width: 0;
+  height: 100%;
+  background-color: $dark;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  transition: width 600ms ease-in-out;
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 100vh;
+    top: 0;
+    display: grid;
+    width: 100%;
+    grid-template-rows: repeat(6, 50px);
+    justify-items: center;
+    align-items: center;
+    padding-top: 100px;
+    opacity: 0;
+    transition: opacity 450ms ease-in-out;
+  }
+}
+.nav-mobile.is-active { 
+  display: block;
+  width: 100%;
+  .nav-links {
+    opacity: 1;
+  }
+  @media only screen and (min-width: 950px) {
+    display: none;
+  }
+}
+
+/* Hamburger Icon */
+.burger {
   display: none;
   cursor: pointer;
-  flex-grow: 1;
-  span {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999999;
+  padding: 2vh;
+  @media only screen and (max-width: 950px) {
     display: block;
-    border-radius: 15px;
-    width: 33px;
-    height: 2px;
-    background-color: $dark;
-    margin: 5px;
-    transition: all 0.4s ease;
   }
+
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: $light;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px) }
+.toggle .line2 { opacity: 0 }
+.toggle .line3 { transform: rotate(45deg) translate(-5px, -6px) }
+
+
+
+
+@media only screen and (max-width: 950px) {
+  .logo-hide { display: none;}
 }
 
 
 
-@media screen and (max-width: 780px) {
-  header {
-    .navbar {
-      h1 {
-        flex-grow: 1;
-      }
-      .navigation {
-        .nav-links {
-          height: 90vh;
-          width: 100%;
-          position: absolute;
-          top: 10vh;
-          left: 0px;
-          justify-content: center;
-          flex-direction: column;
-          align-items: center;
-          background-color: rgba(0, 0, 0, 1);
-          transform: translateX(-100%);
-          transition: transform 0.5s ease-in;
-          z-index: 99;
-          a {
-            color: $light;
-            padding: 1.3em 0;
-          }
-        }
-        .menu-icon {
-          display: block;
-          z-index: 99999;
-        }
-      }
-    }
-  }
-}
+
+
+/* OLD */
+// header {
+//   height: 8vh;
+//   width: 100%;
+//   transition: ease-in 0.4s;
+//   position: fixed;
+//   top: 0;
+//   display: block;
+//   z-index: 9999;
+//   margin: 0;
+//   border-bottom: 2px solid $gatsby-gold;
+//   background: $green-1;
+//   .navbar {
+//     position: absolute;
+//     z-index: 999;
+//     left: 50%;
+//     transform: translate(-50%);
+//     height: 8vh;
+//     width: 80%;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     img {
+//       width: 180px;
+//       height: auto;
+//       margin-top: 15px;
+//     }
+
+//     .navigation {
+//       .nav-links {
+//         width: auto;
+//         display: flex;
+//         justify-content: end;
+//         align-self: center;
+//         position: relative;
+//         &.menu-active {
+//           transform: translateX(0%);
+//           opacity: 1;
+//         }
+//         a {
+//           color: $light;
+//           text-decoration: none;
+//           letter-spacing: 3px;
+//           font-weight: 400;
+//           font-size: 1em;
+//           position: relative;
+//           top: 0.5vh;
+//           padding: 0 0.5em;
+//           cursor: pointer;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// // Hamburger
+// .navbar .menu-icon {
+//   display: none;
+//   cursor: pointer;
+//   flex-grow: 1;
+//   span {
+//     display: block;
+//     border-radius: 15px;
+//     width: 33px;
+//     height: 2px;
+//     background-color: $light;
+//     margin: 5px;
+//     transition: all 0.4s ease;
+//   }
+// }
 
 
 
-// Hamburger animation
-@keyframes navLinkAnime {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-.navbar .menu-icon.span-anime {
-  span {
-    &:first-child {
-      transform: rotate(-135deg) translate(-16px, 10px);
-      margin-left: -14px;
-    }
-    &:nth-child(2) { opacity: 0; }
-    &:last-child {
-      transform: rotate(135deg) translate(-20px, -5px);
-      margin-left: -14px;
-    }
-  }
-}
+// @media screen and (max-width: 780px) {
+//   header {
+//     .navbar {
+//       width: 100%;
+//       .logo {
+//         margin-left: 2em;
+//       }
+//       .navigation {
+//         .nav-links {
+//           height: 100vh;
+//           width: 100%;
+//           position: absolute;
+//           top: 8vh;
+//           left: 0px;
+//           justify-content: center;
+//           flex-direction: column;
+//           align-items: center;
+//           background-color: rgba(0, 0, 0, 1);
+//           transform: translateX(-100%);
+//           transition: transform 0.5s ease-in;
+//           z-index: 99;
+//           a {
+//             color: $light;
+//             padding: 1.3em 0;
+//           }
+//         }
+//         .menu-icon {
+//           display: block;
+//           z-index: 99999;
+//           margin-right: 2em;
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+
+// // Hamburger animation
+// @keyframes navLinkAnime {
+//   from {
+//     opacity: 0;
+//     transform: translateX(-50px);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: translateX(0px);
+//   }
+// }
+// .navbar .menu-icon.span-anime {
+//   span {
+//     &:first-child {
+//       transform: rotate(-135deg) translate(-16px, 10px);
+//       margin-left: -14px;
+//     }
+//     &:nth-child(2) { opacity: 0; }
+//     &:last-child {
+//       transform: rotate(135deg) translate(-20px, -5px);
+//       margin-left: -14px;
+//     }
+//   }
+// }

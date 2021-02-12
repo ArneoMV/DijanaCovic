@@ -4,14 +4,7 @@
     <div class="text-container">
       <h1 class="black-title">Self - Portrait</h1>
       <p class="tx-1">Dijana Čović is Croatian painter based in Zagreb. Her bold, victorian style - often described as Croatian oil painter, and TV journalist. Television is my work, art is my love. I live in Zagreb and was born in Vukovar.</p> 
-      <div class="contact__social">
-        <h4>Contact</h4>
-        <p>dijanacovichrt@gmail.com</p>
-        <div class="social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
+
     </div> 
     <img class="avatar trigger-image" src="images/avatar/woman_painting.png" alt="">
   </section>
@@ -43,14 +36,13 @@
 
 
   <!-- FOOTER -->
-  <div class="footer">
-
-  </div>
-
+  <div id="footer"></div>
 </div>
 
 
-
+<script>
+  $("#footer").load("html/Footer.html");
+</script>
 <script src="scripts/contact.js"></script>
 <script>
 let scroll_tl = gsap.timeline({

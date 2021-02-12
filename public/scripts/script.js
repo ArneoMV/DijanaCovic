@@ -1,7 +1,9 @@
 // NAVIGATION
 $(document).ready(function() {
 
+$("#header").load("html/Header.html");
 $("#main").load("html/Homepage.html");
+
 // ActivitiesContent Navigacija
 function navbarLinks(navigateTo) {
   let navbarLinksID = [".nav-home",".nav-gallery", ".nav-exhibitions", ".nav-products", ".nav-about"];
