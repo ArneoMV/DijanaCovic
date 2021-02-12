@@ -3,6 +3,7 @@ $(document).ready(function() {
 
 //  DROPDOWN STYLE
     if (typeof selectbox == 'undefined') {
+
         const selectbox_style = document.getElementById("selectbox_style");
         const selectbox_technique = document.getElementById("selectbox_technique");
 
@@ -15,6 +16,8 @@ $(document).ready(function() {
         const submitbtn = document.getElementById('btn_form');
 
 
+
+
         // DROPDOWN STYLE
         // Open dropdown
         click_dropdown_style.addEventListener("click", (e) => {
@@ -25,16 +28,8 @@ $(document).ready(function() {
         options_style.forEach((option, index) => {
             option.addEventListener("click", (e) => {
                 e.stopPropagation();
-                //let label = option.querySelector("label");
-                //selectboxDisplay.innerHTML = label.innerHTML;
-                //selectbox.setAttribute("data-option", label.getAttribute("data-value"));
-                //selectbox.classList.remove("selectbox--active", "selectbox--unselect");
             });
         });
-        // close dropdown when option is clicked
-        // window.addEventListener("click", () => {
-        //     selectbox_style.classList.remove("selectbox--active");
-        // });
 
         // DROPDOWN TECHNIQUE
         // Open dropdown
@@ -73,19 +68,6 @@ $(document).ready(function() {
         console.log("Selected Price is: " + PriceMin);
         console.log("Selected Price is: " + PriceMax);
 
-
-
     });
-
-
-
-
-
-
-
-
-
-
-
 
 });

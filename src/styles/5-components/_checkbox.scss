@@ -24,9 +24,6 @@ input[type=checkbox] + label:before {
  transition: .2s;
 }
 
-input[type=checkbox] + label:active:before {
- // transform: scale(0);
-}
 
 input[type=checkbox]:checked + label:before {
  background-color: $dark;

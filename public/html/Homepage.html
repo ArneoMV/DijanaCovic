@@ -161,31 +161,31 @@
   <div class="square-deco-container container">
     <div class="square-deco-content">
 
-      <form action="#" method="post" class="form" id="contact_form">
+    <form action="#" method="post" class="form" id="contact_form">
         <fieldset>
             <!-- DROPDOWN  -->
             <div class="contact-dropbox-container">
                 <p>What are u interested in?</p>
-                <div class="selectbox selectbox--unselect" data-option="">
-                    <div class="selectbox__displayWord">
+                <div id="selectbox_contactForm" class="selectbox selectbox--unselect" data-option="">
+                    <div id="click_dropdown_contactForm" class="selectbox__displayWord">
                         -- CHOOSE --
                     </div>
                     <div class="option-container">
-                        <div class="option-container__option">
-                            <input type="radio" class="option__radio" id="type01" name="category" value="BuyPainting">
-                            <label class="option__label" for="type02" data-value="BuyPainting">I want to buy painting</label>
+                        <div class="dropdown_options options_contactForm">
+                            <input type="checkbox" class="option__checkbox" id="form01" name="category" value="BuyPainting">
+                            <label class="option__label" for="form01" data-value="BuyPainting">I want to buy painting</label>
                         </div>
-                        <div class="option-container__option">
-                            <input type="radio" class="option__radio" id="type02" name="category"value="ItemDesign">
-                            <label class="option__label" for="type02" data-value="ItemDesign">I want an item with your design</label>
+                        <div class="dropdown_options options_contactForm">
+                            <input type="checkbox" class="option__checkbox" id="form02" name="category" value="ItemDesign">
+                            <label class="option__label" for="form02" data-value="ItemDesign">I want an item with your design</label>
                         </div>
-                        <div class="option-container__option">
-                            <input type="radio" class="option__radio" id="type03" name="category"value="CostumPainting">
-                            <label class="option__label" for="type03" data-value="CostumPainting">I want you to paint a picture for me</label>
+                        <div class="dropdown_options options_contactForm">
+                            <input type="checkbox" class="option__checkbox" id="form03" name="category" value="CostumPainting">
+                            <label class="option__label" for="form03" data-value="CostumPainting">I want you to paint a picture for me</label>
                         </div>
-                        <div class="option-container__option">
-                            <input type="radio" class="option__radio" id="type05" name="category" value="Other">
-                            <label class="option__label" for="type05" data-value="Other">Other</label>
+                        <div class="dropdown_options options_contactForm">
+                            <input type="checkbox" class="option__checkbox" id="form05" name="category" value="Other">
+                            <label class="option__label" for="form05" data-value="Other">Other</label>
                         </div>
                     </div>
                 </div>
@@ -235,3 +235,36 @@
   </div>
 
 </footer>
+
+<script>
+  
+$(document).ready(function() { 
+
+//  DROPDOWN STYLE
+    if (typeof selectbox == 'undefined') {
+
+
+        const selectbox_contactForm = document.getElementById("selectbox_contactForm");
+        const click_dropdown_contactForm = document.getElementById("click_dropdown_contactForm");
+        const options_contactForm = document.querySelectorAll(".options_contactForm");
+       
+        const submitbtn = document.getElementById('btn_form');
+
+        //  Contact Form
+        // Open dropdown
+        click_dropdown_contactForm.addEventListener("click", (e) => {
+            e.stopPropagation();
+            selectbox_contactForm.classList.toggle("selectbox--active");
+        });
+        // Show selected items
+        options_contactForm.forEach((option, index) => {
+            option.addEventListener("click", (e) => {
+                e.stopPropagation();
+            });
+        });
+
+    }
+
+});
+
+</script>

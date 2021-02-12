@@ -640,6 +640,9 @@ footer {
   height: auto;
   display: grid;
   padding: 3em 0 5em 0; }
+  footer .footer_info {
+    justify-self: center;
+    max-width: 35ch; }
   footer .button-form {
     text-align: center; }
   @media only screen and (min-width: 151px) and (max-width: 479px) {
