@@ -75,7 +75,7 @@ html {
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   font-family: 'Montserrat', sans-serif;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1rem;
@@ -86,7 +86,7 @@ ul {
   padding: 0px; }
 
 main {
-  height: 100vh;
+  height: auto;
   width: 100vw;
   position: relative;
   z-index: 99;
@@ -190,12 +190,14 @@ figcaption {
   font-style: normal;
   font-display: swap; }
 h1, h2, h3, h4, h5, h6 {
+  max-width: 30ch;
   font-weight: 600;
   line-height: 1;
   font-weight: 150;
   letter-spacing: 0.05em;
   margin: 0;
-  font-family: 'Viaoda Libre'; }
+  font-family: 'Viaoda Libre';
+  color: #d4a45d; }
 
 p, a {
   font-family: 'Montserrat', sans-serif;
@@ -568,11 +570,12 @@ p, a {
   height: 8vh;
   display: block;
   transition: top 0.3s;
-  background-image: url("../images/patterns/assault.png"); }
+  background-color: #1D5445;
+  border-bottom: 2px solid #d4a45d; }
 
 #logo {
-  position: absolute;
-  top: 0;
+  position: relative;
+  top: 1vh;
   left: 0;
   transition: top 0.3s;
   z-index: 99999; }
@@ -599,7 +602,7 @@ p, a {
   top: 0.5vh; }
 
 nav {
-  width: 100%;
+  width: 80%;
   height: 8vh;
   position: absolute;
   z-index: 9999;
@@ -607,7 +610,8 @@ nav {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  justify-items: end; }
   nav .nav-links {
     display: flex;
     justify-content: space-around;
@@ -921,7 +925,7 @@ footer {
 
 .products {
   width: auto;
-  height: 100%;
+  height: 100vh;
   display: flex;
   overflow: hidden;
   /* images */
@@ -937,7 +941,7 @@ footer {
     .products .text h1 {
       font-size: 70px;
       line-height: 84px;
-      color: #151515;
+      color: #d4a45d;
       text-transform: uppercase; }
     .products .text p {
       font-size: 20px;
@@ -1016,7 +1020,7 @@ footer {
 
 .exhibitions {
   width: auto;
-  height: 100%;
+  height: 100vh;
   padding: 0 2em; }
   .exhibitions section {
     width: 100%;
@@ -1081,7 +1085,21 @@ footer {
         max-width: 350px; } }
 
 .about {
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100vw;
+  height: auto; }
+  .about section {
+    width: 100vw; }
+    .about section:nth-child(1) {
+      background-color: #1D5445; }
+    .about section:nth-child(2) {
+      background-color: #316859; }
+    .about section:nth-child(3) {
+      background-color: #1D5445; }
+  .about p {
+    color: #FBFBFB; }
+  .about h1, .about h2 {
+    color: #d4a45d; }
 
 .text-container {
   margin: 0 auto;
@@ -1228,13 +1246,6 @@ footer {
   .page-contact .button-form {
     text-align: center; }
 
-.footer {
-  margin: 2em 0 0 0;
-  width: 100%;
-  height: 250px;
-  background-color: #426643;
-  opacity: 0.3; }
-
 .homepage {
   margin: 0 auto 3em auto;
   width: 100vw;
@@ -1244,20 +1255,33 @@ footer {
     .homepage section:nth-child(1) {
       background-color: #1D5445; }
     .homepage section:nth-child(2) {
-      background-color: #FBFBFB; }
+      background-color: #316859; }
     .homepage section:nth-child(3) {
       background-color: #1D5445;
       position: relative;
       height: 100vh;
       display: grid; }
     .homepage section:nth-child(4) {
-      background-color: #FBFBFB; }
+      background-color: #316859; }
     .homepage section:nth-child(1), .homepage section:nth-child(2) {
       height: 100vh; }
     .homepage section:nth-child(1), .homepage section:nth-child(3) {
       color: #FBFBFB; }
     .homepage section:nth-child(1), .homepage section:nth-child(2), .homepage section:nth-child(3) {
       position: relative; }
+  .homepage h1 {
+    font-size: 4em; }
+  .homepage h3 {
+    font-size: 2em; }
+  .homepage h4 {
+    font-size: 3em; }
+  .homepage h5 {
+    font-size: 2em; }
+  .homepage p {
+    color: #FBFBFB;
+    font-size: 1.1em;
+    text-align: justify;
+    max-width: 50ch; }
   .homepage .pattern__container {
     width: 30%;
     height: 100%;
@@ -1307,11 +1331,6 @@ footer {
       .homepage .home1 .home__information .home__title {
         display: grid;
         grid-gap: 1em; }
-        .homepage .home1 .home__information .home__title h1 {
-          font-size: 4em;
-          color: #d4a45d; }
-        .homepage .home1 .home__information .home__title p {
-          font-size: 1.1em; }
       .homepage .home1 .home__information .home__button {
         margin: 10vh auto 10vh auto;
         text-align: center;
@@ -1345,9 +1364,7 @@ footer {
       place-self: center; }
       .homepage .home2 .home2__title_container .home2__title {
         width: 80%;
-        place-self: center;
-        color: #d4a45d;
-        font-size: 2em; }
+        place-self: center; }
     .homepage .home2 .home__icons {
       width: 80%;
       display: grid;
@@ -1356,8 +1373,6 @@ footer {
       grid-template-rows: auto;
       align-self: center;
       justify-self: start; }
-      .homepage .home2 .home__icons h4 {
-        color: #d4a45d; }
       .homepage .home2 .home__icons img {
         height: auto;
         max-width: 68px;
@@ -1375,14 +1390,6 @@ footer {
       height: 60%;
       justify-self: center;
       display: grid; }
-      .homepage .home3 article h4 {
-        font-size: 3em;
-        color: #d4a45d;
-        line-height: 1em; }
-      .homepage .home3 article .home3__textbox h5 {
-        font-size: 2em;
-        color: #d4a45d;
-        line-height: 1em; }
     .homepage .home3 .home__gallery {
       justify-self: center;
       display: grid;
@@ -1416,19 +1423,12 @@ footer {
         object-fit: cover;
         justify-self: center;
         align-self: center; }
-      .homepage .home4 article h3 {
-        max-width: 30ch; }
-      .homepage .home4 article p {
-        text-align: justify;
-        max-width: 50ch; }
       .homepage .home4 article:nth-of-type(1) img {
         object-fit: cover;
         border-radius: 49% 49% 0 0; }
       .homepage .home4 article:nth-of-type(1) div {
         justify-self: center;
         align-self: center; }
-        .homepage .home4 article:nth-of-type(1) div h3 {
-          color: #d4a45d; }
       .homepage .home4 article:nth-of-type(2) p {
         justify-self: center;
         align-self: center; }

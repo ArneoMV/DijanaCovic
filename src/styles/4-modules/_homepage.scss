@@ -12,14 +12,14 @@
     section {
         width: 100vw;
         &:nth-child(1) { background-color: $green-1; }
-        &:nth-child(2) { background-color: $light; }
+        &:nth-child(2) { background-color: $green-2; }
         &:nth-child(3) { 
             background-color:  $green-1;
             position: relative;
             height: 100vh;
             display: grid;
         }
-        &:nth-child(4) { background-color: $light; }
+        &:nth-child(4) { background-color: $green-2; }
         &:nth-child(1), &:nth-child(2) { height: 100vh; }
         &:nth-child(1), &:nth-child(3) { color: $light;}
 
@@ -27,6 +27,25 @@
             position: relative;
         }
     }
+    h1 {
+        font-size: 4em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    h4 {
+        font-size: 3em;
+    }
+    h5 {
+        font-size: 2em;
+    }
+    p { 
+        color: $light;
+        font-size: 1.1em;
+        text-align: justify;
+        max-width: 50ch;
+    }
+    
 
 .pattern__container {
     width: 30%;
@@ -80,19 +99,9 @@
         width: 80%;
         margin: 0 auto;
         place-self: center;
-        // display: grid;
-        // grid-gap: 2em;
-        // margin: 0 3em 0 5em;
         .home__title {
             display: grid;
             grid-gap: 1em;
-            h1 {
-                font-size: 4em;
-                color: $gatsby-gold;
-            }
-            p {
-                font-size: 1.1em;
-            }
         }
         .home__button {
             margin: 10vh auto 10vh auto;
@@ -109,9 +118,6 @@
                 max-width: 250px;
                 font-size: 1.4em;
             }
-        }
-        .home__contact {
-
         }
     }
     .home__image {
@@ -138,15 +144,11 @@
         height: 80%;
         display: grid;
         place-self: center;
-
         .home2__title {
             width: 80%;
             place-self: center;
-            color: $gatsby-gold;
-            font-size: 2em;
         }
     }
-
     .home__icons {
         width: 80%;
         display: grid;
@@ -154,10 +156,7 @@
         grid-template-columns: 50% 50%;
         grid-template-rows: auto;
         align-self: center;
-        justify-self: start;
-        h4 {
-            color: $gatsby-gold;
-        }
+        justify-self: start; 
         img {
             height: auto;
             max-width: 68px;
@@ -181,20 +180,6 @@
         height: 60%;
         justify-self: center;
         display: grid;
-        h4 {
-            font-size: 3em;
-            color: $gatsby-gold;
-            line-height: 1em;
-        }
-        .home3__textbox {
-            h5 {
-                font-size: 2em;
-                color: $gatsby-gold;
-                line-height: 1em;
-            }
-            // display: grid;
-            // grid-gap: 0.5em;
-        }
     }
     .home__gallery {
         justify-self: center;
@@ -237,13 +222,7 @@
             justify-self: center;
             align-self: center;
         }
-        h3 {
-            max-width: 30ch;
-        }
-        p {
-            text-align: justify;
-            max-width: 50ch;
-        }
+        
         &:nth-of-type(1) {
             img {
                 @include image__arch();
@@ -251,9 +230,6 @@
             div {
                 justify-self: center;
                 align-self: center;
-                h3 {
-                    color: $gatsby-gold;
-                }
             }
         }
         &:nth-of-type(2) {
