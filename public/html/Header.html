@@ -1,4 +1,5 @@
 <header>
+  <nav>
     <div id="navBar">
       <a href="#" id="logo"><img class="logo" src="images/potpis.svg" alt="Dijana Covic signature"/></a>
       <nav>
@@ -8,7 +9,6 @@
           <a href="#" id="header-partners" class="nav-exhibitions">Exhibitions</a>
           <a href="#" id="header-about" class="nav-products">Products</a>
           <a href="#" id="header-contact" class="nav-about">About</a>
-
         </div>
       </nav>
     </div>
@@ -26,35 +26,8 @@
         <a href="#" id="header-contact" class="nav-about">About</a>
       </div>
     </div>
-  </header>
+  </nav>
+</header>
   
-
-  
-<script src="scripts/navigation.js">
-
-$(document).ready(function() {
-
-let burger = document.querySelector('.burger');
-let navMobile = document.querySelector('.nav-mobile');
-let navBar = document.getElementById("navBar");
-
-burger.addEventListener('click', () => {
-  //Burger Animation
-  burger.classList.toggle('toggle');
-  navMobile.classList.toggle('is-active');
-});  
-
-// HIDE NAVIGATION ON SCROLL
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    navBar.style.top = "0";
-  } else {
-    navBar.style.top = "-8vh";
-  }
-  prevScrollpos = currentScrollPos;
-}
-
-});
-</script>
+<script src="scripts/navigation.js"></script>
+<script src="scripts/script.js"></script>
