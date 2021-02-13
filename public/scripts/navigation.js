@@ -1,5 +1,4 @@
 
-
 $(document).ready(function() {
 
   let burger = document.querySelector('.burger');
@@ -29,28 +28,28 @@ $(document).ready(function() {
 // old
 // $(document).ready(function() {
 
-//   const menuSlide = () => {
-//     const menuIcon = document.querySelector(".menu-icon");
-//     const navLinks = document.querySelector(".nav-links");
+  // const menuSlide = () => {
+  //   const menuIcon = document.querySelector(".menu-icon");
+  //   const navLinks = document.querySelector(".nav-links");
   
-//     //menu-icon click event
-//     menuIcon.addEventListener("click", () => {
-//       //toggle active class
-//       navLinks.classList.toggle("menu-active");
-//       //toggle for menu-icon animation
-//       menuIcon.classList.toggle("span-anime");
-//     });
+  //   //menu-icon click event
+  //   menuIcon.addEventListener("click", () => {
+  //     //toggle active class
+  //     navLinks.classList.toggle("menu-active");
+  //     //toggle for menu-icon animation
+  //     menuIcon.classList.toggle("span-anime");
+  //   });
 
-//     //nav-link click event
-//     navLinks.addEventListener("click", () => {
-//       //toggle active class
-//       navLinks.classList.toggle("menu-active");
-//       //toggle for menu-icon animation
-//       menuIcon.classList.toggle("span-anime");
-//     });
-//   };
+  //   //nav-link click event
+  //   navLinks.addEventListener("click", () => {
+  //     //toggle active class
+  //     navLinks.classList.toggle("menu-active");
+  //     //toggle for menu-icon animation
+  //     menuIcon.classList.toggle("span-anime");
+  //   });
+  // };
   
-//   menuSlide();
+  // menuSlide();
 
 
 
