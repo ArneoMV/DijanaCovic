@@ -1,4 +1,36 @@
 
+/* MIXINS */
+
+@import '../3-layout/_breakpoint.scss';
+
+// BREAKPOINT
+@mixin breakpoint($point) {
+	@if $point == desktop {
+	  @media (max-width: 1024px) { @content; }
+	}
+	@else if $point == tablet {
+	  @media (max-width: 840px) { @content; }
+	}
+	@else if $point == phone {
+	  @media (max-width: 480px)  { @content; }
+	}
+}
+
+// Main side navigsation
+@mixin mainSidebar {
+	position: fixed;
+	z-index: 100;
+	background-color: $dark;
+	overflow-x: hidden;
+	transition: 330ms ease;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	align-items: center;
+	box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+
+
 // Center object to middle
 @mixin center-flex {
   display: flex;
@@ -14,14 +46,14 @@
 }
 // @include shadow();
 
-@mixin shadow-png {
-  -webkit-filter: drop-shadow(inset 2px 2px 2px 0px rgba(255,255,255,.5),
-	                                  7px 7px 20px 0px rgba(0,0,0,.1),
-	                                  4px 4px 5px 0px rgba(0,0,0,.1));
-  filter: url(#drop-shadow);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-}
+// @mixin shadow-png {
+//   -webkit-filter: drop-shadow(inset 2px 2px 2px 0px rgba(255,255,255,.5),
+// 	                                  7px 7px 20px 0px rgba(0,0,0,.1),
+// 	                                  4px 4px 5px 0px rgba(0,0,0,.1));
+//   filter: url(#drop-shadow);
+//   -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+//   filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+// }
 // @include shadow-png();
 .shadowed {
   -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
