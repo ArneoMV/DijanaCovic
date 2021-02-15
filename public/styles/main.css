@@ -93,7 +93,7 @@ main {
   bottom: 0; }
 
 .filler {
-  padding-top: 10vh; }
+  padding-top: 8vh; }
 
 .middle {
   width: 100%;
@@ -247,7 +247,6 @@ h6 {
 
 h1, h2, h3, h4, h5, h6 {
   max-width: 30ch;
-  font-weight: 600;
   line-height: 1;
   font-weight: 150;
   letter-spacing: 0.05em;
@@ -258,8 +257,9 @@ h1, h2, h3, h4, h5, h6 {
 p, a {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  line-height: 1.4;
-  text-decoration: none; }
+  line-height: 1.15;
+  text-decoration: none;
+  max-width: 65ch; }
 
 /* Brakepoint's */
 .demo {
@@ -1183,9 +1183,11 @@ footer {
   .homepage section {
     width: 100vw; }
     .homepage section:nth-child(1) {
-      background-color: #1D5445; }
+      background-color: #1D5445;
+      display: grid; }
     .homepage section:nth-child(2) {
-      background-color: #316859; }
+      background-color: #316859;
+      display: grid; }
     .homepage section:nth-child(3) {
       background-color: #1D5445;
       position: relative;
@@ -1200,10 +1202,7 @@ footer {
     .homepage section:nth-child(1), .homepage section:nth-child(2), .homepage section:nth-child(3) {
       position: relative; }
   .homepage p {
-    color: #FBFBFB;
-    font-size: 1.1em;
-    text-align: justify;
-    max-width: 50ch; }
+    color: #FBFBFB; }
   .homepage .pattern__container {
     width: 30%;
     height: 100%;
@@ -1241,12 +1240,10 @@ footer {
       height: 100vh;
       opacity: 0.2; }
   .homepage .home1 {
-    height: 100vh;
     width: auto;
     display: grid;
     position: relative;
-    z-index: 99;
-    padding-top: 18vh; }
+    z-index: 99; }
     .homepage .home1 .home__information {
       height: auto;
       width: 80%;
@@ -1256,34 +1253,33 @@ footer {
         display: grid;
         grid-gap: 1em; }
       .homepage .home1 .home__information .home__button {
-        margin: 10vh auto 10vh auto;
+        margin: 5vh auto 0 auto;
         text-align: center;
-        max-width: 350px;
-        cursor: pointer; }
-        .homepage .home1 .home__information .home__button .triple-deco-container {
-          min-width: 300px; }
+        cursor: pointer;
+        max-width: 300px; }
         .homepage .home1 .home__information .home__button a {
           color: #d4a45d;
-          padding: 1em;
           width: auto;
-          max-width: 250px;
           font-size: 1.4em; }
     .homepage .home1 .home__image {
-      display: grid; }
-      .homepage .home1 .home__image img.front__image {
+      display: grid;
+      width: 80%;
+      height: 100%;
+      align-self: center; }
+      .homepage .home1 .home__image img {
         justify-self: start;
         align-self: center;
         object-fit: cover;
-        height: 70%;
+        height: 100%;
         width: 100%;
         border-radius: 49% 49% 0 0; }
   .homepage .home2 {
-    height: 100vh;
+    height: 80%;
     display: grid;
-    margin: 0 auto; }
+    place-self: center; }
     .homepage .home2 .home2__title_container {
-      width: 100%;
-      height: 80%;
+      width: auto;
+      height: auto;
       display: grid;
       place-self: center; }
       .homepage .home2 .home2__title_container .home2__title {
@@ -1292,17 +1288,21 @@ footer {
     .homepage .home2 .home__icons {
       width: 80%;
       display: grid;
-      grid-gap: 1em;
+      grid-gap: 3em;
       grid-template-columns: 50% 50%;
       grid-template-rows: auto;
       align-self: center;
       justify-self: start; }
-      .homepage .home2 .home__icons img {
-        height: auto;
-        max-width: 68px;
-        min-width: 24px; }
       .homepage .home2 .home__icons .objects__icons {
         text-align: center; }
+        .homepage .home2 .home__icons .objects__icons img {
+          height: auto;
+          width: auto;
+          max-width: 100px;
+          min-width: 24px;
+          grid-area: home__object__icon; }
+        .homepage .home2 .home__icons .objects__icons .home__icons__text {
+          grid-area: home__object__text; }
   .homepage .home3 {
     height: auto;
     display: grid;
@@ -1329,75 +1329,308 @@ footer {
         .homepage .home3 .home__gallery .gallery__navigation img {
           height: 48px;
           width: auto;
-          margin: 1em; }
+          margin: 1em;
+          cursor: pointer; }
   .homepage .home4 {
     height: auto;
     padding: 3em 0;
     display: grid;
-    grid-gap: 2em; }
+    grid-gap: 1.5em; }
     .homepage .home4 article {
-      display: grid;
-      grid-template-columns: 50% 50%;
-      grid-gap: 2em; }
-      .homepage .home4 article img {
-        max-height: 500px;
-        max-width: 350px;
-        width: auto;
-        height: 400px;
-        object-fit: cover;
-        justify-self: center;
-        align-self: center; }
+      width: auto;
+      height: auto;
+      display: grid; }
       .homepage .home4 article:nth-of-type(1) img {
         object-fit: cover;
-        border-radius: 49% 49% 0 0; }
-      .homepage .home4 article:nth-of-type(1) div {
+        border-radius: 49% 49% 0 0;
+        grid-area: home4_img1; }
+      .homepage .home4 article:nth-of-type(1) .home4__text {
+        padding: 2em;
+        grid-area: home4_text1;
         justify-self: center;
         align-self: center; }
       .homepage .home4 article:nth-of-type(2) p {
         justify-self: center;
+        align-self: center;
+        grid-area: home4_text2; }
+      .homepage .home4 article:nth-of-type(2) img {
+        grid-area: home4_img2; }
+      .homepage .home4 article p {
+        text-align: justify; }
+      .homepage .home4 article img {
+        max-height: 500px;
+        max-width: 350px;
+        min-width: 200px;
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        justify-self: center;
         align-self: center; }
   @media only screen and (min-width: 151px) and (max-width: 479px) {
     .homepage .home1 {
-      grid-template-rows: 60% 40%; }
+      height: 100%;
+      grid-template-rows: 50% 50%;
+      border: 2px solid green;
+      padding-bottom: 2vh; }
+      .homepage .home1 .home__information .home__title {
+        grid-gap: 0.5em; }
+      .homepage .home1 .home__information .home__button {
+        margin: 2vh auto 0 auto; }
+        .homepage .home1 .home__information .home__button a {
+          font-size: 1em; }
+      .homepage .home1 .home__image {
+        margin: 0 auto;
+        width: 65%; }
     .homepage .home2 {
-      grid-template-rows: 50% 50%; }
+      border: 2px solid green;
+      height: 100%;
+      grid-template-rows: 20% auto; }
+      .homepage .home2 .home__title {
+        text-align: center;
+        align-self: end; }
+      .homepage .home2 .home__icons {
+        width: auto;
+        grid-template-columns: auto;
+        grid-gap: 0.5em; }
+        .homepage .home2 .home__icons .objects__icons {
+          display: grid; }
+          .homepage .home2 .home__icons .objects__icons:nth-child(odd) {
+            grid-template-columns: 1fr 2fr;
+            grid-template-areas: "home__object__icon home__object__text";
+            text-align: left; }
+          .homepage .home2 .home__icons .objects__icons:nth-child(even) {
+            grid-template-columns: 2fr 1fr;
+            grid-template-areas: "home__object__text home__object__icon";
+            text-align: right; }
     .homepage .home3 {
-      grid-template-rows: 50% 50%; } }
+      grid-template-rows: 30% auto;
+      height: 90%;
+      border: 2px solid blue; }
+      .homepage .home3 article {
+        width: auto;
+        height: auto;
+        grid-gap: 10px; }
+      .homepage .home3 .home__gallery {
+        height: auto;
+        align-self: center; }
+        .homepage .home3 .home__gallery .home__gallery__image {
+          height: auto;
+          align-self: center; }
+        .homepage .home3 .home__gallery .gallery__navigation {
+          width: 60%;
+          margin: 0 auto; }
+          .homepage .home3 .home__gallery .gallery__navigation img {
+            height: 32px; }
+          .homepage .home3 .home__gallery .gallery__navigation img:nth-child(2) {
+            float: right; }
+    .homepage .home4 {
+      border: 2px solid green; } }
   @media only screen and (min-width: 321px) and (max-width: 479px) {
     .homepage .home1 {
-      grid-template-rows: 60% 40%; }
+      height: 100%;
+      grid-template-rows: 50% 50%;
+      border: 2px solid green;
+      padding-bottom: 2vh; }
+      .homepage .home1 .home__information .home__title {
+        grid-gap: 0.5em; }
+      .homepage .home1 .home__information .home__button {
+        margin: 2vh auto 0 auto; }
+        .homepage .home1 .home__information .home__button a {
+          font-size: 1em; }
+      .homepage .home1 .home__image {
+        margin: 0 auto;
+        width: 65%; }
     .homepage .home2 {
-      grid-template-rows: 50% 50%; }
+      border: 2px solid green;
+      height: 100%;
+      grid-template-rows: 20% auto; }
+      .homepage .home2 .home__title {
+        text-align: center;
+        align-self: end; }
+      .homepage .home2 .home__icons {
+        width: auto;
+        grid-template-columns: auto;
+        grid-gap: 0.5em; }
+        .homepage .home2 .home__icons .objects__icons {
+          display: grid; }
+          .homepage .home2 .home__icons .objects__icons:nth-child(odd) {
+            grid-template-columns: 1fr 2fr;
+            grid-template-areas: "home__object__icon home__object__text";
+            text-align: left; }
+          .homepage .home2 .home__icons .objects__icons:nth-child(even) {
+            grid-template-columns: 2fr 1fr;
+            grid-template-areas: "home__object__text home__object__icon";
+            text-align: right; }
     .homepage .home3 {
-      grid-template-rows: 50% 50%; } }
+      grid-template-rows: 30% auto;
+      height: 90%;
+      border: 2px solid blue; }
+      .homepage .home3 article {
+        width: auto;
+        height: auto;
+        grid-gap: 10px; }
+      .homepage .home3 .home__gallery {
+        height: auto;
+        align-self: center; }
+        .homepage .home3 .home__gallery .home__gallery__image {
+          height: auto;
+          align-self: center; }
+        .homepage .home3 .home__gallery .gallery__navigation {
+          width: 60%;
+          margin: 0 auto; }
+          .homepage .home3 .home__gallery .gallery__navigation img {
+            height: 32px; }
+          .homepage .home3 .home__gallery .gallery__navigation img:nth-child(2) {
+            float: right; }
+    .homepage .home4 {
+      border: 2px solid green; } }
   @media only screen and (min-width: 481px) and (max-width: 719px) {
     .homepage .home1 {
-      grid-template-columns: 60% 40%; }
+      height: 100%;
+      grid-template-rows: 50% 50%;
+      border: 2px solid green;
+      padding-bottom: 2vh; }
+      .homepage .home1 .home__information .home__title {
+        grid-gap: 0.5em; }
+      .homepage .home1 .home__information .home__button {
+        margin: 2vh auto 0 auto; }
+        .homepage .home1 .home__information .home__button a {
+          font-size: 1em; }
+      .homepage .home1 .home__image {
+        margin: 0 auto;
+        width: 65%; }
     .homepage .home2 {
-      grid-template-columns: 50% 50%; }
+      border: 2px solid green;
+      height: 100%;
+      grid-template-rows: 20% auto; }
+      .homepage .home2 .home__title {
+        text-align: center;
+        align-self: end; }
+      .homepage .home2 .home__icons {
+        width: auto;
+        grid-template-columns: auto;
+        grid-gap: 0.5em; }
+        .homepage .home2 .home__icons .objects__icons {
+          display: grid; }
+          .homepage .home2 .home__icons .objects__icons:nth-child(odd) {
+            grid-template-columns: 1fr 2fr;
+            grid-template-areas: "home__object__icon home__object__text";
+            text-align: left; }
+          .homepage .home2 .home__icons .objects__icons:nth-child(even) {
+            grid-template-columns: 2fr 1fr;
+            grid-template-areas: "home__object__text home__object__icon";
+            text-align: right; }
     .homepage .home3 {
-      grid-template-columns: 40% 60%; } }
+      grid-template-rows: 30% auto;
+      height: 90%;
+      border: 2px solid blue; }
+      .homepage .home3 article {
+        width: auto;
+        height: auto;
+        grid-gap: 10px; }
+      .homepage .home3 .home__gallery {
+        height: auto;
+        align-self: center; }
+        .homepage .home3 .home__gallery .home__gallery__image {
+          height: auto;
+          align-self: center; }
+        .homepage .home3 .home__gallery .gallery__navigation {
+          width: 60%;
+          margin: 0 auto; }
+          .homepage .home3 .home__gallery .gallery__navigation img {
+            height: 32px; }
+          .homepage .home3 .home__gallery .gallery__navigation img:nth-child(2) {
+            float: right; }
+    .homepage .home4 {
+      border: 2px solid green; } }
   @media only screen and (min-width: 721px) and (max-width: 919px) {
     .homepage .home1 {
-      grid-template-columns: 60% 40%; }
+      height: 90%;
+      grid-template-columns: 60% 40%;
+      place-self: center;
+      border: 2px solid blue; }
+      .homepage .home1 .home__information .home__title {
+        grid-gap: 1em; }
+      .homepage .home1 .home__information .home__button {
+        margin: 5vh auto 0 auto; }
+      .homepage .home1 .home__image {
+        height: 80%; }
     .homepage .home2 {
-      grid-template-columns: 50% 50%; }
+      grid-template-rows: 40% 60%;
+      border: 2px solid blue; }
+      .homepage .home2 .home2__title_container {
+        place-self: center;
+        text-align: center; }
+      .homepage .home2 .home__icons {
+        justify-self: center;
+        align-self: start; }
     .homepage .home3 {
-      grid-template-columns: 40% 60%; } }
+      grid-template-rows: 30% auto;
+      height: 80%;
+      border: 2px solid blue; }
+      .homepage .home3 article {
+        width: auto;
+        height: auto; }
+      .homepage .home3 .home__gallery {
+        height: auto; }
+        .homepage .home3 .home__gallery .home__gallery__image {
+          height: auto;
+          align-self: center; }
+        .homepage .home3 .home__gallery .gallery__navigation {
+          width: 45%;
+          margin: 0 auto; }
+          .homepage .home3 .home__gallery .gallery__navigation img:nth-child(2) {
+            float: right; }
+    .homepage .home4 {
+      border: 2px solid blue; }
+      .homepage .home4 article:nth-of-type(1) {
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 1fr;
+        grid-template-areas: "home4_text" "home4_img1"; }
+        .homepage .home4 article:nth-of-type(1) .home4__text {
+          padding: 2em; }
+        .homepage .home4 article:nth-of-type(1) img {
+          place-self: center; } }
   @media only screen and (min-width: 921px) and (max-width: 1199px) {
     .homepage .home1 {
-      grid-template-columns: 60% 40%; }
+      height: 80%;
+      grid-template-columns: 60% 40%;
+      place-self: center;
+      border: 2px solid red; }
     .homepage .home2 {
-      grid-template-columns: 50% 50%; }
+      grid-template-columns: 50% 50%;
+      border: 2px solid red; }
     .homepage .home3 {
-      grid-template-columns: 40% 60%; } }
+      grid-template-columns: 40% 60%;
+      border: 2px solid red; }
+    .homepage .home4 {
+      border: 2px solid red; }
+      .homepage .home4 article:nth-of-type(1) {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "home4_img1 home4_text1"; }
+      .homepage .home4 article:nth-of-type(2) {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "home4_text2 home4_img2"; } }
   @media only screen and (min-width: 1200px) {
     .homepage .home1 {
-      grid-template-columns: 60% 40%; }
+      height: 80%;
+      grid-template-columns: 60% 40%;
+      place-self: center;
+      border: 2px solid red; }
     .homepage .home2 {
-      grid-template-columns: 50% 50%; }
+      grid-template-columns: 50% 50%;
+      border: 2px solid red; }
     .homepage .home3 {
-      grid-template-columns: 40% 60%; } }
+      grid-template-columns: 40% 60%;
+      border: 2px solid red; }
+    .homepage .home4 {
+      border: 2px solid red; }
+      .homepage .home4 article:nth-of-type(1) {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "home4_img1 home4_text1"; }
+      .homepage .home4 article:nth-of-type(2) {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "home4_text2 home4_img2"; } }
 
 /* Hamburger */
 body.has-nav .menu-btn {

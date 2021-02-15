@@ -101,6 +101,7 @@
 
 
 /*  Fluid TYPO  */
+// https://codepen.io/MadeByMike/pen/7744b5fc445e2b34a9e2bb1e21e8b09c
 @mixin fluid-type($properties, $min-screen, $max-screen, $min-value, $max-value) {
   & {
     @each $property in $properties {
@@ -180,7 +181,6 @@ h6{	@include fluid-type(font-size, 37.5rem, 80rem, $h6-min, $h6-max); }
 
 h1, h2, h3, h4, h5, h6 {
   max-width: 30ch;
-  font-weight: 600;
   line-height: 1;
   font-weight: 150;
   letter-spacing: 0.05em;
@@ -192,75 +192,7 @@ h1, h2, h3, h4, h5, h6 {
 p, a{
   font-family: 'Montserrat', sans-serif; 
   font-weight: 400; 
-  line-height: 1.4;
-  // margin: 0.2em 0 0.3em 0;
+  line-height: 1.15;
   text-decoration: none;
+  max-width: 65ch;
 }
-
-// @include respond-to(extrasmall-screens) {
-//   h1 {font-size: 2em;}
-//   h2 {font-size: 1.5em;}
-//   h3 {font-size: 1.1em;}
-//   h4 {font-size: 1em;}
-//   h5 {font-size: 0.75em;} 
-//   h6 {font-size: 0.75em;}
-//   p, a {
-//     font-size: 0.7em;
-//   }
-// }
-// @include respond-to(small-screens) {
-//   h1 {font-size: 2.4em;}
-//   h2 {font-size: 1.5em;}
-//   h3 {font-size: 1.1em;}
-//   h4 {font-size: 1em;}
-//   h5 {font-size: 0.75em;} 
-//   h6 {font-size: 0.75em;}
-//   p, a {
-//     font-size: 0.8em;
-//   }
-// }
-// @include respond-to(medium-screens) {
-//   h1 {font-size: 2.8em;}
-//   h2 {font-size: 1.8em;}
-//   h3 {font-size: 1.25em;}
-//   h4 {font-size: 1em;}
-//   h5 {font-size: 0.8em;} 
-//   h6 {font-size: 0.75em;}
-//   p, a {
-//     font-size: 0.9em;
-//   }
-// }
-// @include respond-to(large-screens) {
-//   h1 {font-size: 3.2em;}
-//   h2 {font-size: 2.3em;}
-//   h3 {font-size: 1.95em;}
-//   h4 {font-size: 1.3em;}
-//   h5 {font-size: 1em;} 
-//   h6 {font-size: 0.75em;}
-//   p, a {
-//     font-size: 1em;
-//   }
-// }
-// @include respond-to(extralarge-screens) {
-//   h1 {font-size: 3.8em;}
-//   h2 {font-size: 2em;}
-//   h3 {font-size: 1.95em;}
-//   h4 {font-size: 1.5em;}
-//   h5 {font-size: 1em;} 
-//   h6 {font-size: 0.75em;}
-
-//   p, a {
-//     font-size: 1em;
-//   }
-// }
-// @include respond-to(extraextralarge-screens) {
-//   h1 {font-size: 4em;}
-//   h2 {font-size: 2.8em;}
-//   h3 {font-size: 1.85em;}
-//   h4 {font-size: 1.55em;}
-//   h5 {font-size: 1.25em;} 
-//   h6 {font-size: 1em;}
-//   p, a {
-//     font-size: 1em;
-//   }
-// }
