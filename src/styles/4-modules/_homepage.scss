@@ -9,6 +9,7 @@
     margin: 0 auto 3em auto;
     width: 100vw;
     height: auto;
+    overflow-x: hidden;
     section {
         width: 100vw;
         &:nth-child(1) { background-color: $green-1; }
@@ -26,18 +27,6 @@
         &:nth-child(1), &:nth-child(2), &:nth-child(3) {
             position: relative;
         }
-    }
-    h1 {
-        font-size: 4em;
-    }
-    h3 {
-        font-size: 2em;
-    }
-    h4 {
-        font-size: 3em;
-    }
-    h5 {
-        font-size: 2em;
     }
     p { 
         color: $light;
@@ -91,9 +80,11 @@
  // HOME 1
 .home1 {
     height: 100vh;
+    width: auto;
     display: grid;
     position: relative;
     z-index: 99;
+    padding-top: 18vh;
     .home__information {
         height: auto;
         width: 80%;

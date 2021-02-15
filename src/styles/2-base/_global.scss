@@ -18,6 +18,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 1rem;
   background-color: #F3ECEC;
+  // font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 ul {
   margin: 0px;

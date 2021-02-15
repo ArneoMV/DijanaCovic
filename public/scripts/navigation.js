@@ -10,7 +10,7 @@ $(document).ready(function() {
     burger.classList.toggle('toggle');
     navMobile.classList.toggle('is-active');
   });  
-
+  
   // HIDE NAVIGATION ON SCROLL
   var prevScrollpos = window.pageYOffset;
   window.onscroll = function() {
@@ -22,9 +22,10 @@ $(document).ready(function() {
     }
     prevScrollpos = currentScrollPos;
   }
+  
+  });
 
-});
-
+  
 // old
 // $(document).ready(function() {
 

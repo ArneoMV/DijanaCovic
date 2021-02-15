@@ -1,6 +1,17 @@
 @import "../3-layout/_breakpoint.scss";
 @import "../2-base/_colors.scss";
 
+
+// Viaoda Libre
+@font-face {
+  font-family: 'Viaoda Libre';
+  src: url('../fonts/ViaodaLibre/ViaodaLibre-Regular.woff2') format('woff2'),
+      url('../fonts/ViaodaLibre/ViaodaLibre-Regular.woff') format('woff'),
+      url('../fonts/ViaodaLibre/ViaodaLibre-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 // Margaret
 @font-face {
   font-family: 'Margaret';
@@ -11,7 +22,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 // Montserrat
 @font-face {
   font-family: 'Montserrat';
@@ -40,7 +50,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Montserrat';
   src: url('../fonts/Montserrat/Montserrat-Medium.woff2') format('woff2'),
@@ -77,7 +86,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Montserrat';
   src: url('../fonts/Montserrat/Montserrat-Italic.woff2') format('woff2'),
@@ -87,18 +95,6 @@
   font-style: italic;
   font-display: swap;
 }
-
-@font-face {
-  font-family: 'Viaoda Libre';
-  src: url('../fonts/ViaodaLibre/ViaodaLibre-Regular.woff2') format('woff2'),
-      url('../fonts/ViaodaLibre/ViaodaLibre-Regular.woff') format('woff'),
-      url('../fonts/ViaodaLibre/ViaodaLibre-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-
 
 
 
@@ -121,77 +117,72 @@ p, a{
   text-decoration: none;
 }
 
-@include respond-to(extrasmall-screens) {
-  h1 {font-size: 2em;}
-  h2 {font-size: 1.5em;}
-  h3 {font-size: 1.1em;}
-  h4 {font-size: 1em;}
-  h5 {font-size: 0.75em;} 
-  h6 {font-size: 0.75em;}
-  p, a {
-    font-size: 0.7em;
-  }
-}
-@include respond-to(small-screens) {
-  h1 {font-size: 2em;}
-  h2 {font-size: 1.5em;}
-  h3 {font-size: 1.1em;}
-  h4 {font-size: 1em;}
-  h5 {font-size: 0.75em;} 
-  h6 {font-size: 0.75em;}
-  p, a {
-    font-size: 0.8em;
-  }
-}
-@include respond-to(medium-screens) {
-  h1 {font-size: 2.3em;}
-  h2 {font-size: 1.8em;}
-  h3 {font-size: 1.25em;}
-  h4 {font-size: 1em;}
-  h5 {font-size: 0.8em;} 
-  h6 {font-size: 0.75em;}
-  p, a {
-    font-size: 0.9em;
-  }
-}
-@include respond-to(large-screens) {
-  h1 {font-size: 2.5em;}
-  h2 {font-size: 2.3em;}
-  h3 {font-size: 1.95em;}
-  h4 {font-size: 1.3em;}
-  h5 {font-size: 1em;} 
-  h6 {font-size: 0.75em;}
-  p, a {
-    font-size: 1em;
-  }
-}
-@include respond-to(extralarge-screens) {
-  h1 {font-size: 2.8em;}
-  h2 {font-size: 2em;}
-  h3 {font-size: 1.95em;}
-  h4 {font-size: 1.5em;}
-  h5 {font-size: 1em;} 
-  h6 {font-size: 0.75em;}
+// @include respond-to(extrasmall-screens) {
+//   h1 {font-size: 2em;}
+//   h2 {font-size: 1.5em;}
+//   h3 {font-size: 1.1em;}
+//   h4 {font-size: 1em;}
+//   h5 {font-size: 0.75em;} 
+//   h6 {font-size: 0.75em;}
+//   p, a {
+//     font-size: 0.7em;
+//   }
+// }
+// @include respond-to(small-screens) {
+//   h1 {font-size: 2.4em;}
+//   h2 {font-size: 1.5em;}
+//   h3 {font-size: 1.1em;}
+//   h4 {font-size: 1em;}
+//   h5 {font-size: 0.75em;} 
+//   h6 {font-size: 0.75em;}
+//   p, a {
+//     font-size: 0.8em;
+//   }
+// }
+// @include respond-to(medium-screens) {
+//   h1 {font-size: 2.8em;}
+//   h2 {font-size: 1.8em;}
+//   h3 {font-size: 1.25em;}
+//   h4 {font-size: 1em;}
+//   h5 {font-size: 0.8em;} 
+//   h6 {font-size: 0.75em;}
+//   p, a {
+//     font-size: 0.9em;
+//   }
+// }
+// @include respond-to(large-screens) {
+//   h1 {font-size: 3.2em;}
+//   h2 {font-size: 2.3em;}
+//   h3 {font-size: 1.95em;}
+//   h4 {font-size: 1.3em;}
+//   h5 {font-size: 1em;} 
+//   h6 {font-size: 0.75em;}
+//   p, a {
+//     font-size: 1em;
+//   }
+// }
+// @include respond-to(extralarge-screens) {
+//   h1 {font-size: 3.8em;}
+//   h2 {font-size: 2em;}
+//   h3 {font-size: 1.95em;}
+//   h4 {font-size: 1.5em;}
+//   h5 {font-size: 1em;} 
+//   h6 {font-size: 0.75em;}
 
-  p, a {
-    font-size: 1em;
-  }
-}
-@include respond-to(extraextralarge-screens) {
-  h1 {font-size: 3.2em;}
-  h2 {font-size: 2.8em;}
-  h3 {font-size: 1.85em;}
-  h4 {font-size: 1.55em;}
-  h5 {font-size: 1.25em;} 
-  h6 {font-size: 1em;}
-
-  p, a {
-    font-size: 1em;
-  }
-}
-
-.text-container {
-  
-}
+//   p, a {
+//     font-size: 1em;
+//   }
+// }
+// @include respond-to(extraextralarge-screens) {
+//   h1 {font-size: 4em;}
+//   h2 {font-size: 2.8em;}
+//   h3 {font-size: 1.85em;}
+//   h4 {font-size: 1.55em;}
+//   h5 {font-size: 1.25em;} 
+//   h6 {font-size: 1em;}
+//   p, a {
+//     font-size: 1em;
+//   }
+// }
 
 
