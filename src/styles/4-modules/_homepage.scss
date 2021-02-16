@@ -1,3 +1,39 @@
+.container-2-50 {
+    display: grid;
+    justify-items: center;
+    text-align: justify;
+    padding-top: 2.5em;
+    .article {
+      h3, p { text-align: justify;}
+    }
+}
+@mixin container-2-50_mobile {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
+}
+@mixin container-2-50_desktop {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+}
+.container-2-50  {
+    @mixin mobile__screen {
+        @include container-2-50_mobile();
+    }
+    @mixin desktop__screen {
+        @include container-2-50_desktop();
+    }
+
+    @include respond-to(extrasmall-screens) { @include mobile__screen(); }
+    @include respond-to(small-screens) {  @include mobile__screen(); }
+    @include respond-to(medium-screens) {  @include mobile__screen(); }
+    @include respond-to(large-screens) {  @include desktop__screen(); }
+    @include respond-to(extralarge-screens) {  @include desktop__screen(); }
+    @include respond-to(extraextralarge-screens) {  @include desktop__screen(); }
+
+}
+
+
+
 @mixin image__arch {
     object-fit: cover;
     border-radius: 49% 49% 0 0;
@@ -9,7 +45,7 @@
     height: auto;
     overflow-x: hidden;
     section {
-        width: 100vw;
+        width: auto;
         &:nth-child(1) { 
             background-color: $green-1;
             display: grid;
@@ -36,7 +72,6 @@
         color: $light;
         //text-align: justify;
     }
-    
 
 .pattern__container {
     width: 30%;
@@ -201,33 +236,11 @@
 
 // HOME 4
 .home4 {
-    height: auto;
-    padding: 3em 0;
-    display: grid;
-    grid-gap: 1.5em;
-    article {
-        display: grid;
-        p { text-align: justify; }
-        img {
-            width: 100%;
-            height: auto;
-            // max-height: 500px;
-            // max-width: 350px;
-            // min-width: 200px;
-            object-fit: cover;
-            justify-self: center;
-            align-self: center;
-        }
+    article, img  {
+        padding: 1em;
     }
-    article:nth-of-type(1) {
-        grid-template-columns: 50% 50%;
-        grid-template-areas:  
-            "home4_img1 home4_text1";
-    }
-    article:nth-of-type(2) {
-        grid-template-columns: 50% 50%;
-        grid-template-areas:  
-            "home4_text2 home4_img2";
+    .home4_title {
+        
     }
 }
 
@@ -370,8 +383,7 @@
         }
     }
     .home4 {
-        border: 2px solid blue;
-
+       
     }
 }
 @mixin desktop__screen {
@@ -391,19 +403,6 @@
     }
     .home4 {
         border: 2px solid red;
-        article {
-            display: grid;
-        }
-        article:nth-of-type(1) {
-            grid-template-columns: 50% 50%;
-            grid-template-areas:  
-                "home4_img1 home4_text1";
-        }
-        article:nth-of-type(2) {
-            grid-template-columns: 50% 50%;
-            grid-template-areas:  
-                "home4_text2 home4_img2";
-        }
     }
 }
 
@@ -413,5 +412,4 @@
 @include respond-to(large-screens) {  @include tablet__screen(); }
 @include respond-to(extralarge-screens) {  @include desktop__screen(); }
 @include respond-to(extraextralarge-screens) {  @include desktop__screen(); }
-
 }

@@ -39,8 +39,7 @@ $screen-xxl: 1200px;
 // KAKO KORISTITI
 // unijeti brakepoint u roditelj element
 .demo {
-    display: grid;
-   
+    display: grid;  
     // @mixin xs-screen {
     // }
     // @mixin small-screen {
@@ -59,6 +58,7 @@ $screen-xxl: 1200px;
     // @include respond-to(large-screens) {  @include large-screen(); }
     // @include respond-to(extralarge-screens) {  @include xl-screen(); }
     // @include respond-to(extraextralarge-screens) {  @include xxl-screen(); }
+
     @mixin mobile__screen {
     }
     @mixin tablet__screen {

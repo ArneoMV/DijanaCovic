@@ -7,25 +7,21 @@ footer {
     height: auto;
     display: grid;
     padding: 3em 0 5em 0;
-
     .footer_info {
         justify-self: center;
         max-width: 35ch;
     }
-
     .button-form {
         text-align: center;
     }
-
-
     @mixin mobile__screen {
-        grid-template-rows: 40% 60%
+        grid-template-rows: 40% 60%;
     }
     @mixin tablet__screen {
-        grid-template-columns: 40% 60%
+        grid-template-columns: 40% 60%;
     }
     @mixin desktop__screen {
-        grid-template-columns: 40% 60%
+        grid-template-columns: 40% 60%;
     }
 
     @include respond-to(extrasmall-screens) { @include mobile__screen(); }
