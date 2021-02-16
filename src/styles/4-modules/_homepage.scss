@@ -1,3 +1,69 @@
+    
+.home__gallery {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    img {
+        height: auto;
+        width: 100%;
+        justify-self: center;
+    }
+    .gallery__navigation {
+        height: auto;
+        width: 80%;
+        justify-self: start;
+        img {
+            height: 36px;
+            width: auto;
+            margin: 1em;
+            cursor: pointer;
+        }
+    }
+      
+    @mixin home__gallery__mobile__screen {
+        width: 100%;
+        height: auto;
+        align-self: center;
+        img {
+            width: 100%;
+            height: auto;
+            align-self: center;
+        }
+        .gallery__navigation {
+            width: 60%;
+            margin: 0 auto;
+            img {
+                height: 32px;
+            }
+            img:nth-child(2) {
+                float: right;
+            }
+        }
+    }
+    @mixin home__gallery__tablet__screen {
+        width: 80%;
+        height: auto;
+        img {
+            height: auto;
+            align-self: center;
+        }
+        .gallery__navigation {
+            width: 45%;
+            margin: 0 auto;
+            img:nth-child(2) {
+                float: right;
+            }
+        }
+    }
+
+    @include respond-to(extrasmall-screens) { @include home__gallery__mobile__screen(); }
+    @include respond-to(small-screens) {  @include home__gallery__mobile__screen(); }
+    @include respond-to(medium-screens) {  @include home__gallery__tablet__screen(); }
+    @include respond-to(large-screens) {  @include home__gallery__tablet__screen(); }
+    @include respond-to(extralarge-screens) {  @include home__gallery__tablet__screen(); }
+    @include respond-to(extraextralarge-screens) {  @include home__gallery__tablet__screen(); }  
+}
+
 .container-2-50 {
     display: grid;
     justify-items: center;
@@ -9,7 +75,7 @@
 }
 @mixin container-2-50_mobile {
     grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
 }
 @mixin container-2-50_desktop {
     grid-template-columns: 50% 50%;
@@ -200,48 +266,26 @@
 
 // HOME 3
 .home3 {
-    height: auto;
-    display: grid;
-    position: relative;
-    z-index: 999;
-    align-self: center;
-    article {
-        width: 80%;
-        height: 60%;
-        justify-self: center;
-        display: grid;
+    .container {
+        place-self: center;
     }
     .home__gallery {
-        justify-self: center;
-        display: grid;
-        width: 80%;
-        img.home__gallery__image {
-            height: auto;
-            width: auto;
-            justify-self: center;
-        }
-        .gallery__navigation {
-            height: auto;
-            width: 80%;
-            justify-self: start;
-            img {
-                height: 48px;
-                width: auto;
-                margin: 1em;
-                cursor: pointer;
-            }
-        }
+        place-self: center;
     }
 }
 
 // HOME 4
 .home4 {
+    img {
+        height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
     article, img  {
         padding: 1em;
+        align-self: center;
     }
-    .home4_title {
-        
-    }
+   
 }
 
 // resposnive
@@ -296,33 +340,8 @@
         }
     }
     .home3 {
-        grid-template-rows: 30% auto;
-        height: 90%;
-
         border: 2px solid blue;
-        article {
-            width: auto;
-            height: auto;
-            grid-gap: 10px;
-        }
-        .home__gallery {
-            height: auto;
-            align-self: center;
-            .home__gallery__image {
-                height: auto;
-                align-self: center;
-            }
-            .gallery__navigation {
-                width: 60%;
-                margin: 0 auto;
-                img {
-                    height: 32px;
-                }
-                img:nth-child(2) {
-                    float: right;
-                }
-            }
-        }
+       
     }
     .home4 {
         border: 2px solid green;
@@ -359,31 +378,14 @@
         }
     }
     .home3 {
-        grid-template-rows: 30% auto;
-        height: 80%;
-
         border: 2px solid blue;
-        article {
-            width: auto;
-            height: auto;
-        }
-        .home__gallery {
-            height: auto;
-            .home__gallery__image {
-                height: auto;
-                align-self: center;
-            }
-            .gallery__navigation {
-                width: 45%;
-                margin: 0 auto;
-                img:nth-child(2) {
-                    float: right;
-                }
-            }
-        }
     }
     .home4 {
-       
+       img {
+           height: 450px;
+           width: 100%;
+           object-fit: cover;
+       }
     }
 }
 @mixin desktop__screen {
@@ -398,11 +400,11 @@
         border: 2px solid red;
     }
     .home3 {
-        grid-template-columns: 40% 60%;
         border: 2px solid red;
     }
     .home4 {
         border: 2px solid red;
+        
     }
 }
 
