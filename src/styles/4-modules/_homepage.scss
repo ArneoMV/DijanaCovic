@@ -68,14 +68,13 @@
     display: grid;
     justify-items: center;
     text-align: justify;
-    padding-top: 2.5em;
     .article {
       h3, p { text-align: justify;}
     }
 }
 @mixin container-2-50_mobile {
     grid-template-columns: auto;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 @mixin container-2-50_desktop {
     grid-template-columns: 50% 50%;
@@ -97,8 +96,6 @@
     @include respond-to(extraextralarge-screens) {  @include desktop__screen(); }
 
 }
-
-
 
 @mixin image__arch {
     object-fit: cover;
@@ -136,7 +133,6 @@
     }
     p { 
         color: $light;
-        //text-align: justify;
     }
 
 .pattern__container {
@@ -156,7 +152,7 @@
         width: 25vw;
         float: right;
         height: 100vh;
-        opacity: 0.2;
+        opacity: 0.1;
     }
 }
 .list_bg {
@@ -276,6 +272,7 @@
 
 // HOME 4
 .home4 {
+    padding: 2em 0 3em 0;
     img {
         height: 450px;
         width: 100%;
@@ -294,7 +291,6 @@
     .home1 {
         height: 100%;
         grid-template-rows: 50% 50%;
-        border: 2px solid green;
         padding-bottom: 2vh;
         .home__information {
             .home__title {
@@ -307,14 +303,10 @@
         }
         .home__image {
             margin: 0 auto;
-            width: 65%;
-            img {
-
-            }
+            width: 80%;
         }
     }
     .home2 {
-        border: 2px solid green;
         height: 100%;
         grid-template-rows: 20% auto;
         .home__title { text-align: center; align-self: end; }
@@ -339,20 +331,12 @@
             
         }
     }
-    .home3 {
-        border: 2px solid blue;
-       
-    }
-    .home4 {
-        border: 2px solid green;
-    }
 }
 @mixin tablet__screen {
     .home1 {
         height: 90%;
         grid-template-columns: 60% 40%;
         place-self: center;
-        border: 2px solid blue;
         .home__information {
             .home__title {
                 grid-gap: 1em;
@@ -367,7 +351,6 @@
     }
     .home2 {
         grid-template-rows: 40% 60%;
-        border: 2px solid blue;
         .home2__title_container {
             place-self: center;
             text-align: center;
@@ -376,9 +359,6 @@
             justify-self: center;
             align-self: start;
         }
-    }
-    .home3 {
-        border: 2px solid blue;
     }
     .home4 {
        img {
@@ -393,18 +373,19 @@
         height: 80%;
         grid-template-columns: 60% 40%;
         place-self: center;
-        border: 2px solid red;
+        .home__image {
+            @include image__arch();
+            #slideshow_wrapper {
+                @include image__arch();  
+            }
+            .slideshow {
+                @include image__arch();
+            }
+        }
+        
     }
     .home2 {
         grid-template-columns: 50% 50%;
-        border: 2px solid red;
-    }
-    .home3 {
-        border: 2px solid red;
-    }
-    .home4 {
-        border: 2px solid red;
-        
     }
 }
 

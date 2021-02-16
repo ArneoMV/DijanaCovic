@@ -1,12 +1,12 @@
-
-
-  
-
 footer {
     width: 100%;
     height: auto;
-    display: grid;
-    padding: 3em 0 5em 0;
+    .footer {
+        display: grid;
+        justify-items: center;
+        margin: 0 auto;
+        padding: 3em 0 5em 0;
+    }
     .footer_info {
         justify-self: center;
         max-width: 35ch;
@@ -14,14 +14,37 @@ footer {
     .button-form {
         text-align: center;
     }
+    .copyright {
+        width: 100%;
+        position: relative;
+        bottom: 0;
+        background-color: $dark;
+        padding: 8px;
+        a,p {
+            font-size: 0.8em;
+            margin: 0 auto;
+            color: $light;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
     @mixin mobile__screen {
-        grid-template-rows: 40% 60%;
+        .footer {
+            width: 90%;
+            grid-template-rows: 40% 60%;
+        }
     }
     @mixin tablet__screen {
-        grid-template-columns: 40% 60%;
+        .footer {
+            width: 90%;
+            grid-template-columns: 40% 60%;
+        }
     }
     @mixin desktop__screen {
-        grid-template-columns: 40% 60%;
+        .footer {
+            width: 80%;
+            grid-template-columns: 40% 60%;
+        }
     }
 
     @include respond-to(extrasmall-screens) { @include mobile__screen(); }
@@ -32,4 +55,4 @@ footer {
     @include respond-to(extraextralarge-screens) {  @include desktop__screen(); }
 }
 
-
+   
