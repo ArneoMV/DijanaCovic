@@ -116,11 +116,33 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div class="home__gallery">
-          <img class="home__gallery__image" src="images/Mockup/mockup_1_Alter_ego.jpg" alt="">
+          <div class="gallerySlider">
+            <div class="gallery__news">
+              <div class="title__line__light">
+                <h3>Galerija</h3>
+                <span></span>
+              </div>
+              <div class="gallery__items gallery__img__popup">
+                <div class="item"><a href="images/Mockup/mockup_2_Alter_ego.jpg"><img src="images/Mockup/mockup_2_Alter_ego.jpg" alt=""></a></div>
+                <div class="item"><a href="images/In_stock/Alice_is_meeting_Mr.Rabbit.jpg"><img src="images/In_stock/Alice_is_meeting_Mr.Rabbit.jpg" alt=""></a></div>
+                <div class="item"><a href="images/In_stock/Alter_ego.jpg"><img src="images/In_stock/Alter_ego.jpg" alt=""></a></div>
+                <div class="item"><a href="images/In_stock/Before_the_storm.jpg"><img src="images/In_stock/Before_the_storm.jpg" alt=""></a></div>
+                <div class="item"><a href="images/In_stock/Angry_Geisha.jpg"><img src="images/In_stock/Angry_Geisha.jpg" alt=""></a></div>
+                <div class="item"><a href="images/In_stock/Before_the_storm.jpg"><img src="images/In_stock/Before_the_storm.jpg" alt=""></a></div>
+                <div class="item"><a href="images/In_stock/CAMOUFLAGE.jpg"><img src="images/In_stock/CAMOUFLAGE.jpg" alt=""></a></div>
+              </div>
+              <div class="pagination">
+                <div id="prev-1" class="button__light__pagination"><p>Prev</p></div>
+                <div id="page-1" class="label__light__pagination"><p>Page <span id="page-num-1"></span></p></div>
+                <div id="next-1" class="button__light__pagination"><p>Next</p></div>
+              </div>
+            </div>
+          </div>
+          <!-- <img class="home__gallery__image" src="images/Mockup/mockup_1_Alter_ego.jpg" alt="">
           <div class="gallery__navigation">
             <img src="images/icons/arrow_right.svg" alt="">
             <img src="images/icons/arrow_left.svg" alt="">
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="pattern__container">
@@ -164,6 +186,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script>
 <script src="scripts/script.js"></script>
+
+<!-- galleria -->
+<script src="scripts/vendors/jquery.magnific-popup.min.js" ></script>
+<script src="scripts/imgPopUp.js"></script>
+<script src="scripts/Gallery.js"></script>
 
 
 </body>

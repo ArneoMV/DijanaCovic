@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,7 +80,7 @@ let scroll_tl = gsap.timeline({
         //pin: true,
         scrub: true,
         end: "+=300",
-        // markers: true
+        //markers: true
       }
     }),
     facts = [...document.querySelectorAll('.fact')]
@@ -98,11 +97,11 @@ let scroll_tl = gsap.timeline({
         pin: true,
         // horizontal: true,
         // pinSpacing:false,
-        // markers: true,
+        markers: true,
         scrub: 1,
         snap: 1 / (facts.length - 1),
         // base vertical scrolling on how wide the container is so it feels more natural.
-        // end: () => `+=${smallFactsContainer.offsetWidth}`
+        //end: () => `+=${smallFactsContainer.offsetWidth}`
         end: () => `+=5320`
       }
     });
