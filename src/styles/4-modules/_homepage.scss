@@ -1,68 +1,40 @@
     
-.home__gallery {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    img {
-        height: auto;
-        width: 100%;
-        justify-self: center;
-    }
-    .gallery__navigation {
-        height: auto;
-        width: 80%;
-        justify-self: start;
-        img {
-            height: 36px;
-            width: auto;
-            margin: 1em;
-            cursor: pointer;
-        }
-    }
+// .home__gallery {
+//     position: relative;
+//     display: flex;
+//     flex-direction: column;
+//     img {
+//         height: auto;
+//         width: 100%;
+//         justify-self: center;
+//     }
       
-    @mixin home__gallery__mobile__screen {
-        width: 100%;
-        height: auto;
-        align-self: center;
-        img {
-            width: 100%;
-            height: auto;
-            align-self: center;
-        }
-        .gallery__navigation {
-            width: 60%;
-            margin: 0 auto;
-            img {
-                height: 32px;
-            }
-            img:nth-child(2) {
-                float: right;
-            }
-        }
-    }
-    @mixin home__gallery__tablet__screen {
-        width: 80%;
-        height: auto;
-        img {
-            height: auto;
-            align-self: center;
-        }
-        .gallery__navigation {
-            width: 45%;
-            margin: 0 auto;
-            img:nth-child(2) {
-                float: right;
-            }
-        }
-    }
+//     @mixin home__gallery__mobile__screen {
+//         width: 100%;
+//         height: auto;
+//         align-self: center;
+//         img {
+//             width: 100%;
+//             height: auto;
+//             align-self: center;
+//         }
+//     }
+//     @mixin home__gallery__tablet__screen {
+//         width: 80%;
+//         height: auto;
+//         img {
+//             height: auto;
+//             align-self: center;
+//         }
+//     }
 
-    @include respond-to(extrasmall-screens) { @include home__gallery__mobile__screen(); }
-    @include respond-to(small-screens) {  @include home__gallery__mobile__screen(); }
-    @include respond-to(medium-screens) {  @include home__gallery__tablet__screen(); }
-    @include respond-to(large-screens) {  @include home__gallery__tablet__screen(); }
-    @include respond-to(extralarge-screens) {  @include home__gallery__tablet__screen(); }
-    @include respond-to(extraextralarge-screens) {  @include home__gallery__tablet__screen(); }  
-}
+//     @include respond-to(extrasmall-screens) { @include home__gallery__mobile__screen(); }
+//     @include respond-to(small-screens) {  @include home__gallery__mobile__screen(); }
+//     @include respond-to(medium-screens) {  @include home__gallery__tablet__screen(); }
+//     @include respond-to(large-screens) {  @include home__gallery__tablet__screen(); }
+//     @include respond-to(extralarge-screens) {  @include home__gallery__tablet__screen(); }
+//     @include respond-to(extraextralarge-screens) {  @include home__gallery__tablet__screen(); }  
+// }
 
 .container-2-50 {
     display: grid;

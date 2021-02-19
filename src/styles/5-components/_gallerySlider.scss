@@ -1,4 +1,4 @@
-// 2. GALERIJA
+// 1. GALERIJA
 .gallerySlider {
  width: 90%;
  display: grid;
@@ -6,26 +6,23 @@
  align-items: center;
  .gallery__items {
   display: grid;
-  grid-gap: 8px;
  }
 
  @mixin home_mobile_view {
   .gallery__items {
    grid-template-rows: 1fr;
-   grid-template-columns: 1fr 1fr;
   }
  }
  @mixin home_tablet_view {
   .gallery__items {
-   grid-template-rows: auto;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 20vh 20vh 20vh;
+   grid-template-columns: 1fr;
+   grid-template-rows: 20vh;
   }
  }
  @mixin home_desktop_view {
   .gallery__items {
    grid-template-rows: auto;
-   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-columns: 1fr;
   }
  }
 
@@ -43,13 +40,6 @@
 	margin: 0 auto;
 	height: auto;
 }
-.gallery__items__natjecanja {
-	display: grid;
-	grid-template-rows: 1fr;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 8px;
-}
-
 
 
 .gallerySlider .item.hide{
@@ -110,35 +100,15 @@
 }
 
 
-@mixin border__text__light {
-	color: $light;
-	border: 1px solid $light;
-}
-@mixin border__text__dark {
-	color: $dark;
-	border: 1px solid $dark;
-}
-@mixin button__round {
-	border-radius: 50% ;
-	padding: 13px 13px; cursor: pointer;
-	cursor: pointer;
+#prev-1, #next-1 {
+ cursor: pointer;
 }
 
-.button__dark__pagination, .label__dark__pagination, .button__light__pagination, .label__light__pagination { font-size: 0.8rem; }
-#prev-1.disabled, #next-1.disabled, #prev__natjecanja.disabled, #next__natjecanja.disabled { pointer-events: none; }
+.button__light__pagination, .label__light__pagination { font-size: 0.8rem; }
+#prev-1.disabled, #next-1.disabled { pointer-events: none; opacity: 0.3; }
 
-.button__dark__pagination {
-	@include border__text__dark();
-	@include button__round();
-}
-.label__dark__pagination { 
-	color: $dark;
-}
-.button__light__pagination {
-	@include border__text__light();
-	@include button__round();
-}
 .label__light__pagination { 
 	color: $light;
 }
+
 

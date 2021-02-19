@@ -8,7 +8,7 @@ $(document).ready(function() {
   const page1 = document.getElementById("page-num-1");
 
   // koliko slika se prikazuje
-  const maxItem = 2;
+  const maxItem = 1;
   let index = 1;
 
   const pagination1 = Math.ceil(galleryItems1.length / maxItem);
