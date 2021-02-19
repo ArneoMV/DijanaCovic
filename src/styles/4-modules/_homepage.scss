@@ -1,40 +1,4 @@
-    
-// .home__gallery {
-//     position: relative;
-//     display: flex;
-//     flex-direction: column;
-//     img {
-//         height: auto;
-//         width: 100%;
-//         justify-self: center;
-//     }
-      
-//     @mixin home__gallery__mobile__screen {
-//         width: 100%;
-//         height: auto;
-//         align-self: center;
-//         img {
-//             width: 100%;
-//             height: auto;
-//             align-self: center;
-//         }
-//     }
-//     @mixin home__gallery__tablet__screen {
-//         width: 80%;
-//         height: auto;
-//         img {
-//             height: auto;
-//             align-self: center;
-//         }
-//     }
 
-//     @include respond-to(extrasmall-screens) { @include home__gallery__mobile__screen(); }
-//     @include respond-to(small-screens) {  @include home__gallery__mobile__screen(); }
-//     @include respond-to(medium-screens) {  @include home__gallery__tablet__screen(); }
-//     @include respond-to(large-screens) {  @include home__gallery__tablet__screen(); }
-//     @include respond-to(extralarge-screens) {  @include home__gallery__tablet__screen(); }
-//     @include respond-to(extraextralarge-screens) {  @include home__gallery__tablet__screen(); }  
-// }
 
 .container-2-50 {
     display: grid;
@@ -43,31 +7,23 @@
     .article {
       h3, p { text-align: justify;}
     }
-}
-@mixin container-2-50_mobile {
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr;
-}
-@mixin container-2-50_desktop {
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
-}
-.container-2-50  {
-    @mixin mobile__screen {
-        @include container-2-50_mobile();
+    @mixin container-2-50_mobile {
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr;
     }
-    @mixin desktop__screen {
-        @include container-2-50_desktop();
+    @mixin container-2-50_desktop {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
     }
-
-    @include respond-to(extrasmall-screens) { @include mobile__screen(); }
-    @include respond-to(small-screens) {  @include mobile__screen(); }
-    @include respond-to(medium-screens) {  @include mobile__screen(); }
-    @include respond-to(large-screens) {  @include desktop__screen(); }
-    @include respond-to(extralarge-screens) {  @include desktop__screen(); }
-    @include respond-to(extraextralarge-screens) {  @include desktop__screen(); }
-
+    
+    @include respond-to(extrasmall-screens) { @include container-2-50_mobile(); }
+    @include respond-to(small-screens) {  @include container-2-50_mobile(); }
+    @include respond-to(medium-screens) {  @include container-2-50_mobile(); }
+    @include respond-to(large-screens) {  @include container-2-50_desktop(); }
+    @include respond-to(extralarge-screens) {  @include container-2-50_desktop(); }
+    @include respond-to(extraextralarge-screens) {  @include container-2-50_desktop(); }
 }
+
 
 @mixin image__arch {
     object-fit: cover;
@@ -80,9 +36,10 @@
     height: auto;
     overflow-y: hidden;
     // h3, p { text-align: justify;}
+    p { line-height: 1.5em; }
     section {
         width: auto;
-        &:nth-child(1), &:nth-child(3), &:nth-child(4) { h3, p { text-align: justify;} }
+        &:nth-child(1), &:nth-child(4) { h3, p { text-align: justify;} }
         &:nth-child(1) { 
             background-color: $green-1;
             display: grid;
@@ -116,6 +73,7 @@
     height: 100%;
     z-index: 99;
     position: absolute;
+    z-index: 9;
     top: 0;
     right: 0;
     .artdeco__backgroung {
@@ -124,7 +82,6 @@
         position: absolute;
         top: 0;
         right: 0;
-        z-index: 9;
         width: 25vw;
         float: right;
         height: 100vh;
@@ -235,11 +192,21 @@
 
 // HOME 3
 .home3 {
-    .container {
+    display: grid;
+    justify-items: center;
+    article {
+        width: 80%;
+        margin: 0 auto;
         place-self: center;
+        h4, h3, p { text-align: justify;}
+        h4 { line-height: 1.5em; }
+        p { line-height: 1.2em; }
+
     }
-    .home__gallery {
+    .gallerySlider {
         place-self: center;
+        position: relative;
+        z-index: 99;
     }
 }
 
@@ -313,6 +280,15 @@
             
         }
     }
+    .home3 {
+        grid-template-columns: auto;
+        grid-template-rows: 40% auto;
+        .gallerySlider {
+            .item img {
+                height: 250px;
+            }
+        }
+    }
 }
 @mixin tablet__screen {
     .home1 {
@@ -341,6 +317,15 @@
             justify-self: center;
             align-self: start;
             text-align: center;
+        }
+    }
+    .home3 {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        .gallerySlider {
+            .item img {
+                height: 300px;
+            }
         }
     }
     .home4 {
@@ -373,6 +358,10 @@
             justify-self: center;
             text-align: center;
         }
+    }
+    .home3 {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
     }
 }
 
