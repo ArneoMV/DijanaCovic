@@ -31,11 +31,11 @@
   animation: slideShow 15s linear infinite 0s;
   opacity: 0;
 }
-.slideshow li:nth-child(1)  {background-image: url("../images/In_stock/Flower_dance.jpg");animation-delay:  0s;}
-.slideshow li:nth-child(2)  {background-image: url("../images/Sold/Lost in your own mind_sold.jpg");animation-delay:  3s;}
-.slideshow li:nth-child(3)  {background-image: url("../images/Sold/SWAN LAKE_sold.jpg");animation-delay:  6s;}
-.slideshow li:nth-child(4)  {background-image: url("../images/In_stock/Memoirs of a Geisha.jpg");animation-delay:  9s;}
-.slideshow li:nth-child(5)  {background-image: url("../images/In_stock/SUMMERTIME, AND THE LIVING IS EASY.jpg");animation-delay:  12s;}
+.slideshow li:nth-child(1)  {background-image: url("../images/graphic/In_stock/Flower_dance.jpg");animation-delay:  0s;}
+.slideshow li:nth-child(2)  {background-image: url("../images/graphic/Sold/Lost in your own mind_sold.jpg");animation-delay:  3s;}
+.slideshow li:nth-child(3)  {background-image: url("../images/graphic/Sold/SWAN LAKE_sold.jpg");animation-delay:  6s;}
+.slideshow li:nth-child(4)  {background-image: url("../images/graphic/In_stock/Memoirs of a Geisha.jpg");animation-delay:  9s;}
+.slideshow li:nth-child(5)  {background-image: url("../images/graphic/In_stock/SUMMERTIME, AND THE LIVING IS EASY.jpg");animation-delay:  12s;}
 
 @keyframes slideShow {
   0% {
