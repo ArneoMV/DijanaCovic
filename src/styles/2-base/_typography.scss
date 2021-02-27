@@ -196,3 +196,7 @@ p, a{
   text-decoration: none;
   max-width: 65ch;
 }
+a {
+  text-decoration: underline;
+  color: $primary-4;
+}
