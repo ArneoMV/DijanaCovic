@@ -72,6 +72,8 @@ section[class^="exhibitions"] {
   }
   img {
     @include shadow();
+    max-width: 350px;
+    height: auto;
   }
 
 }
