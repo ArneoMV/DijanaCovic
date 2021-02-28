@@ -223,7 +223,7 @@ section[class^="exhibitions"] {
     grid-template-columns: auto;
     grid-template-rows: 25% auto;
     figure, img, figcaption {
-      height: 80%;
+      height: auto;
       max-height: 350px;
     }
   }

@@ -1584,7 +1584,7 @@ section[class^=exhibitions] {
     grid-template-rows: 25% auto;
   }
   .exhibitions figure, .exhibitions img, .exhibitions figcaption {
-    height: 80%;
+    height: auto;
     max-height: 350px;
   }
 
@@ -1627,7 +1627,7 @@ section[class^=exhibitions] {
     grid-template-rows: 25% auto;
   }
   .exhibitions figure, .exhibitions img, .exhibitions figcaption {
-    height: 80%;
+    height: auto;
     max-height: 350px;
   }
 
