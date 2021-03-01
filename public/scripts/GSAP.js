@@ -1,3 +1,5 @@
+
+// ABOUT HORIZONTAL SCROLL
 let scroll_tl = gsap.timeline({
  scrollTrigger: {
    trigger: '.trigger-image',
@@ -25,3 +27,21 @@ scroll_tl.to(facts, {
    end: () => `+=4000`
  }
 });
+
+
+// HOME LOADING ANIMATION
+
+gsap.from(".home__intro__slideshow", 1, {
+  y: 560,
+  opacity: 0,
+  stagger: 0.4,
+  delay: 0.5
+})
+gsap.from(".home__intro__text", 1, {
+  y: -560,
+  opacity: 0,
+  stagger: 0.4,
+  delay: 0.2
+})
+
+  

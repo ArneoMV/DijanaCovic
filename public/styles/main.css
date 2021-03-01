@@ -1283,6 +1283,7 @@ footer .copyright a, footer .copyright p {
     line-height: 28px;
   }
 }
+
 @keyframes stripe-one {
   50% {
     transform: translateY(-50%);

@@ -38,8 +38,6 @@
    animation: stripe-one 60s ease 0s infinite;
   }
   img {
-    // @include shadow-png();
-    // -webkit-filter: drop-shadow(2px 2px 2px rgba(255,255,255,.5);
     -webkit-filter: drop-shadow(2px 2px 2px 0px rgba(255,255,255,0.5));
   }
  }
@@ -47,7 +45,6 @@
   width: 100%;
   margin: 15px;
  }
-
 
  /* REPONSIVE */
  @media only screen and (max-width: 1024px) {
@@ -79,8 +76,6 @@
    }
   }
  }
- @media only screen and (max-width: 575px) {
- }
  @media only screen and (max-width: 480px) {
   .text {
     bottom: 0;
@@ -93,8 +88,6 @@
     }
   }
   
- }
- @media only screen and (max-width: 375px) {
  }
 }
 
