@@ -21,11 +21,6 @@
 @include respond-to(large-screens) {  @include tablet__screen(); }
 @include respond-to(extralarge-screens) {  @include desktop__screen(); }
 @include respond-to(extraextralarge-screens) {  @include desktop__screen(); }
-.container-fluid {
-	width: 100%;
-	height: auto;
-	margin: 0 auto;
-}
 
 .container-2-50, .container-40-60 {
     display: grid;
