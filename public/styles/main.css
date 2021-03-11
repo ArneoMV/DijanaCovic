@@ -1836,13 +1836,13 @@ section[class^=exhibitions] {
   z-index: 9999;
 }
 .homepage .home5 {
-  padding: 3em;
+  padding: 0 0 3em 0;
 }
 .homepage .home5 .container-2-50 {
   grid-gap: 2em;
 }
 .homepage .home5 p {
-  place-self: center;
+  text-align: center;
 }
 .homepage .home3 {
   display: grid;

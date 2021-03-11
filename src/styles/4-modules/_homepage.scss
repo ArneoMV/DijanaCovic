@@ -116,12 +116,12 @@
 
 // section 2
 .home5 {
-    padding: 3em;
+    padding: 0 0 3em 0;
     .container-2-50 {
         grid-gap: 2em;
     }
     p {
-        place-self: center;
+        text-align: center;
     }
 
 }

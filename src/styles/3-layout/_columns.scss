@@ -27,7 +27,6 @@
     justify-items: center;
     text-align: left;
 }
-
 @mixin container_mobile {
     .container-2-50, .container-40-60, .container-60-40  {
         grid-template-columns: auto;
