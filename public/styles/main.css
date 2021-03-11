@@ -256,7 +256,7 @@ h1, h2, h3, h4, h5, h6 {
 p, a {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  line-height: 1.15em;
+  line-height: 1.25em;
   text-decoration: none;
   max-width: 65ch;
   margin-bottom: 1em;
@@ -264,7 +264,7 @@ p, a {
 
 a {
   text-decoration: underline;
-  color: #043764; }
+  color: #b2cadb; }
 
 /* Brakepoint's */
 .demo {
@@ -599,7 +599,7 @@ nav {
   nav .nav-links {
     display: flex;
     justify-content: space-around;
-    width: 80%;
+    width: 50%;
     align-self: center;
     position: relative;
     left: 20%;
@@ -1330,7 +1330,7 @@ section[class^="exhibitions"] {
     .homepage section:nth-child(5) {
       position: relative;
       height: auto; }
-    .homepage section:nth-child(1), .homepage section:nth-child(3) {
+    .homepage section:nth-child(1) {
       height: 100vh; }
     .homepage section:nth-child(5) {
       height: auto;
@@ -1464,6 +1464,9 @@ section[class^="exhibitions"] {
         max-width: 100px;
         min-width: 24px; }
   @media only screen and (min-width: 151px) and (max-width: 479px) {
+    .homepage section:nth-child(3) {
+      height: auto;
+      padding: 3em 0; }
     .homepage .home1 {
       height: 100%;
       grid-template-rows: 50% 50%;
@@ -1481,10 +1484,13 @@ section[class^="exhibitions"] {
       align-self: end; }
     .homepage .home3 {
       grid-template-columns: auto;
-      grid-template-rows: 40% auto; }
+      grid-template-rows: auto auto; }
       .homepage .home3 .gallerySlider .item img {
         height: 250px; } }
   @media only screen and (min-width: 321px) and (max-width: 479px) {
+    .homepage section:nth-child(3) {
+      height: auto;
+      padding: 3em 0; }
     .homepage .home1 {
       height: 100%;
       grid-template-rows: 50% 50%;
@@ -1502,10 +1508,13 @@ section[class^="exhibitions"] {
       align-self: end; }
     .homepage .home3 {
       grid-template-columns: auto;
-      grid-template-rows: 40% auto; }
+      grid-template-rows: auto auto; }
       .homepage .home3 .gallerySlider .item img {
         height: 250px; } }
   @media only screen and (min-width: 481px) and (max-width: 719px) {
+    .homepage section:nth-child(3) {
+      height: auto;
+      padding: 3em 0; }
     .homepage .home1 {
       height: 100%;
       grid-template-rows: 50% 50%;
@@ -1523,10 +1532,12 @@ section[class^="exhibitions"] {
       align-self: end; }
     .homepage .home3 {
       grid-template-columns: auto;
-      grid-template-rows: 40% auto; }
+      grid-template-rows: auto auto; }
       .homepage .home3 .gallerySlider .item img {
         height: 250px; } }
   @media only screen and (min-width: 721px) and (max-width: 919px) {
+    .homepage section:nth-child(3) {
+      height: 100vh; }
     .homepage .home1 {
       height: 90%;
       grid-template-columns: 60% 40%;
@@ -1549,6 +1560,8 @@ section[class^="exhibitions"] {
       width: 100%;
       object-fit: cover; } }
   @media only screen and (min-width: 921px) and (max-width: 1199px) {
+    .homepage section:nth-child(3) {
+      height: 100vh; }
     .homepage .home1 {
       height: 80%;
       grid-template-columns: 60% 40%;
@@ -1566,6 +1579,8 @@ section[class^="exhibitions"] {
       grid-template-columns: 50% 50%;
       grid-template-rows: auto; } }
   @media only screen and (min-width: 1200px) {
+    .homepage section:nth-child(3) {
+      height: 100vh; }
     .homepage .home1 {
       height: 80%;
       grid-template-columns: 60% 40%;
@@ -3130,7 +3145,6 @@ img.mfp-img {
   height: auto; }
 
 .gallerySlider {
-  width: 90%;
   display: grid;
   justify-self: center;
   align-items: center;
