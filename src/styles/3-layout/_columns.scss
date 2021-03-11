@@ -30,7 +30,7 @@
 @mixin container_mobile {
     .container-2-50, .container-40-60, .container-60-40  {
         grid-template-columns: auto;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: auto auto
     }
 }
 @mixin container_desktop {

@@ -181,13 +181,11 @@ h6{	@include fluid-type(font-size, 37.5rem, 80rem, $h6-min, $h6-max); }
 
 h1, h2, h3, h4, h5, h6 {
   max-width: 30ch;
-  line-height: 0.9em;
   font-weight: 150;
   letter-spacing: 0.05em;
-  // margin-bottom: 0.9em;
+  margin-bottom: $margin-bottom-md;
   font-family: 'Margaret', serif;
   color: $gatsby-gold;
-  text-align: left;
 }
 p, a{
   font-family: 'Montserrat', sans-serif; 

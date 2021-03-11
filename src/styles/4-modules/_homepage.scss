@@ -19,7 +19,11 @@
             position: relative;
             height: auto;
         }
-        &:nth-child(1), &:nth-child(3), &:nth-child(5) { height: 100vh; }
+        &:nth-child(1), &:nth-child(3) { height: 100vh; }
+        &:nth-child(5) {
+            height: auto;
+            padding: 3em 0 4em 0;
+        }
         &:nth-child(1), &:nth-child(3), &:nth-child(4) { position: relative; }
         &:nth-child(1), &:nth-child(4) { h4, h3, p { text-align: left;} }
         p { color: $light; }
@@ -51,7 +55,7 @@
         z-index: 99;
         position: absolute;
         bottom: 0;
-        left: -33px;
+        left: -15px;
         .artdeco__list {
             background-image: url(../images/graphic/SVG/list_1.svg);
             background-repeat: no-repeat;
@@ -59,9 +63,9 @@
             top: 0;
             left: 0;
             z-index: 9;
-            width: 30vw;
+            width: 110vw;
             float: left;
-            height: 100vh;
+            height: 25vh;
             opacity: 0.2;
         }
     }
@@ -116,12 +120,12 @@
 
 // section 2
 .home5 {
-    padding: 0 0 3em 0;
+    padding: 3em 0;
     .container-2-50 {
         grid-gap: 2em;
     }
     p {
-        text-align: center;
+        margin: 0 auto;
         text-align: justify;
         max-width: 60ch;
     }
@@ -165,15 +169,10 @@
     height: 80%;
     display: grid;
     place-self: center;
-    .home2__title_container {
-        width: auto;
-        height: auto;
-        display: grid;
-        place-self: center;
-        .home2__title {
-            width: 80%;
-            place-self: center;
-        }
+
+    .home2__title {
+        width: 80%;
+        margin: 0 auto 2em auto;
     }
     .home__icons {
         width: 80%;
@@ -181,17 +180,15 @@
         grid-template-columns: 50% 50%;
         grid-template-rows: auto;
         align-self: center;
-        justify-self: start;
+        justify-self: center;
+        text-align: center;
+        grid-gap: 2em;
         .objects__icons {
             img {
                 height: auto;
                 width: auto;
                 max-width: 100px;
                 min-width: 24px;
-                grid-area: home__object__icon;
-            }
-            .home__icons__text {
-                grid-area: home__object__text;
             }
         }
     }
@@ -219,38 +216,8 @@
         }
     }
     .home2 {
-        height: 100%;
-        grid-template-rows: 20% auto;
         .home__title { align-self: end; }
-        .home__icons {
-            width: auto;
-            grid-template-columns: auto;
-            grid-gap: 1em;
-            .objects__icons {
-                display: grid;
-                grid-template-columns: auto auto;
-                &:nth-child(odd) {
-                    grid-template-columns: 1fr 2fr;
-                    grid-template-areas: "home__object__icon home__object__text";
-                    align-items: center;
-                    justify-items: center;
-                    text-align: left;
-                }
-                &:nth-child(even) {
-                    grid-template-columns: 2fr 1fr;
-                    grid-template-areas: "home__object__text home__object__icon";
-                    align-items: center;
-                    justify-items: center;
-                    text-align: right;
-                    .home__icons__text {
-                        display: grid;
-                        h4{ justify-self: end; }
-                    }
-                }
-                
-            }
-            
-        }
+
     }
     .home3 {
         grid-template-columns: auto;
@@ -281,19 +248,6 @@
     }
     .home2 {
         grid-template-rows: 40% 60%;
-        .home2__title_container {
-            place-self: center;
-            text-align: center;
-        }
-        .home__icons {
-            justify-self: center;
-            align-self: start;
-            text-align: center;
-            grid-gap: 1em;
-            .home__icons__text p {
-                font-size: 0.9em;
-            }
-        }
     }
     .home3 {
         grid-template-columns: 50% 50%;
@@ -329,12 +283,7 @@
         
     }
     .home2 {
-        grid-template-columns: 50% 50%;
-        .home__icons {
-            justify-self: center;
-            text-align: center;
-            grid-gap: 2em;
-        }
+
     }
     .home3 {
         grid-template-columns: 50% 50%;

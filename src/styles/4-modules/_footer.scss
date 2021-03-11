@@ -6,15 +6,13 @@ footer {
         justify-items: center;
         margin: 0 auto;
         padding: 3em 0 5em 0;
+        grid-gap: 2em;
     }
     .square-deco-container {
         max-width: 600px;
     }
-    .home__contact {
-        margin: 1em 0;
-    }
     .footer_info {
-        justify-self: center;
+        justify-self: start;
         max-width: 35ch;
     }
     .button-form {
@@ -37,7 +35,7 @@ footer {
     @mixin mobile__screen {
         .footer {
             width: 90%;
-            grid-template-rows: 40% 60%;
+            grid-template-rows: auto auto;
         }
     }
     @mixin tablet__screen {
@@ -55,7 +53,7 @@ footer {
 
     @include respond-to(extrasmall-screens) { @include mobile__screen(); }
     @include respond-to(small-screens) {  @include mobile__screen(); }
-    @include respond-to(medium-screens) {  @include tablet__screen(); }
+    @include respond-to(medium-screens) {  @include mobile__screen(); }
     @include respond-to(large-screens) {  @include tablet__screen(); }
     @include respond-to(extralarge-screens) {  @include desktop__screen(); }
     @include respond-to(extraextralarge-screens) {  @include desktop__screen(); }

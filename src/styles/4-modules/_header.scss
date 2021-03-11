@@ -5,6 +5,10 @@
 @import "../1-helpers/_mixins.scss";
 @import "../2-base/_colors.scss";
 
+.overflowHidden {
+  overflow: hidden;
+}
+
 #navBar {
   position: fixed;
   z-index: 9999;
@@ -78,7 +82,7 @@ nav {
   background-color: $dark;
   position: fixed;
   z-index: 9999;
-  top: 0;
+  top: 8vh;
   left: 0;
   overflow-y: hidden;
   transition: width 600ms ease-in-out;
@@ -112,7 +116,7 @@ nav {
 .burger {
   display: none;
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   z-index: 999999;

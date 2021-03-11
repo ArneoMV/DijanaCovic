@@ -9,12 +9,13 @@
           <a href="About.html">About</a>
         </div>
       </nav>
+      <div id="burger" class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
     </div>
-    <div id="burger" class="burger">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
-    </div>
+    
     <div class="nav-mobile">
       <div class="nav-links">
         <a href="index.html">Home</a>
@@ -22,6 +23,7 @@
         <a href="Products.html">Products</a>
         <a href="About.html">About</a>
       </div>
+      
     </div>
   </header>
   <!-- <script src="scripts/navigation.js"></script> -->
@@ -37,6 +39,8 @@ burger.addEventListener('click', () => {
   //Burger Animation
   burger.classList.toggle('toggle');
   navMobile.classList.toggle('is-active');
+  navBar.style.top = "0";
+  document.body.classList.toggle('overflowHidden');
 });  
 
 // HIDE NAVIGATION ON SCROLL
