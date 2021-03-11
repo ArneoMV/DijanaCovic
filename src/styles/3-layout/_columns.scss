@@ -22,17 +22,14 @@
 @include respond-to(extralarge-screens) {  @include desktop__screen(); }
 @include respond-to(extraextralarge-screens) {  @include desktop__screen(); }
 
-.container-2-50, .container-40-60 {
+.container-2-50, .container-40-60, .container-60-40 {
     display: grid;
     justify-items: center;
-    text-align: justify;
-    .article {
-      h3, p { text-align: justify;}
-    }
+    text-align: left;
 }
 
 @mixin container_mobile {
-    .container-2-50, .container-40-60 {
+    .container-2-50, .container-40-60, .container-60-40  {
         grid-template-columns: auto;
         grid-template-rows: 1fr 1fr;
     }
@@ -44,6 +41,9 @@
     }
     .container-40-60 {
         grid-template-columns: 40% 60%;
+    }
+    .container-60-40  {
+        grid-template-columns: 60% 40%;
     }
 
 }

@@ -184,10 +184,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0.9em;
   font-weight: 150;
   letter-spacing: 0.05em;
-  margin-bottom: 0.9em;
-  // font-family: "Margaret Bold", serif;
-  font-family: 'Viaoda Libre';
+  // margin-bottom: 0.9em;
+  font-family: 'Margaret', serif;
   color: $gatsby-gold;
+  text-align: left;
 }
 p, a{
   font-family: 'Montserrat', sans-serif; 
@@ -196,6 +196,7 @@ p, a{
   text-decoration: none;
   max-width: 65ch;
   margin-bottom: 1em;
+  text-align: justify;
 }
 a {
   text-decoration: underline;
