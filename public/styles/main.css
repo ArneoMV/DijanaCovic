@@ -1843,6 +1843,8 @@ section[class^=exhibitions] {
 }
 .homepage .home5 p {
   text-align: center;
+  text-align: justify;
+  max-width: 60ch;
 }
 .homepage .home3 {
   display: grid;
