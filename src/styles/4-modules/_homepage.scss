@@ -146,6 +146,9 @@
             place-self: center;
             position: relative;
             z-index: 99;
+            .gallery__items {
+                margin: 0 auto;
+            }
         }
     }
 
@@ -153,7 +156,7 @@
     .home4 {
         padding: 2em 0 3em 0;
         img {
-            height: 450px;
+            height: auto;
             width: 100%;
             object-fit: cover;
         }
@@ -227,7 +230,7 @@
             grid-template-rows: auto auto;
             .gallerySlider {
                 .item img {
-                    height: 250px;
+                    height: 300px;
                 }
             }
         }

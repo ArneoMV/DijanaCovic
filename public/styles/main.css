@@ -1433,10 +1433,12 @@ section[class^="exhibitions"] {
       place-self: center;
       position: relative;
       z-index: 99; }
+      .homepage .home3 .gallerySlider .gallery__items {
+        margin: 0 auto; }
   .homepage .home4 {
     padding: 2em 0 3em 0; }
     .homepage .home4 img {
-      height: 450px;
+      height: auto;
       width: 100%;
       object-fit: cover; }
     .homepage .home4 article, .homepage .home4 img {
@@ -1486,7 +1488,7 @@ section[class^="exhibitions"] {
       grid-template-columns: auto;
       grid-template-rows: auto auto; }
       .homepage .home3 .gallerySlider .item img {
-        height: 250px; } }
+        height: 300px; } }
   @media only screen and (min-width: 321px) and (max-width: 479px) {
     .homepage section:nth-child(3) {
       height: auto;
@@ -1510,7 +1512,7 @@ section[class^="exhibitions"] {
       grid-template-columns: auto;
       grid-template-rows: auto auto; }
       .homepage .home3 .gallerySlider .item img {
-        height: 250px; } }
+        height: 300px; } }
   @media only screen and (min-width: 481px) and (max-width: 719px) {
     .homepage section:nth-child(3) {
       height: auto;
@@ -1534,7 +1536,7 @@ section[class^="exhibitions"] {
       grid-template-columns: auto;
       grid-template-rows: auto auto; }
       .homepage .home3 .gallerySlider .item img {
-        height: 250px; } }
+        height: 300px; } }
   @media only screen and (min-width: 721px) and (max-width: 919px) {
     .homepage section:nth-child(3) {
       height: 100vh; }
@@ -3157,8 +3159,8 @@ img.mfp-img {
     display: block;
     animation: show .5s ease; }
   .gallerySlider .item img {
-    width: 100%;
-    height: 450px;
+    width: auto;
+    height: auto;
     display: block;
     object-fit: cover;
     border-radius: 4px; }
