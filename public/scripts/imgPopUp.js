@@ -12,6 +12,14 @@ $('.gallery__img__popup').magnificPopup({
 	}
 });
 
+$('.about__img_1').magnificPopup({
+	delegate: 'a',
+	type: 'image',
+	gallery:{
+		enabled:true
+	}
+});
+
 
 })(jQuery);	
 
