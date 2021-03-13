@@ -9,7 +9,7 @@
     margin: 0 auto 3em auto;
     width: 100vw;
     height: auto;
-    overflow-y: hidden;
+    overflow-x: hidden;
     section {
         width: auto;
         &:nth-child(odd) { background-color: $green-1; }
