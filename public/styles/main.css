@@ -1318,7 +1318,7 @@ section[class^="exhibitions"] {
   margin: 0 auto 3em auto;
   width: 100vw;
   height: auto;
-  overflow-y: hidden; }
+  overflow-x: hidden; }
   .homepage section {
     width: auto; }
     .homepage section:nth-child(odd) {
