@@ -494,7 +494,6 @@ a {
 
   .col-sm-12 {
     width: 100%; } }
-/* Grid layout */
 .Masonry {
   padding-bottom: 130px; }
   .Masonry img {
@@ -510,7 +509,7 @@ a {
         height: 200px; } }
   @media only screen and (min-width: 321px) and (max-width: 479px) {
     .Masonry {
-      column-count: 1;
+      column-count: 2;
       text-align: center; }
       .Masonry img {
         height: 250px; } }
@@ -726,105 +725,159 @@ footer {
       width: 80%;
       grid-template-columns: 40% 60%; } }
 
-/* Paintings*/
-.painting {
-  width: 100%;
-  height: 100%;
-  display: grid;
+.painting .exit-painting {
+  width: 50px;
+  height: auto;
   position: absolute;
-  overflow: hidden;
-  align-items: center;
-  z-index: 99;
-  background-color: #5a3098; }
-  .painting .exit-painting {
-    width: 50px;
-    height: auto;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 1em;
-    cursor: pointer; }
-    .painting .exit-painting svg {
-      fill: white; }
-  .painting .grid-painting {
-    height: auto;
-    width: 100%;
+  top: 8vh;
+  right: 0;
+  margin: 1em;
+  cursor: pointer; }
+  .painting .exit-painting svg {
+    fill: white; }
+.painting .grid-painting .info-painting {
+  color: #151515; }
+  .painting .grid-painting .info-painting p {
+    max-width: 45ch; }
+  .painting .grid-painting .info-painting ul {
+    align-self: end; }
+  .painting .grid-painting .info-painting .lista_painting {
+    font-weight: bold; }
+@media only screen and (min-width: 151px) and (max-width: 479px) {
+  .painting {
+    height: 100vh;
     display: grid;
-    align-self: center; }
-    .painting .grid-painting .image-painting {
-      display: grid;
-      width: 100%;
-      height: 100%; }
-      .painting .grid-painting .image-painting img {
-        place-self: center;
-        height: 100%; }
-    .painting .grid-painting .info-painting {
-      color: #FBFBFB;
+    align-items: center;
+    overflow: hidden; }
+    .painting .painting_container {
+      width: 90%;
+      height: 100%;
+      margin: 0 auto;
+      border: 1px solid blue;
       display: grid; }
-      .painting .grid-painting .info-painting p {
-        max-width: 45ch; }
-      .painting .grid-painting .info-painting ul {
-        align-self: end; }
-  @media only screen and (min-width: 151px) and (max-width: 479px) {
-    .painting .grid-painting {
-      grid-template-columns: repeat(1, 1fr); }
-      .painting .grid-painting .image-painting img {
-        width: auto;
-        padding: 2em; }
-      .painting .grid-painting .info-painting {
-        padding: 0 2em; }
-        .painting .grid-painting .info-painting ul li {
-          padding-top: 0.5em; } }
-  @media only screen and (min-width: 321px) and (max-width: 479px) {
-    .painting .grid-painting {
-      grid-template-columns: repeat(1, 1fr); }
-      .painting .grid-painting .image-painting {
-        padding: 0 2em; }
-        .painting .grid-painting .image-painting img {
-          width: auto;
-          padding: 2em; }
-      .painting .grid-painting .info-painting {
-        padding: 0 2em; }
-        .painting .grid-painting .info-painting ul li {
-          padding-top: 0.5em; } }
-  @media only screen and (min-width: 481px) and (max-width: 719px) {
-    .painting .grid-painting {
-      height: 70vh;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: 50% 50%; }
-      .painting .grid-painting .image-painting img {
-        width: auto; }
-      .painting .grid-painting .info-painting {
-        padding: 0 2em; }
-        .painting .grid-painting .info-painting ul li {
-          padding-top: 0.5em; } }
-  @media only screen and (min-width: 721px) and (max-width: 919px) {
-    .painting .grid-painting {
-      grid-template-columns: 60% 40%; }
-      .painting .grid-painting .image-painting img {
-        width: 80%; }
-      .painting .grid-painting .info-painting {
-        padding: 0 1em; }
-        .painting .grid-painting .info-painting ul li {
-          padding-top: 0.5em; } }
-  @media only screen and (min-width: 921px) and (max-width: 1199px) {
-    .painting .grid-painting {
-      grid-template-columns: repeat(2, 1fr); }
-      .painting .grid-painting .image-painting img {
-        width: 80%; }
-      .painting .grid-painting .info-painting {
-        padding: 0 1em; }
-        .painting .grid-painting .info-painting ul li {
-          padding-top: 0.5em; } }
-  @media only screen and (min-width: 1200px) {
-    .painting .grid-painting {
-      grid-template-columns: repeat(2, 1fr); }
-      .painting .grid-painting .image-painting img {
-        width: 80%; }
-      .painting .grid-painting .info-painting {
-        padding: 0 1em; }
-        .painting .grid-painting .info-painting ul li {
-          padding-top: 0.5em; } }
+    .painting .container-2-50 {
+      place-self: center; }
+    .painting img {
+      padding: 0.5em;
+      width: auto;
+      height: auto;
+      max-height: 50vh;
+      place-self: center; }
+    .painting article {
+      justify-self: start;
+      align-self: start; } }
+@media only screen and (min-width: 321px) and (max-width: 479px) {
+  .painting {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    overflow: hidden; }
+    .painting .painting_container {
+      width: 90%;
+      height: 100%;
+      margin: 0 auto;
+      border: 1px solid blue;
+      display: grid; }
+    .painting .container-2-50 {
+      place-self: center; }
+    .painting img {
+      padding: 0.5em;
+      width: auto;
+      height: auto;
+      max-height: 50vh;
+      place-self: center; }
+    .painting article {
+      justify-self: start;
+      align-self: start; } }
+@media only screen and (min-width: 481px) and (max-width: 719px) {
+  .painting {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    overflow: hidden; }
+    .painting .painting_container {
+      width: 90%;
+      height: 100%;
+      margin: 0 auto;
+      border: 1px solid blue;
+      display: grid; }
+    .painting .container-2-50 {
+      place-self: center; }
+    .painting img {
+      padding: 0.5em;
+      width: auto;
+      height: auto;
+      max-height: 50vh;
+      place-self: center; }
+    .painting article {
+      justify-self: start;
+      align-self: start; } }
+@media only screen and (min-width: 721px) and (max-width: 919px) {
+  .painting {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    overflow: hidden; }
+    .painting .painting_container {
+      width: 80%;
+      height: 70%;
+      margin: 0 auto;
+      display: grid; }
+    .painting .container-2-50 {
+      place-self: center; }
+    .painting img {
+      padding: 0.5em;
+      width: auto;
+      height: auto;
+      max-height: 500px;
+      place-self: center; }
+    .painting article {
+      justify-self: start;
+      align-self: start; } }
+@media only screen and (min-width: 921px) and (max-width: 1199px) {
+  .painting {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    overflow: hidden; }
+    .painting .painting_container {
+      width: 80%;
+      height: 70%;
+      margin: 0 auto;
+      display: grid; }
+    .painting .container-2-50 {
+      place-self: center; }
+    .painting img {
+      padding: 0.5em;
+      width: auto;
+      height: auto;
+      max-height: 500px;
+      place-self: center; }
+    .painting article {
+      justify-self: start;
+      align-self: start; } }
+@media only screen and (min-width: 1200px) {
+  .painting {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    overflow: hidden; }
+    .painting .painting_container {
+      width: 80%;
+      height: 70%;
+      margin: 0 auto;
+      display: grid; }
+    .painting .container-2-50 {
+      place-self: center; }
+    .painting img {
+      padding: 0.5em;
+      width: auto;
+      height: auto;
+      max-height: 500px;
+      place-self: center; }
+    .painting article {
+      justify-self: start;
+      align-self: start; } }
 
 /* MIXINS */
 /* Brakepoint's */
@@ -838,6 +891,10 @@ footer {
   filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')"; }
 
 /* Gallery */
+/* Paintings */
+#painting_1:hover {
+  cursor: pointer; }
+
 .gallery {
   width: 100%;
   height: 100vh;
@@ -1025,8 +1082,13 @@ footer {
   overflow: hidden;
   width: 100vw;
   height: auto; }
+  .about section:nth-child(2) {
+    display: grid; }
   .about section:nth-child(3) {
-    height: 100vh; }
+    display: grid;
+    position: relative; }
+    .about section:nth-child(3) h4, .about section:nth-child(3) h3, .about section:nth-child(3) p {
+      text-align: left; }
   .about section:nth-child(4) {
     height: auto;
     padding: 3em 0; }
@@ -1034,8 +1096,6 @@ footer {
     background-color: #1D5445; }
   .about section:nth-child(even) {
     background-color: #316859; }
-  .about section:nth-child(2) {
-    display: grid; }
   .about p {
     color: #FBFBFB; }
   .about h1, .about h2 {
@@ -1090,22 +1150,15 @@ section[class^="exhibitions"] {
     height: auto;
     place-self: center; }
 
-.horizontalScroll {
-  display: grid;
-  align-items: center; }
-
-.page2 {
-  display: grid;
-  grid-template-columns: repeat(6, auto);
-  grid-template-rows: auto; }
-
-.fact {
-  margin: 0 2.5em;
-  height: auto; }
-  .fact img {
+.home4 {
+  padding: 2em 0 3em 0; }
+  .home4 img {
+    height: auto;
     width: 100%;
-    height: 100%;
     object-fit: cover; }
+  .home4 article, .home4 img {
+    padding: 1em;
+    align-self: center; }
 
 .page3 .container-2-50 {
   grid-gap: 2em; }
@@ -1151,10 +1204,6 @@ section[class^="exhibitions"] {
       max-height: 450px;
       place-self: center; }
 
-  .page2 .fact {
-    margin: 0 2.5em;
-    width: 250px; }
-
   .exhibitions {
     grid-template-columns: auto;
     grid-template-rows: auto auto; }
@@ -1184,10 +1233,6 @@ section[class^="exhibitions"] {
       max-height: 450px;
       place-self: center; }
 
-  .page2 .fact {
-    margin: 0 2.5em;
-    width: 250px; }
-
   .exhibitions {
     grid-template-columns: auto;
     grid-template-rows: auto auto; }
@@ -1216,10 +1261,6 @@ section[class^="exhibitions"] {
       max-height: 350px;
       place-self: center; }
 
-  .page2 .fact {
-    margin: 0 2.5em;
-    width: 350px; }
-
   .exhibitions {
     grid-template-columns: auto;
     grid-template-rows: auto auto; }
@@ -1230,7 +1271,12 @@ section[class^="exhibitions"] {
     grid-template-columns: auto;
     grid-template-rows: auto auto; }
     .page3 .text-container {
-      align-self: center; } }
+      align-self: center; }
+
+  .home4 img {
+    height: 450px;
+    width: 100%;
+    object-fit: cover; } }
 @media only screen and (min-width: 721px) and (max-width: 919px) {
   .about section:nth-child(1) {
     height: auto; }
@@ -1251,10 +1297,6 @@ section[class^="exhibitions"] {
       max-height: 350px;
       place-self: center; }
 
-  .page2 .fact {
-    margin: 0 2.5em;
-    width: 350px; }
-
   .exhibitions {
     grid-template-columns: auto;
     grid-template-rows: auto auto; }
@@ -1265,7 +1307,12 @@ section[class^="exhibitions"] {
     grid-template-columns: auto;
     grid-template-rows: auto auto; }
     .page3 .text-container {
-      align-self: center; } }
+      align-self: center; }
+
+  .home4 img {
+    height: 450px;
+    width: 100%;
+    object-fit: cover; } }
 @media only screen and (min-width: 921px) and (max-width: 1199px) {
   .about section:nth-child(1) {
     height: 100vh; }
@@ -1280,10 +1327,6 @@ section[class^="exhibitions"] {
     .page1 .avatar {
       max-height: 450px;
       place-self: center; }
-
-  .page2 .fact {
-    margin: 0 2.5em;
-    width: 450px; }
 
   .exhibitions {
     grid-template-columns: auto;
@@ -1305,10 +1348,6 @@ section[class^="exhibitions"] {
       max-height: 450px;
       place-self: center; }
 
-  .page2 .fact {
-    margin: 0 2.5em;
-    width: 450px; }
-
   .exhibitions {
     grid-template-columns: auto;
     grid-template-rows: auto auto; }
@@ -1325,8 +1364,10 @@ section[class^="exhibitions"] {
       background-color: #1D5445; }
     .homepage section:nth-child(even) {
       background-color: #316859; }
-    .homepage section:nth-child(1), .homepage section:nth-child(3), .homepage section:nth-child(4) {
+    .homepage section:nth-child(1), .homepage section:nth-child(3) {
       display: grid; }
+    .homepage section:nth-child(4) {
+      height: 100vh; }
     .homepage section:nth-child(5) {
       position: relative;
       height: auto; }
@@ -1335,9 +1376,9 @@ section[class^="exhibitions"] {
     .homepage section:nth-child(5) {
       height: auto;
       padding: 3em 0 4em 0; }
-    .homepage section:nth-child(1), .homepage section:nth-child(3), .homepage section:nth-child(4) {
+    .homepage section:nth-child(1), .homepage section:nth-child(3) {
       position: relative; }
-    .homepage section:nth-child(1) h4, .homepage section:nth-child(1) h3, .homepage section:nth-child(1) p, .homepage section:nth-child(4) h4, .homepage section:nth-child(4) h3, .homepage section:nth-child(4) p {
+    .homepage section:nth-child(1) h4, .homepage section:nth-child(1) h3, .homepage section:nth-child(1) p {
       text-align: left; }
     .homepage section p {
       color: #FBFBFB; }
@@ -1435,15 +1476,20 @@ section[class^="exhibitions"] {
       z-index: 99; }
       .homepage .home3 .gallerySlider .gallery__items {
         margin: 0 auto; }
-  .homepage .home4 {
-    padding: 2em 0 3em 0; }
-    .homepage .home4 img {
-      height: auto;
+  .homepage .horizontalScroll {
+    display: grid;
+    align-items: center; }
+  .homepage .page2 {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: auto; }
+  .homepage .fact {
+    margin: 0 2.5em;
+    height: auto; }
+    .homepage .fact img {
       width: 100%;
+      height: 100%;
       object-fit: cover; }
-    .homepage .home4 article, .homepage .home4 img {
-      padding: 1em;
-      align-self: center; }
   .homepage .home2 {
     height: 80%;
     display: grid;
@@ -1488,7 +1534,10 @@ section[class^="exhibitions"] {
       grid-template-columns: auto;
       grid-template-rows: auto auto; }
       .homepage .home3 .gallerySlider .item img {
-        height: 300px; } }
+        height: 300px; }
+    .homepage .page2 .fact {
+      margin: 0 2.5em;
+      width: 250px; } }
   @media only screen and (min-width: 321px) and (max-width: 479px) {
     .homepage section:nth-child(3) {
       height: auto;
@@ -1512,7 +1561,10 @@ section[class^="exhibitions"] {
       grid-template-columns: auto;
       grid-template-rows: auto auto; }
       .homepage .home3 .gallerySlider .item img {
-        height: 300px; } }
+        height: 300px; }
+    .homepage .page2 .fact {
+      margin: 0 2.5em;
+      width: 250px; } }
   @media only screen and (min-width: 481px) and (max-width: 719px) {
     .homepage section:nth-child(3) {
       height: auto;
@@ -1536,7 +1588,10 @@ section[class^="exhibitions"] {
       grid-template-columns: auto;
       grid-template-rows: auto auto; }
       .homepage .home3 .gallerySlider .item img {
-        height: 300px; } }
+        height: 300px; }
+    .homepage .page2 .fact {
+      margin: 0 2.5em;
+      width: 250px; } }
   @media only screen and (min-width: 721px) and (max-width: 919px) {
     .homepage section:nth-child(3) {
       height: 100vh; }
@@ -1557,10 +1612,9 @@ section[class^="exhibitions"] {
       grid-template-rows: auto; }
       .homepage .home3 .gallerySlider .item img {
         height: 300px; }
-    .homepage .home4 img {
-      height: 450px;
-      width: 100%;
-      object-fit: cover; } }
+    .homepage .page2 .fact {
+      margin: 0 2.5em;
+      width: 350px; } }
   @media only screen and (min-width: 921px) and (max-width: 1199px) {
     .homepage section:nth-child(3) {
       height: 100vh; }
@@ -1579,7 +1633,10 @@ section[class^="exhibitions"] {
           border-radius: 49% 49% 0 0; }
     .homepage .home3 {
       grid-template-columns: 50% 50%;
-      grid-template-rows: auto; } }
+      grid-template-rows: auto; }
+    .homepage .page2 .fact {
+      margin: 0 2.5em;
+      width: 450px; } }
   @media only screen and (min-width: 1200px) {
     .homepage section:nth-child(3) {
       height: 100vh; }
@@ -1598,7 +1655,10 @@ section[class^="exhibitions"] {
           border-radius: 49% 49% 0 0; }
     .homepage .home3 {
       grid-template-columns: 50% 50%;
-      grid-template-rows: auto; } }
+      grid-template-rows: auto; }
+    .homepage .page2 .fact {
+      margin: 0 2.5em;
+      width: 450px; } }
 
 /* Hamburger */
 body.has-nav .menu-btn {

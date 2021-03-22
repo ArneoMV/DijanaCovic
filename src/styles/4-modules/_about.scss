@@ -4,8 +4,11 @@
   width: 100vw;
   height: auto;
   section {
+    &:nth-child(2) { display: grid;}
     &:nth-child(3) {
-      height: 100vh;
+      display: grid;
+      position: relative;
+      h4, h3, p { text-align: left;}
     }
     &:nth-child(4) {
       height: auto;
@@ -13,7 +16,6 @@
     }
     &:nth-child(odd) { background-color: $green-1; }
     &:nth-child(even) { background-color: $green-2; }
-    &:nth-child(2) { display: grid;}
   }
 
   p { color: $light; }
@@ -80,24 +82,20 @@ section[class^="exhibitions"] {
 }
 
 // SECTION 3
-.horizontalScroll {
-  display: grid;
-  align-items: center;
-}
-.page2 {
-  display: grid;
-  grid-template-columns: repeat(6, auto);
-  grid-template-rows: auto;
-}
-.fact {
-  margin: 0 2.5em;
-  height: auto;
+.home4 {
+  padding: 2em 0 3em 0;
   img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+  }
+  article, img  {
+      padding: 1em;
+      align-self: center;
   }
 }
+
+
 
 // SECTION 4
 .page3 {
@@ -111,7 +109,6 @@ section[class^="exhibitions"] {
       max-width: 500px;
       place-self: center;
     }
-
 }
 
 
@@ -172,12 +169,7 @@ section[class^="exhibitions"] {
       place-self: center;
     }
   }
-  .page2 {
-    .fact {
-      margin: 0 2.5em;
-      width: 250px;
-    }
-  }
+
   .exhibitions {
     grid-template-columns: auto;
     grid-template-rows: auto auto;
@@ -187,9 +179,7 @@ section[class^="exhibitions"] {
       max-width: 280px;
     }
   }
-  .page3 {
 
-  }
 }
 
 // TABLET
@@ -224,12 +214,6 @@ section[class^="exhibitions"] {
       place-self: center;
     }
   }
-  .page2 {
-    .fact {
-      margin: 0 2.5em;
-      width: 350px;
-    }
-  }
   .exhibitions {
     grid-template-columns: auto;
     grid-template-rows: auto auto;
@@ -243,10 +227,14 @@ section[class^="exhibitions"] {
     .text-container {
       align-self: center;
     }
-    .page3-galery {
-
-    }
   }
+  .home4 {
+    img {
+        height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
 }
 // DESKTOP
 @mixin desktop__about {
@@ -273,12 +261,7 @@ section[class^="exhibitions"] {
     }
 
   }
-  .page2 {
-    .fact {
-      margin: 0 2.5em;
-      width: 450px;
-    }
-  }
+
   
   .exhibitions {
     grid-template-columns: auto;
@@ -287,9 +270,7 @@ section[class^="exhibitions"] {
       max-width: 350px;
     }
   }
-  .page3 {
 
-  }
 }
 
 @include respond-to(extrasmall-screens) { @include mobile__about(); }

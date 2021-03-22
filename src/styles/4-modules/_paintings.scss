@@ -1,19 +1,12 @@
-/* Paintings*/
+
+
 .painting  {
- width: 100%;
- height: 100%;
- display: grid;
- position: absolute;
- overflow: hidden;
- align-items: center; 
- z-index: 99;
- background-color: rgb(90, 48, 152);
 
  .exit-painting {
   width: 50px;
   height: auto;
   position: absolute;
-  top: 0;
+  top: 8vh;
   right: 0;
   margin: 1em;
   cursor: pointer;
@@ -23,123 +16,75 @@
  }
 
  .grid-painting {
-  height: auto;
-  width: 100%;
-  display: grid;
-  align-self: center;
-  .image-painting {
-   display: grid;
-   width: 100%;
-   height: 100%;
-   img {
-    place-self: center;
-    height: 100%;
-   }
-  }
-  .info-painting {
-   color: $light;
-   display: grid;
-   p { max-width: 45ch; }
-   ul {
-    align-self: end;
-   }
-  }
- }
+
+    .info-painting {
+        color: $dark;
+        p { max-width: 45ch; }
+        ul { align-self: end; }
+        .lista_painting { font-weight: bold; }
+    }
+}
  
 
+    @mixin mobile__screen {
+        height: 100vh;
+        display: grid;
+        align-items: center;
+        overflow: hidden;
+        .painting_container {
+            width: 90%;
+            height: 100%;
+            margin: 0 auto;
+            border: 1px solid blue;
+            display: grid;
+        }
+        .container-2-50 {
+            place-self: center;
+        }
+        img {
+            padding: 0.5em;
+            width: auto;
+            height: auto;
+            max-height: 50vh;
+            place-self: center;
+        }
+        article {
+            justify-self: start;
+            align-self: start;
+        }
+    }
 
- @mixin xs-screen {
-  .grid-painting {
-   grid-template-columns: repeat(1, 1fr);
-   .image-painting {
-    img { width: auto; padding: 2em; }
-   }
-   .info-painting {
-    padding: 0 2em;
-    ul { 
-     li { padding-top: 0.5em; }
+    @mixin desktop__screen {
+        height: 100vh;
+        display: grid;
+        align-items: center;
+        overflow: hidden;
+        .painting_container {
+            width: 80%;
+            height: 70%;
+            margin: 0 auto;
+            display: grid;
+        }
+        .container-2-50 {
+            place-self: center;
+        }
+        img {
+            padding: 0.5em;
+            width: auto;
+            height: auto;
+            max-height: 500px;
+            place-self: center;
+        }
+        article {
+            justify-self: start;
+            align-self: start;
+        }
     }
-   }
-  }
- 
- }
- @mixin small-screen {
-  .grid-painting {
-   grid-template-columns: repeat(1, 1fr);
-   .image-painting {
-    padding: 0 2em;
-    img { width: auto; padding: 2em; }
-   }
-   .info-painting {
-    padding: 0 2em;
-    ul { 
-     li { padding-top: 0.5em; }
-    }
-   }
-  }
- }
- @mixin medium-screen {
-  .grid-painting {
-   height: 70vh;
-   grid-template-columns: repeat(1, 1fr);
-   grid-template-rows: 50% 50%;
-   .image-painting {
-    img { width: auto;  }
-   }
-   .info-painting {
-    padding: 0 2em;
-    ul { 
-     li { padding-top: 0.5em; }
-    }
-   }
-  }
- }
- @mixin large-screen {
-  .grid-painting {
-   grid-template-columns: 60% 40%;
-   .image-painting {
-    img { width: 80%; }
-   }
-   .info-painting {
-    padding: 0 1em;
-    ul { 
-     li { padding-top: 0.5em; }
-    }
-   }
-  }
- }
- @mixin xl-screen {
-  .grid-painting {
-   grid-template-columns: repeat(2, 1fr);
-   .image-painting {
-    img { width: 80%; }
-   }
-   .info-painting {
-    padding: 0 1em;
-    ul { 
-     li { padding-top: 0.5em; }
-    }
-   }
-  }
- }
- @mixin xxl-screen {
-  .grid-painting {
-   grid-template-columns: repeat(2, 1fr);
-   .image-painting {
-    img { width: 80%; }
-   }
-   .info-painting {
-    padding: 0 1em;
-    ul { 
-     li { padding-top: 0.5em; }
-    }
-   }
-  }
- }
- @include respond-to(extrasmall-screens) { @include xs-screen(); }
- @include respond-to(small-screens) {  @include small-screen(); }
- @include respond-to(medium-screens) {  @include medium-screen(); }
- @include respond-to(large-screens) {  @include large-screen(); }
- @include respond-to(extralarge-screens) {  @include xl-screen(); }
- @include respond-to(extraextralarge-screens) {  @include xxl-screen(); }
+
+    @include respond-to(extrasmall-screens) { @include mobile__screen(); }
+    @include respond-to(small-screens) {  @include mobile__screen(); }
+    @include respond-to(medium-screens) {  @include mobile__screen(); }
+    @include respond-to(large-screens) {  @include desktop__screen(); }
+    @include respond-to(extralarge-screens) {  @include desktop__screen(); }
+    @include respond-to(extraextralarge-screens) {  @include desktop__screen(); }
 }
