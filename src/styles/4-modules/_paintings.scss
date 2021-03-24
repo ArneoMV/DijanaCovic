@@ -14,14 +14,13 @@
    fill: white;
   }
  }
-
+ .txt_bold { font-weight: bold; }
  .grid-painting {
 
     .info-painting {
         color: $dark;
         p { max-width: 45ch; }
         ul { align-self: end; }
-        .lista_painting { font-weight: bold; }
     }
 }
  

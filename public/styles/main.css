@@ -735,14 +735,14 @@ footer {
   cursor: pointer; }
   .painting .exit-painting svg {
     fill: white; }
+.painting .txt_bold {
+  font-weight: bold; }
 .painting .grid-painting .info-painting {
   color: #151515; }
   .painting .grid-painting .info-painting p {
     max-width: 45ch; }
   .painting .grid-painting .info-painting ul {
     align-self: end; }
-  .painting .grid-painting .info-painting .lista_painting {
-    font-weight: bold; }
 @media only screen and (min-width: 151px) and (max-width: 479px) {
   .painting {
     height: 100vh;
