@@ -266,6 +266,9 @@ a {
   text-decoration: underline;
   color: #b2cadb; }
 
+.txt_bold {
+  font-weight: bold; }
+
 /* Brakepoint's */
 .demo {
   display: grid; }
@@ -579,7 +582,6 @@ a {
   color: #FBFBFB;
   text-decoration: none;
   letter-spacing: 3px;
-  font-weight: bold;
   font-size: 1em;
   position: relative;
   top: 0.5vh; }
@@ -735,8 +737,6 @@ footer {
   cursor: pointer; }
   .painting .exit-painting svg {
     fill: white; }
-.painting .txt_bold {
-  font-weight: bold; }
 .painting .grid-painting .info-painting {
   color: #151515; }
   .painting .grid-painting .info-painting p {
@@ -1623,13 +1623,10 @@ section[class^="exhibitions"] {
       grid-template-columns: 60% 40%;
       place-self: center; }
       .homepage .home1 .home__image {
-        object-fit: cover;
         border-radius: 49% 49% 0 0; }
         .homepage .home1 .home__image #slideshow_wrapper {
-          object-fit: cover;
           border-radius: 49% 49% 0 0; }
         .homepage .home1 .home__image .slideshow {
-          object-fit: cover;
           border-radius: 49% 49% 0 0; }
     .homepage .home3 {
       grid-template-columns: 50% 50%;
@@ -1645,13 +1642,10 @@ section[class^="exhibitions"] {
       grid-template-columns: 60% 40%;
       place-self: center; }
       .homepage .home1 .home__image {
-        object-fit: cover;
         border-radius: 49% 49% 0 0; }
         .homepage .home1 .home__image #slideshow_wrapper {
-          object-fit: cover;
           border-radius: 49% 49% 0 0; }
         .homepage .home1 .home__image .slideshow {
-          object-fit: cover;
           border-radius: 49% 49% 0 0; }
     .homepage .home3 {
       grid-template-columns: 50% 50%;
@@ -2783,32 +2777,44 @@ input[type=checkbox]:checked:disabled + label:before {
   opacity: 0; }
 
 .slideshow li:nth-child(1) {
-  background-image: url("../images/graphic/slike/Angry_Geisha.jpg");
+  background-image: url("../images/graphic/slike_animacija/slika_12.jpg");
   animation-delay: 0s; }
 
 .slideshow li:nth-child(2) {
-  background-image: url("../images/graphic/slike/Flower_dance.jpg");
-  animation-delay: 3s; }
+  background-image: url("../images/graphic/slike_animacija/Miss_Green.jpg");
+  animation-delay: 2.5s; }
 
 .slideshow li:nth-child(3) {
-  background-image: url("../images/graphic/slike/Croatian_abstract.jpg");
-  animation-delay: 6s; }
+  background-image: url("../images/graphic/slike_animacija/Black_Haze.jpg");
+  animation-delay: 5s; }
 
 .slideshow li:nth-child(4) {
-  background-image: url("../images/graphic/slike/Just_say_sorry.jpg");
-  animation-delay: 9s; }
+  background-image: url("../images/graphic/slike_animacija/slika_13.jpg");
+  animation-delay: 7.5s; }
 
 .slideshow li:nth-child(5) {
-  background-image: url("../images/graphic/slike/Lady_in_red.jpg");
-  animation-delay: 12s; }
+  background-image: url("../images/graphic/slike_animacija/Slika_50.jpg");
+  animation-delay: 10s; }
 
 .slideshow li:nth-child(6) {
-  background-image: url("../images/graphic/slike/Fallen_swan_sold.jpg");
+  background-image: url("../images/graphic/slike_animacija/Slika_54.jpg");
+  animation-delay: 12.5s; }
+
+.slideshow li:nth-child(8) {
+  background-image: url("../images/graphic/slike_animacija/slika_56.jpg");
   animation-delay: 15s; }
 
-.slideshow li:nth-child(7) {
-  background-image: url("../images/graphic/slike/Boogie Girl_sold.jpg");
-  animation-delay: 18s; }
+.slideshow li:nth-child(9) {
+  background-image: url("../images/graphic/slike_animacija/slika_57.jpg");
+  animation-delay: 17.5s; }
+
+.slideshow li:nth-child(10) {
+  background-image: url("../images/graphic/slike_animacija/slika_kokot.jpg");
+  animation-delay: 20s; }
+
+.slideshow li:nth-child(11) {
+  background-image: url("../images/graphic/slike_animacija/Trapped.jpg");
+  animation-delay: 22.5s; }
 
 @keyframes slideShow {
   0% {
