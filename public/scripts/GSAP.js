@@ -31,7 +31,6 @@ let scroll_tl = gsap.timeline({
  
  
  // HOME LOADING ANIMATION
- 
  gsap.from(".home__intro__slideshow", 1, {
    y: 560,
    opacity: 0,
@@ -45,6 +44,4 @@ let scroll_tl = gsap.timeline({
    delay: 0.2
  })
  
-   
-
 })

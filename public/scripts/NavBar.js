@@ -6,14 +6,17 @@ $(document).ready(function() {
     let navBar = document.getElementById("navBar");
     
     burger.addEventListener('click', () => {
-      //Burger Animation
+
+      //alert("klik");
+      
+      // Burger Klick
       burger.classList.toggle('toggle');
       navMobile.classList.toggle('is-active');
       navBar.style.top = "0";
       document.body.classList.toggle('overflowHidden');
     });  
-    
-    // HIDE NAVIGATION ON SCROLL
+
+    // Hide navbar on scroll
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
       var currentScrollPos = window.pageYOffset;
@@ -24,5 +27,4 @@ $(document).ready(function() {
       }
       prevScrollpos = currentScrollPos;
     }
-    
 });

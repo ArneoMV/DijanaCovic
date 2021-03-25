@@ -141,7 +141,6 @@
         display: grid;
         justify-items: center;
         article {
-            width: 80%;
             margin: 0 auto;
             place-self: center;
         }
@@ -194,7 +193,6 @@
             align-self: center;
             justify-self: center;
             text-align: center;
-            grid-gap: 2em;
             .objects__icons {
                 img {
                     height: auto;

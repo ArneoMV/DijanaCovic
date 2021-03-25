@@ -12,21 +12,37 @@
    height: 100vh;
    position: fixed;
    display: grid;
-  .filters {
-      height: 100%;
-      margin: 1em 0 0.5em 0;
+
+   article {
+      margin: 1em;
+      text-align: left;
+   }
+  .filter {
+      height: auto;
+      display: none;
+      p {
+         font-size: 1.3em;
+         font-weight: 500;
+      } 
   }
+  .filter_icon {
+      width: 30px;
+      height: 30px; 
+      cursor: pointer;    
+   }
+   .filter_active, form{
+      display: block;
+   }
   form {
    position: relative;
    margin: 0 1rem;
-}
+   }
   .paintings {
       height: 100%;
       width: auto;
       position: relative;
       overflow-y: scroll;
       overflow-x: hidden;
-      margin: 0 1em;
       .Masonry {
          img {
             border-radius: 3px;
@@ -34,59 +50,38 @@
          }
       }
   }
-   .filter_icon {
-      display: none;
-      margin: 0 0 0 4em;
-      position: relative;
-      cursor: pointer;
-      p {
-         font-size: 1.3em;
-         font-weight: 500;
-         &:before{
-            content: "";
-            background-image: url("../images/icons/filter.svg");
-            background-size: 25px 25px;
-            background-repeat: no-repeat;
-            position: absolute;
-            bottom: -3px;
-            left: -30px;
-            width: 30px;
-            height: 30px;  
-        }
-      }     
-   }
 
-   .filter_active, form{
-      display: block;
-   }
-   
 
-  @mixin mobile-gallery {
+   @mixin mobile__screen {
       grid-template-columns: 100%;
       grid-template-rows: auto auto;
       // margin-top: 3vh;
+      .filter {
+         margin: 1em;
+         display: grid;
+         grid-template-columns: 42px auto;
+         img { place-self: center; }
+         p {align-self: center; }
+      }
       form {
          display: none;
          grid-template-columns: 100%;
          grid-template-rows: repeat(2,auto);
       }
       .filter_icon { display: block; }
-      
    }
-
-   @mixin tablet-gallery {
+   @mixin tablet__screen {
+      grid-template-columns: 250px auto;
+   }
+   @mixin desktop__screen {
       grid-template-columns: 250px auto;
    }
 
-   @mixin desktop-gallery {
-      grid-template-columns: 250px auto;
-   }
-  
-   @include respond-to(extrasmall-screens) { @include mobile-gallery(); }
-   @include respond-to(small-screens) {  @include mobile-gallery(); }
-   @include respond-to(medium-screens) {  @include mobile-gallery(); }
-   @include respond-to(large-screens) {  @include tablet-gallery(); }
-   @include respond-to(extralarge-screens) {  @include desktop-gallery(); }
-   @include respond-to(extraextralarge-screens) {  @include desktop-gallery(); }
+   @include respond-to(extrasmall-screens) { @include mobile__screen(); }
+   @include respond-to(small-screens) {  @include mobile__screen(); }
+   @include respond-to(medium-screens) {  @include tablet__screen(); }
+   @include respond-to(large-screens) {  @include tablet__screen(); }
+   @include respond-to(extralarge-screens) {  @include desktop__screen(); }
+   @include respond-to(extraextralarge-screens) {  @include desktop__screen(); }
 
 }

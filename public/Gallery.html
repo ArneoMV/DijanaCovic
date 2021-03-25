@@ -1,79 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <link rel="apple-touch-icon" sizes="180x180" href="images/graphic/favicon/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="48x48"  href="images/graphic/favicon/android-icon-48x48.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/graphic/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="images/graphic/favicon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/graphic/favicon/favicon-16x16.png">
-  <title>Dijana Čović</title>
+
+  <title>Dijana Čović Gallery</title>
   
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="styles/main.css">
 
 </head>
+
 <body>
 
-  <header>
-    <div id="navBar">
-      <a href="#" id="logo"><img class="logo" src="images/graphic/SVG/potpis.svg" alt="Dijana Covic"/></a>
-      <nav>
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a class="txt_bold" href="Gallery.html">Gallery</a>
-          <a href="Products.html">Products</a>
-          <a href="About.html">About</a>
-        </div>
-      </nav>
-      <div id="burger" class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
+  <header id="header"></header>
+
+  <main id="main">
+    <div class="gallery container filler">
+        <section>
+            <article>
+                <h3>Gallery</h3>
+                <p>Here you can see my paintings that are ready to be delivered on your address.</p>
+            </article>
+            <div class="filter">
+                <img class="filter_icon" src="images/graphic/icons/filter.svg" alt="filter icon">
+                <p>Filters</p>
+            </div>
+            <!-- Filter menu -->
+            <form>
+                <!-- Price slider --> 
+                <div class="slider-range-wrap">
+                    <p class="tx-filter">Price</p>
+                    <p class="tx-filter">MIn: <b><span id="price_min">100</span></b> Max: <b><span id="price_max">7000</span></b></p>
+                    <div id="slider-range"></div>
+                    <span class="min-range">100</span>
+                    <span class="max-range">7,000</span>
+                </div>
+                <!-- Style -->
+                <div class="contact-dropbox-container">
+                    <div id="selectbox_style" class="selectbox selectbox--unselect" data-option="">
+                        <div id="click_dropdown_style" class="selectbox__displayWord"><p class="tx-filter">Style</p> </div>
+                        <div class="option-container">
+                            <div class="dropdown_options options_style">
+                                <input type="checkbox" id="style01" class="option__checkbox" name="category-style" value="Surrealism"/> 
+                                <label class="option__label" for="style01" data-value="Surrealism">Surrealism</label>
+                            </div>
+                            <div class="dropdown_options options_style">
+                                <input type="checkbox" id="style02" class="option__checkbox" name="category-style" value="Figurative"/> 
+                                <label class="option__label" for="style02" data-value="Figurative">Figurative</label>
+                            </div>
+                            <div class="dropdown_options options_style">
+                                <input type="checkbox" id="style03" class="option__checkbox" name="category-style" value="Portrait"/> 
+                                <label class="option__label" for="style03" data-value="Portrait">Portrait</label>
+                            </div>
+                            <div class="dropdown_options options_style">
+                                <input type="checkbox" id="style04" class="option__checkbox" name="category-style" value="Impressionism"/> 
+                                <label class="option__label" for="style04" data-value="Impressionism">Impressionism</label>
+                            </div>
+                            <div class="dropdown_options options_style">
+                                <input type="checkbox" id="style05" class="option__checkbox" name="category-style" value="Modern"/> 
+                                <label class="option__label" for="style05" data-value="Modern">Modern</label>
+                            </div>
+                            <div class="dropdown_options options_style">
+                                <input type="checkbox" id="style06" class="option__checkbox" name="category-style" value="PopArt"/> 
+                                <label class="option__label" for="style06" data-value="Pop Art">Pop art</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Technique -->
+                <div class="contact-dropbox-container">
+                    <div id="selectbox_technique" class="selectbox selectbox--unselect" data-option="">
+                        <div id="click_dropdown_technique" class="selectbox__displayWord"><p class="tx-filter">Technique</p></div>
+                        <div class="option-container">
+                            <div class="dropdown_options options_technique">
+                                <input type="checkbox" id="technique01" class="option__checkbox" name="category-technique" value="Oil"/> 
+                                <label class="option__label" for="technique01" data-value="Oil">Oil</label>
+                            </div>
+                            <div class="dropdown_options options_technique">
+                                <input type="checkbox" id="technique02" class="option__checkbox" name="category-technique" value="Gresso"/> 
+                                <label class="option__label" for="technique02" data-value="Gresso">Gresso</label>
+                            </div>
+                            <div class="dropdown_options options_technique">
+                                <input type="checkbox" id="technique03" class="option__checkbox" name="category-technique" value="Acrylic"/> 
+                                <label class="option__label" for="technique03" data-value="Acrylic">Acrylic</label>
+                            </div>
+                            <div class="dropdown_options options_technique">
+                                <input type="checkbox" id="technique04" class="option__checkbox" name="category-technique" value="Ink"/> 
+                                <label class="option__label" for="technique04" data-value="Ink">Ink</label>
+                            </div>
+                            <div class="dropdown_options options_technique">
+                                <input type="checkbox" id="technique05" class="option__checkbox" name="category-technique" value="Watercolor"/> 
+                                <label class="option__label" for="technique05" data-value="Watercolor">Watercolor</label>
+                            </div>
+                            <div class="dropdown_options options_technique">
+                                <input type="checkbox" id="technique06" class="option__checkbox" name="category-technique" value="Gousche"/> 
+                                <label class="option__label" for="technique06" data-value="Gousche">Gousche</label>
+                            </div>
+                            <div class="dropdown_options options_technique">
+                                <input type="checkbox" id="technique07" class="option__checkbox" name="category-technique" value="Charoal"/> 
+                                <label class="option__label" for="technique07" data-value="Charoal">Charoal</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <button class="button-filter">Filter</button> -->
+                <button class="custom-btn btn-8"><span>Filter</span></button>
+            </form>
+        </section> 
+       
+        <!-- Gallery -->
+        <section class="paintings">
+            <div class="Masonry">
+                <img id="painting_1" src="images/graphic/slike/African_men_in_a_blue_suit.jpg" alt="">
+                <img src="images/graphic/slike/Alice_is_meeting_Mr.Rabbit.jpg" alt="">
+                <img src="images/graphic/slike/Alter_ego copy.jpg" alt="">
+                <img src="images/graphic/slike/Angry_Geisha.jpg" alt="">
+                <img src="images/graphic/slike/Before_the_storm.jpg" alt="">
+                <img src="images/graphic/slike/Black Magic_sold.jpg" alt="">
+                <img src="images/graphic/slike/Black_haze.jpg" alt="">
+                <img src="images/graphic/slike/Boogie Girl_sold.jpg" alt="">
+                <img src="images/graphic/slike/Boogie Girl_sold.jpg" alt="">
+                <img src="images/graphic/slike/CAMOUFLAGE.jpg" alt="">
+                <img src="images/graphic/slike/Croatian_abstract.jpg" alt="">
+                <img src="images/graphic/slike/Daddy buy me a deer_sold.jpg" alt="">
+                <img src="images/graphic/slike/DIFFERENT TIME, DIFFERENT MANNERS.jpg" alt="">
+                <img src="images/graphic/slike/DIVINE IRISES_sold.jpg" alt="">
+                <img src="images/graphic/slike/DIVINE IRISES_sold.jpg" alt="">
+                <img src="images/graphic/slike/Eyes Wide Open.jpg" alt="">
+                <img src="images/graphic/slike/Fallen_swan_sold.jpg" alt="">
+                <img src="images/graphic/slike/Fragile_sold.jpg" alt="">
+                <img src="images/graphic/slike/Furry Coated-Furry Puppy.jpg" alt="">
+                <img src="images/graphic/slike/Girl with the lantern.jpg" alt="">
+                <img src="images/graphic/slike/Girl_in_a_red_dress.jpg" alt="">
+                <img src="images/graphic/slike/Green_scene.jpg" alt="">
+            </div>
+        </section>
     </div>
-    
-    <div class="nav-mobile">
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a class="txt_bold" href="Gallery.html">Gallery</a>
-        <a href="Products.html">Products</a>
-        <a href="About.html">About</a>
-      </div>
-      
-    </div>
-  </header>
-  
-
-<div id="gallery_page"></div>
-
-
+</main>
 
 
 <script src="scripts/vendors/JQueryV351.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
 <script src="scripts/script.js"></script>
-<script src="scripts/navigation.js"></script>
 <script src="scripts/NavBar.js"></script>
+<script src="scripts/Painting.js"></script>
+<script src="scripts/dropdown.js"></script>
+<script src="scripts/PriceSlider.js"></script>
 
 <script>
-$(document).ready(function() {
-    // Controller
-    //$("#gallery_page").load("html/Gallery_all.html");
-    $("#gallery_page").load("html/Gallery_all.html");
-
-});
+    $(document).ready(function() {;
+      $("#painting_1").click(function() {
+          $("#main").load("html/Painting.html");
+      });
+      // SHOW/HIDE FILTERS 
+      $(".filter_icon").click(function() {
+          $("form").toggleClass("filter_active");
+      });
+    });
 </script>
 
-<script src="scripts/Gallery_Page.js"></script>
-<script src="scripts/Painting.js"></script>
-
-
-</body>
-</html>
 
 
 

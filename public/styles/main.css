@@ -258,9 +258,7 @@ p, a {
   font-weight: 400;
   line-height: 1.25em;
   text-decoration: none;
-  max-width: 65ch;
-  margin-bottom: 1em;
-  text-align: justify; }
+  max-width: 65ch; }
 
 a {
   text-decoration: underline;
@@ -500,26 +498,34 @@ a {
 .Masonry {
   padding-bottom: 130px; }
   .Masonry img {
-    margin: 0.5em;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover; }
   @media only screen and (min-width: 151px) and (max-width: 479px) {
     .Masonry {
       column-count: 1;
-      text-align: center; }
+      text-align: center;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-gap: 0.5em; }
       .Masonry img {
         height: 200px; } }
   @media only screen and (min-width: 321px) and (max-width: 479px) {
     .Masonry {
       column-count: 2;
-      text-align: center; }
+      text-align: center;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-gap: 0.5em; }
       .Masonry img {
         height: 250px; } }
   @media only screen and (min-width: 481px) and (max-width: 719px) {
     .Masonry {
       column-count: 2;
-      text-align: center; } }
+      text-align: center;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-gap: 0.5em; } }
   @media only screen and (min-width: 721px) and (max-width: 919px) {
     .Masonry {
       column-count: 3; } }
@@ -753,7 +759,6 @@ footer {
       width: 90%;
       height: 100%;
       margin: 0 auto;
-      border: 1px solid blue;
       display: grid; }
     .painting .container-2-50 {
       place-self: center; }
@@ -776,7 +781,6 @@ footer {
       width: 90%;
       height: 100%;
       margin: 0 auto;
-      border: 1px solid blue;
       display: grid; }
     .painting .container-2-50 {
       place-self: center; }
@@ -799,7 +803,6 @@ footer {
       width: 90%;
       height: 100%;
       margin: 0 auto;
-      border: 1px solid blue;
       display: grid; }
     .painting .container-2-50 {
       place-self: center; }
@@ -900,9 +903,21 @@ footer {
   height: 100vh;
   position: fixed;
   display: grid; }
-  .gallery .filters {
-    height: 100%;
-    margin: 1em 0 0.5em 0; }
+  .gallery article {
+    margin: 1em;
+    text-align: left; }
+  .gallery .filter {
+    height: auto;
+    display: none; }
+    .gallery .filter p {
+      font-size: 1.3em;
+      font-weight: 500; }
+  .gallery .filter_icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer; }
+  .gallery .filter_active, .gallery form {
+    display: block; }
   .gallery form {
     position: relative;
     margin: 0 1rem; }
@@ -911,35 +926,22 @@ footer {
     width: auto;
     position: relative;
     overflow-y: scroll;
-    overflow-x: hidden;
-    margin: 0 1em; }
+    overflow-x: hidden; }
     .gallery .paintings .Masonry img {
       border-radius: 3px;
       box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1); }
-  .gallery .filter_icon {
-    display: none;
-    margin: 0 0 0 4em;
-    position: relative;
-    cursor: pointer; }
-    .gallery .filter_icon p {
-      font-size: 1.3em;
-      font-weight: 500; }
-      .gallery .filter_icon p:before {
-        content: "";
-        background-image: url("../images/icons/filter.svg");
-        background-size: 25px 25px;
-        background-repeat: no-repeat;
-        position: absolute;
-        bottom: -3px;
-        left: -30px;
-        width: 30px;
-        height: 30px; }
-  .gallery .filter_active, .gallery form {
-    display: block; }
   @media only screen and (min-width: 151px) and (max-width: 479px) {
     .gallery {
       grid-template-columns: 100%;
       grid-template-rows: auto auto; }
+      .gallery .filter {
+        margin: 1em;
+        display: grid;
+        grid-template-columns: 42px auto; }
+        .gallery .filter img {
+          place-self: center; }
+        .gallery .filter p {
+          align-self: center; }
       .gallery form {
         display: none;
         grid-template-columns: 100%;
@@ -950,6 +952,14 @@ footer {
     .gallery {
       grid-template-columns: 100%;
       grid-template-rows: auto auto; }
+      .gallery .filter {
+        margin: 1em;
+        display: grid;
+        grid-template-columns: 42px auto; }
+        .gallery .filter img {
+          place-self: center; }
+        .gallery .filter p {
+          align-self: center; }
       .gallery form {
         display: none;
         grid-template-columns: 100%;
@@ -958,14 +968,7 @@ footer {
         display: block; } }
   @media only screen and (min-width: 481px) and (max-width: 719px) {
     .gallery {
-      grid-template-columns: 100%;
-      grid-template-rows: auto auto; }
-      .gallery form {
-        display: none;
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(2, auto); }
-      .gallery .filter_icon {
-        display: block; } }
+      grid-template-columns: 250px auto; } }
   @media only screen and (min-width: 721px) and (max-width: 919px) {
     .gallery {
       grid-template-columns: 250px auto; } }
@@ -1014,7 +1017,6 @@ footer {
       letter-spacing: 4px; }
   .products .products-gallery {
     width: 50%;
-    padding: 0 30px;
     display: flex;
     justify-content: space-between; }
     .products .products-gallery .img-stripe {
@@ -1467,7 +1469,6 @@ section[class^="exhibitions"] {
     display: grid;
     justify-items: center; }
     .homepage .home3 article {
-      width: 80%;
       margin: 0 auto;
       place-self: center; }
     .homepage .home3 .gallerySlider {
@@ -1504,8 +1505,7 @@ section[class^="exhibitions"] {
       grid-template-rows: auto;
       align-self: center;
       justify-self: center;
-      text-align: center;
-      grid-gap: 2em; }
+      text-align: center; }
       .homepage .home2 .home__icons .objects__icons img {
         height: auto;
         width: auto;
