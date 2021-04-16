@@ -16,15 +16,4 @@ $(document).ready(function() {
       document.body.classList.toggle('overflowHidden');
     });  
 
-    // Hide navbar on scroll
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        navBar.style.top = "0";
-      } else {
-        navBar.style.top = "-8vh";
-      }
-      prevScrollpos = currentScrollPos;
-    }
 });
