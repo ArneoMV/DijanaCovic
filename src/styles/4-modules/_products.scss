@@ -25,6 +25,10 @@
     letter-spacing: 4px;
   }
  }
+}
+
+
+
  /* images */
  .products-gallery {
   width: 50%;
@@ -47,14 +51,14 @@
 
  /* REPONSIVE */
  @media only screen and (max-width: 1024px) {
-  overflow: hidden;
-  display: grid;
-  grid-template-rows: auto auto;
-  .text {
-    bottom: 0;
-    position: relative;
-    top: 8vh;
-  }
+  // overflow: hidden;
+  // display: grid;
+  // grid-template-rows: auto auto;
+  // .text {
+  //   bottom: 0;
+  //   position: relative;
+  //   top: 8vh;
+  // }
   .products-gallery {
    width: 100%;
    height: auto;
@@ -69,7 +73,7 @@
    display: flex;
    max-width: 100%;
    overflow-x: auto;
-   transform: translateY(0) !important;
+   transform: translateX(0) !important;
    img {
      width: auto;
     height: 150px;
@@ -79,40 +83,31 @@
   }
  }
  @media only screen and (max-width: 480px) {
-  .text {
-    bottom: 0;
-    h1 {
-      font-size: 42px;
-    }
-    p {
-      font-size: 18px;
-      line-height: 28px;
-    }
-  }
+  // .text {
+  //   bottom: 0;
+  //   h1 {
+  //     font-size: 42px;
+  //   }
+  //   p {
+  //     font-size: 18px;
+  //     line-height: 28px;
+  //   }
+  // }
  }
-}
+
 
 // image animation
 @keyframes stripe-one {
  50% {
-  transform: translateY(-50%); /* It depends on your image stripe height */
+  transform: translateX(-50%); /* It depends on your image stripe height */
  }
 }
 .products-gallery .stripe2 {
- transform: translateY(-50%); /* It depends on your image stripe height */
+ transform: translateX(-50%); /* It depends on your image stripe height */
  animation: stripe-two 60s ease 0s infinite;
 }
 @keyframes stripe-two {
  50% {
-  transform: translateY(0%);
+  transform: translateX(0%);
  }
 }
-
-
-
-//  web gradiend
-.webgradient {
-  background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, 
-                                            #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
-}
-
