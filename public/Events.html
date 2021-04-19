@@ -21,39 +21,39 @@
   
 <main>
   <div class="events filler">
-
-    <!-- section 2 exhibitions -->
-    <section>
-      <div class="exhibitions container trigger-image">
-        <!-- ACTA -->
-        <div class="container-60-40">
-          <article>
-            <div class="text-container">
-              <h2 class="black-title">Acta, non verba / Djela, ne riječi</h2>
-              <p>Set up on the occasion of the awarding of the Influential Croatian Woman and Future Leader 2019 presented by the Croatian Women’s Network on Women's Day.</p>
-              <p>Croatian Heritage Foundation <br/> March 8th 2019</p>
-            </div>
-            <iframe width="100%" height="315px" src="https://www.youtube.com/embed/agQLjU4yESc" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </article>
-          <img src="images/graphic/Exhibition/ActaNonVerba.jpg" alt="">
-        </div>
-        <!-- ostale izlozbe -->
+    <div class="container">
+      <section class="permanent_exhibitions">
         <article>
           <div class="text-container">
-            <h2>Permanent exhibitions</h2>
+            <h3>Permanent exhibitions</h3>
             <p>Currently I hold two permenant exhibitions. You can find them on the links below.</p>
-            <a href="https://alm.hr/umjetnici/covic-dijana">Galerija umjetnina A.L.M.</a>
+            <a class="link" href="https://alm.hr/umjetnici/covic-dijana">Galerija umjetnina A.L.M.</a>
           </div>
         </article>
+      </section>
 
-      </div>
-    </section>
+      <div class="line_seperator"></div>
+
+      <section class="events_card">
+        <article id="card_article">
+          <h3>Acta, non verba / Djela, ne riječi</h3>
+          <p>Set up on the occasion of the awarding of the Influential Croatian Woman and Future Leader 2019 presented by the Croatian Women’s Network on Women's Day.</p>
+          <p class="card_info">Croatian Heritage Foundation <br/> March 8th 2019</p>
+          <a class="link" href="#">Link ako postoji*</a>
+        </article>
+        <iframe id="card_iframe"  src="https://www.youtube.com/embed/agQLjU4yESc" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <img id="card_img" src="images/graphic/Exhibition/ActaNonVerba.jpg" alt="ActaNonVerba">
+      </section>
+
+      <div class="line_seperator"></div>
+
+    </div>
 
   </div>
 </main>
 
 <!-- FOOTER -->
-<footer id="footer"></footer>
+<!-- <footer id="footer"></footer> -->
 
 
 <script src="scripts/vendors/JQueryV351.js"></script>
@@ -64,7 +64,9 @@
 <script src="scripts/vendors/jquery.magnific-popup.min.js" ></script>
 <script src="scripts/imgPopUp.js"></script>
 
-
+<script>
+  $(".line_seperator").load("html/line_seperator.html");
+</script>
 
 
 
