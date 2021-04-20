@@ -1,29 +1,30 @@
 
 .marquee {
- width: auto;
- height: 150px;
- overflow: hidden;
+    width: auto;
+    height: 150px;
+    overflow: hidden;
+    margin: 2em 0;
 }
 
 .marquee-content {
- display: flex;
- list-style: none;
- animation: scrolling 20s linear infinite;
+    display: flex;
+    list-style: none;
+    animation: scrolling 20s linear infinite;
 }
 
 .marquee-item {
- height: 150px;
- width: 200px;
- flex-shrink: 0;
+    height: 150px;
+    width: 200px;
+    flex-shrink: 0;
 }
 
 .marquee-image {
- height: 100%;
- width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 @keyframes scrolling {
- 0% { transform: translateX(0); }
- 50% { transform: translateX( -500px); }
- 100% { transform: translateX(0); }
+    0% { transform: translateX(0); }
+    50% { transform: translateX( -500px); }
+    100% { transform: translateX(0); }
 }

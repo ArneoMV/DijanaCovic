@@ -58,3 +58,13 @@ main {
 *::-webkit-scrollbar-thumb:hover {
   background: $green-0;
 }
+
+
+// COLOR NAVIGATION
+body.home_nav .home_header,
+body.gallery_nav .gallery_header,
+body.about_nav .about_header,
+body.events_nav .events_header
+{
+  font-weight: bold; 
+}

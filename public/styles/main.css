@@ -115,6 +115,12 @@ main {
 *::-webkit-scrollbar-thumb:hover {
   background: #40785F; }
 
+body.home_nav .home_header,
+body.gallery_nav .gallery_header,
+body.about_nav .about_header,
+body.events_nav .events_header {
+  font-weight: bold; }
+
 /* Color */
 /* Image's */
 img, iframe, object, embed, video {
@@ -674,9 +680,9 @@ footer {
     position: relative;
     bottom: 0;
     background-color: #151515;
-    padding: 8px; }
+    padding: 6px; }
     footer .copyright a, footer .copyright p {
-      font-size: 0.8em;
+      font-size: 0.7em;
       margin: 0 auto;
       color: #FBFBFB;
       text-align: center;
@@ -3329,7 +3335,8 @@ img.mfp-img {
 .marquee {
   width: auto;
   height: 150px;
-  overflow: hidden; }
+  overflow: hidden;
+  margin: 2em 0; }
 
 .marquee-content {
   display: flex;
