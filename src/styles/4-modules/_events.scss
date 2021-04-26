@@ -12,9 +12,9 @@
     width: 100%;
   }
 
-  #card_article {  grid-area: card_article; }
-  #card_img { grid-area: card_img; }
-  #card_iframe { grid-area: card_iframe; }
+  .card_article {  grid-area: card_article; }
+  .card_img { grid-area: card_img; }
+  .card_iframe { grid-area: card_iframe; }
 
   .events_card {
     display: grid; 

@@ -2,26 +2,17 @@
 @import "../2-base/_colors.scss";
 
 
-// Viaoda Libre
-@font-face {
-  font-family: 'Viaoda Libre';
-  src: url('../fonts/ViaodaLibre/ViaodaLibre-Regular.woff2') format('woff2'),
-      url('../fonts/ViaodaLibre/ViaodaLibre-Regular.woff') format('woff'),
-      url('../fonts/ViaodaLibre/ViaodaLibre-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 // Margaret
 @font-face {
   font-family: 'Margaret';
-  src: url('fonts/Margaret/Margaret-Bold.woff2') format('woff2'),
-      url('fonts/Margaret/Margaret-Bold.woff') format('woff'),
-      url('fonts/Margaret/Margaret-Bold.ttf') format('truetype');
+  src: url('../fonts/Margaret/Margaret-Bold.woff2') format('woff2'),
+      url('../fonts/Margaret/Margaret-Bold.woff') format('woff'),
+      url('../fonts/Margaret/Margaret-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
+
 // Montserrat
 @font-face {
   font-family: 'Montserrat';

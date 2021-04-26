@@ -1,21 +1,13 @@
-
-
 $(document).ready(function() {
-
-  const body = document.querySelector("body");
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav-links");
   const navLinks = document.querySelectorAll(".nav-links li");
-
 
   // Navigation
   const navSlide = () => {
     burger.addEventListener("click", () => {
       //Toggle Nav
       nav.classList.toggle("nav-active");
-      //Body overflow fixed
-      // body.classList.toggle("fixed");
-
      //Animate Links
       navLinks.forEach((link, index) => {
         if (link.style.animation) {

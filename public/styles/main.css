@@ -159,15 +159,8 @@ figcaption {
 }
 /* Color */
 @font-face {
-  font-family: "Viaoda Libre";
-  src: url("../fonts/ViaodaLibre/ViaodaLibre-Regular.woff2") format("woff2"), url("../fonts/ViaodaLibre/ViaodaLibre-Regular.woff") format("woff"), url("../fonts/ViaodaLibre/ViaodaLibre-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
   font-family: "Margaret";
-  src: url("fonts/Margaret/Margaret-Bold.woff2") format("woff2"), url("fonts/Margaret/Margaret-Bold.woff") format("woff"), url("fonts/Margaret/Margaret-Bold.ttf") format("truetype");
+  src: url("../fonts/Margaret/Margaret-Bold.woff2") format("woff2"), url("../fonts/Margaret/Margaret-Bold.woff") format("woff"), url("../fonts/Margaret/Margaret-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -2079,13 +2072,13 @@ img.products-gallery {
   height: auto;
   width: 100%;
 }
-.events #card_article {
+.events .card_article {
   grid-area: card_article;
 }
-.events #card_img {
+.events .card_img {
   grid-area: card_img;
 }
-.events #card_iframe {
+.events .card_iframe {
   grid-area: card_iframe;
 }
 .events .events_card {
