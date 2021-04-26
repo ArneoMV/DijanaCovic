@@ -29,46 +29,4 @@ $(document).ready(function() {
     });
   }
   navSlide();
-
-    // Switch pages
-    // $('#Home').click(function() {
-    //   $('#page').load('html/Homepage.html');
-    //   nav.classList.toggle("nav-active");
-    //   burger.classList.toggle("toggle");
-    // });
-    // $('#Solutions').click(function() {
-    //   $('#page').load('html/Solutions.html');
-    //   nav.classList.toggle("nav-active");
-    //   burger.classList.toggle("toggle");
-    // });
-    // $('#IoT').click(function() {
-    //   $('#page').load('html/IoT.html');
-    //   nav.classList.toggle("nav-active");
-    //   burger.classList.toggle("toggle");
-    // });
-    // $('#Project').click(function() {
-    //   $('#page').load('html/Project.html');
-    //   nav.classList.toggle("nav-active");
-    //   burger.classList.toggle("toggle");
-    // });
 });
-
-
-// $(document).ready(function() {
-
-//     let burger = document.querySelector('.burger');
-//     let navMobile = document.querySelector('.nav-mobile');
-//     let navBar = document.getElementById("navBar");
-    
-//     burger.addEventListener('click', () => {
-
-//       //alert("klik");
-      
-//       // Burger Klick
-//       burger.classList.toggle('toggle');
-//       navMobile.classList.toggle('is-active');
-//       navBar.style.top = "0";
-//       document.body.classList.toggle('overflowHidden');
-//     });  
-
-// });
