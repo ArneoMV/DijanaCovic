@@ -1,7 +1,7 @@
 
 .marquee {
     width: auto;
-    height: 150px;
+    height: 200px;
     overflow: hidden;
     margin: 2em 0;
 }
@@ -13,7 +13,7 @@
 }
 
 .marquee-item {
-    height: 150px;
+    height: auto;
     width: 200px;
     flex-shrink: 0;
 }
