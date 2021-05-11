@@ -162,6 +162,16 @@
             object-fit: cover;
         }
     }
+    .scroll_image {
+        position: relative;
+        width: 100vw;
+        display: grid;
+        img {
+            height: 48px;
+            width: auto;
+            justify-self: center;
+        }
+    }
     // section 5
     .home5 {
         height: 80%;
